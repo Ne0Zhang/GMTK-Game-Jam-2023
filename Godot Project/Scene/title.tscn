@@ -31,10 +31,10 @@ stretch_mode = 4
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_left = 805.0
-offset_top = 878.0
-offset_right = 1785.0
-offset_bottom = 959.0
+offset_left = 618.0
+offset_top = 894.0
+offset_right = 1865.0
+offset_bottom = 975.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
 layout_mode = 2
