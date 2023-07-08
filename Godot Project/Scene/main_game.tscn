@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cgd27enmiaa3g"]
+[gd_scene load_steps=16 format=3 uid="uid://cgd27enmiaa3g"]
 
 [ext_resource type="Script" path="res://Script/Main Game/game_manager.gd" id="1_mi7fx"]
 [ext_resource type="Script" path="res://Script/Cloud Platform/Cloud Button.gd" id="2_igkno"]
@@ -13,9 +13,16 @@
 [ext_resource type="Texture2D" uid="uid://crlkea8yl3plf" path="res://Art Assets/Platform All Asset/Spring Platform/spring platform button.png" id="7_bygdd"]
 [ext_resource type="Script" path="res://Script/Spring Platform/Spring Button.gd" id="9_b6y8p"]
 [ext_resource type="PackedScene" uid="uid://depbsan31sf51" path="res://Scene/player.tscn" id="13_rjp4p"]
+[ext_resource type="PackedScene" uid="uid://c7jeducjtbdxp" path="res://Scene/Dangerous/Fireball.tscn" id="14_muh2p"]
+[ext_resource type="Script" path="res://Script/Main Game/Fireball Spawn Behavior.gd" id="15_pukrx"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_mi7fx")
+
+[node name="Danger Collection" type="Node" parent="."]
+
+[node name="Fireball" parent="Danger Collection" instance=ExtResource("14_muh2p")]
+position = Vector2(1192, 336)
 
 [node name="Platform Collection" type="Node" parent="."]
 
@@ -85,7 +92,7 @@ texture = ExtResource("4_orql0")
 
 [node name="Border" type="Sprite2D" parent="."]
 position = Vector2(300, 540)
-scale = Vector2(0.2, 135)
+scale = Vector2(0.200408, 135.467)
 texture = ExtResource("4_dk6yq")
 
 [node name="HUD" type="CanvasLayer" parent="."]
@@ -157,3 +164,34 @@ vertical_alignment = 1
 [node name="Player" parent="." instance=ExtResource("13_rjp4p")]
 position = Vector2(452, 404)
 gravity_scale = 0.0
+
+[node name="Fireball Spawn" type="Node" parent="."]
+script = ExtResource("15_pukrx")
+
+[node name="point1" type="Node2D" parent="Fireball Spawn"]
+position = Vector2(1264, -80)
+
+[node name="Sprite2D" type="Sprite2D" parent="Fireball Spawn/point1"]
+scale = Vector2(0.0542857, 0.0542857)
+texture = ExtResource("4_orql0")
+
+[node name="point2" type="Node2D" parent="Fireball Spawn"]
+position = Vector2(1448, -80)
+
+[node name="Sprite2D" type="Sprite2D" parent="Fireball Spawn/point2"]
+scale = Vector2(0.0542857, 0.0542857)
+texture = ExtResource("4_orql0")
+
+[node name="point3" type="Node2D" parent="Fireball Spawn"]
+position = Vector2(1616, -80)
+
+[node name="Sprite2D" type="Sprite2D" parent="Fireball Spawn/point3"]
+scale = Vector2(0.0542857, 0.0542857)
+texture = ExtResource("4_orql0")
+
+[node name="point4" type="Node2D" parent="Fireball Spawn"]
+position = Vector2(1808, -80)
+
+[node name="Sprite2D" type="Sprite2D" parent="Fireball Spawn/point4"]
+scale = Vector2(0.0542857, 0.0542857)
+texture = ExtResource("4_orql0")
