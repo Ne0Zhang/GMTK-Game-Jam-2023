@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://depbsan31sf51"]
+
+[ext_resource type="Texture2D" uid="uid://xmmkjt52eara" path="res://Art Assets/Demo/playerGrey_walk1.png" id="1_fhs3y"]
+[ext_resource type="Texture2D" uid="uid://des1v56uly4lj" path="res://Art Assets/Demo/playerGrey_walk2.png" id="2_nnnkl"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g7vde"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_fhs3y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_nnnkl")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_75uhd"]
+radius = 27.0
+height = 70.0
+
+[node name="Player" type="RigidBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_g7vde")
+animation = &"walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_75uhd")
