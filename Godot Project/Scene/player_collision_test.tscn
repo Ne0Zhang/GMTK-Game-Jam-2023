@@ -37,13 +37,11 @@ position = Vector2(514, 485)
 [node name="Player2" parent="." instance=ExtResource("5_wn5gv")]
 position = Vector2(1364, 478)
 physics_material_override = SubResource("PhysicsMaterial_8oxvc")
-lock_rotation = true
 freeze_mode = 1
 
 [node name="Player3" parent="." instance=ExtResource("5_wn5gv")]
 position = Vector2(1020, 486)
 physics_material_override = SubResource("PhysicsMaterial_lwfg4")
-lock_rotation = true
 freeze_mode = 1
 
 [node name="Player4" parent="." instance=ExtResource("5_wn5gv")]
