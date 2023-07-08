@@ -1,7 +1,7 @@
 extends StaticBody2D
 
 # Lower cap for the rotation
-@export var min_rotate = 0.0
+@export var min_rotate = -80.0
 # Upper cap for the rotation
 @export var max_rotate = 80.0
 # Rotation Speed
