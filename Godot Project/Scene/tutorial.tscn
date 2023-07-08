@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://b7sresh6udp8r"]
+[gd_scene load_steps=6 format=3 uid="uid://b7sresh6udp8r"]
 
 [ext_resource type="Script" path="res://Script/tutorial.gd" id="1_e65rn"]
 [ext_resource type="Texture2D" uid="uid://crv3538xavf3k" path="res://Art Assets/title/bg.png" id="2_0t4np"]
 [ext_resource type="Theme" uid="uid://dbhkb8xxcoj7t" path="res://theme.tres" id="2_80ypa"]
 [ext_resource type="Texture2D" uid="uid://b602ux8n3yrj3" path="res://Art Assets/title/illust.PNG" id="3_l7t2a"]
+[ext_resource type="Texture2D" uid="uid://cly0uvupq18bm" path="res://Art Assets/title/mouse.PNG" id="5_pjtgq"]
 
 [node name="tutorial" type="Control"]
 layout_mode = 3
@@ -40,5 +41,29 @@ offset_bottom = 1042.0
 layout_mode = 2
 theme = ExtResource("2_80ypa")
 text = "Back"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -691.0
+offset_top = 93.0
+offset_right = -77.0
+offset_bottom = -462.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("5_pjtgq")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="TextEdit" type="TextEdit" parent="HBoxContainer"]
+layout_mode = 2
+text = "Rotate platform"
 
 [connection signal="pressed" from="MarginContainer/back" to="." method="_on_back_pressed"]
