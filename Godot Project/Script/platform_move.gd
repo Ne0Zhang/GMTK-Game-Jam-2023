@@ -12,7 +12,7 @@ func _process(delta):
 		global_position.x = clampf(global_position.x, top_left.x, bottom_right.x)
 		global_position.y = clampf(global_position.y, top_left.y, bottom_right.y)
 	if can_move:
-		global_position.x -= delta *  speed
+		global_position.x -= delta * get_node("/root/Main").platform_speed
 	if (global_position.x < -230.0):
 		queue_free()
 
@@ -22,3 +22,11 @@ func _ready():
 	
 	top_left = Vector2(300, 0)
 	bottom_right = Vector2(screensize.x, bottom.y - 20)
+
+
+func slow_platforms():
+	get_node("/root/Main").platform_speed = speed/5
+
+
+func reset_platform_speeds():
+	get_node("/root/Main").platform_speed = speed

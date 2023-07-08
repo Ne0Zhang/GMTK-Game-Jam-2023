@@ -11,10 +11,11 @@ size = Vector2(200, 34.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_skh7q"]
 size = Vector2(40, 34)
 
-[node name="Cloud Platform" type="Node2D"]
+[node name="Cloud Platform" type="Node2D" groups=["platforms"]]
 script = ExtResource("1_5aid7")
 
 [node name="Cloud Platform Body" type="StaticBody2D" parent="."]
+collision_mask = 0
 script = ExtResource("2_w7hen")
 
 [node name="Cloud Platform Sprite" type="Sprite2D" parent="Cloud Platform Body"]

@@ -8,10 +8,10 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_n0xvs"]
 radius = 64.4981
 
-[node name="Honey Platform" type="Node2D"]
+[node name="Honey Platform" type="Node2D" groups=["platforms"]]
 script = ExtResource("1_47ulq")
 
-[node name="Honey Platform Body" type="StaticBody2D" parent="."]
+[node name="Honey Platform Body" type="Area2D" parent="."]
 script = ExtResource("2_quh7k")
 
 [node name="Honey Platform Sprite" type="Sprite2D" parent="Honey Platform Body"]
@@ -22,3 +22,8 @@ script = ExtResource("4_yxp2o")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Honey Platform Body"]
 position = Vector2(0, 16)
 shape = SubResource("CircleShape2D_n0xvs")
+
+[connection signal="body_entered" from="Honey Platform Body" to="Honey Platform Body" method="_on_body_entered"]
+[connection signal="body_exited" from="Honey Platform Body" to="Honey Platform Body" method="_on_body_exited"]
+[connection signal="in_honey" from="Honey Platform Body" to="." method="slow_platforms"]
+[connection signal="out_honey" from="Honey Platform Body" to="." method="reset_platform_speeds"]

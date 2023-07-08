@@ -1,4 +1,7 @@
-extends StaticBody2D
+extends Area2D
+
+signal in_honey
+signal out_honey
 
 # Lower cap for the rotation
 @export var min_rotate = -80.0
@@ -42,3 +45,13 @@ func _ready():
 	main_scene = get_node("/root/Main")
 	assoc_button = get_node("/root/Main/Button Collection/Honey Spawn Button/Honey Button")
 	parent = get_owner()
+
+
+func _on_body_entered(body):
+	if body.is_in_group("player"):
+		in_honey.emit()
+
+
+func _on_body_exited(body):
+	if body.is_in_group("player"):
+		out_honey.emit()
