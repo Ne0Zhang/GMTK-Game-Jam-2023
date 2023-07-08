@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dsvunjendf0oh"]
+
+[ext_resource type="PackedScene" uid="uid://cf0s15spghpp0" path="res://Scene/cloud_platform.tscn" id="1_cymbf"]
+
+[node name="Node" type="Node"]
+
+[node name="Cloud Platform" parent="." instance=ExtResource("1_cymbf")]
+position = Vector2(544, 376)
