@@ -9,17 +9,31 @@ extends StaticBody2D
 # Current platform rotation
 @export var curr_rotate = 0.0
 
+# All the necessary assets/objects
 var platform_sprite
+var main_scene
+var assoc_button
+var parent
 
 # Platform will follow mouse unless clicked and dropped
-var selected = true
+var selected = false
+
+func _is_selected(state : bool):
+	await get_tree().create_timer(0.25).timeout
+	selected = true
 
 # Check for Mouse Input
 func _input(event):
-	if event is InputEventMouseButton:
+	# If the Mouse is pressed and the player is selection a platform,
+	# change the platform's alpha, reset the button's sprite and can select another
+	if event is InputEventMouseButton and selected:
 		if event.button_index == MOUSE_BUTTON_LEFT and not event.pressed:
 			selected = false
 			platform_sprite._change_alpha(1)
+			main_scene.can_spawn = true
+			assoc_button._reset_sprite()
+			parent.can_move = true
+
 	if event is InputEventMouseButton and selected:
 		if Input.is_action_just_pressed("Rotate_Left"):
 			_set_rotation(1)
@@ -27,9 +41,7 @@ func _input(event):
 			_set_rotation(-1)
 
 # ============ DRAG AND DROP CONTROL ============ 
-func _physics_process(delta):
-	if selected:
-		global_position = lerp(global_position, get_global_mouse_position(), 25*delta)
+
 
 # ============ MOUSE WHEEL / ROTATION CONTROL ============ 
 # Set Rotation According
@@ -45,3 +57,6 @@ func _ready():
 	curr_rotate = 0.0
 	platform_sprite = get_node("Cloud Platform Sprite")
 	platform_sprite._change_alpha(.45)
+	main_scene = get_node("/root/Main")
+	assoc_button = get_node("/root/Main/Cloud Spawn Button/Cloud Button")
+	parent = get_owner()
