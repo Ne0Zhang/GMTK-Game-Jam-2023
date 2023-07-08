@@ -1,0 +1,118 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://ksvcksfif44k"]
+
+[ext_resource type="FontFile" uid="uid://capvxe8dvs2ae" path="res://Art Assets/Nice Sugar.ttf" id="1_jhmp1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eh5pv"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.3)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_78kpt"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.679688, 0.652344, 0.703125, 1)
+draw_center = false
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.359375, 0.324219, 0.46875, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+corner_detail = 5
+expand_margin_left = 10.0
+expand_margin_top = 5.0
+expand_margin_right = 10.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hwuys"]
+bg_color = Color(0.96875, 0.921875, 0.65625, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.360784, 0.32549, 0.470588, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+expand_margin_left = 10.0
+expand_margin_top = 5.0
+expand_margin_right = 10.0
+expand_margin_bottom = 5.0
+shadow_color = Color(1, 1, 1, 0.6)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o8p3y"]
+bg_color = Color(0.996094, 0.980469, 0.9375, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.359375, 0.324219, 0.46875, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+expand_margin_left = 10.0
+expand_margin_top = 5.0
+expand_margin_right = 10.0
+expand_margin_bottom = 5.0
+shadow_offset = Vector2(-1, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_we5sa"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.679688, 0.652344, 0.703125, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.359375, 0.324219, 0.46875, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+corner_detail = 5
+expand_margin_left = 10.0
+expand_margin_top = 5.0
+expand_margin_right = 10.0
+expand_margin_bottom = 5.0
+
+[resource]
+default_font = ExtResource("1_jhmp1")
+Button/colors/font_color = Color(0.360784, 0.32549, 0.470588, 1)
+Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/colors/font_focus_color = Color(0.359375, 0.324219, 0.46875, 1)
+Button/colors/font_hover_color = Color(0.503906, 0.390625, 0.734375, 1)
+Button/colors/font_hover_pressed_color = Color(0.360784, 0.32549, 0.470588, 1)
+Button/colors/font_outline_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(0.359375, 0.324219, 0.46875, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/h_separation = 25
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 30
+Button/fonts/font = ExtResource("1_jhmp1")
+Button/styles/disabled = SubResource("StyleBoxFlat_eh5pv")
+Button/styles/focus = SubResource("StyleBoxFlat_78kpt")
+Button/styles/hover = SubResource("StyleBoxFlat_hwuys")
+Button/styles/normal = SubResource("StyleBoxFlat_o8p3y")
+Button/styles/pressed = SubResource("StyleBoxFlat_we5sa")
