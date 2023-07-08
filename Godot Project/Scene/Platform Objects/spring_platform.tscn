@@ -6,7 +6,7 @@
 [ext_resource type="Script" path="res://Script/Main Game/Sprite_Control.gd" id="4_ypfpa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0fqi1"]
-size = Vector2(112, 21)
+size = Vector2(192, 26.5)
 
 [node name="Spring Platform" type="Node2D"]
 script = ExtResource("1_pk0qi")
@@ -15,9 +15,11 @@ script = ExtResource("1_pk0qi")
 script = ExtResource("2_vkxfm")
 
 [node name="Spring Platform Sprite" type="Sprite2D" parent="Spring Platform Body"]
-scale = Vector2(0.082, 0.082)
+position = Vector2(3.8147e-06, 3.8147e-06)
+scale = Vector2(0.137, 0.137)
 texture = ExtResource("3_1htv5")
 script = ExtResource("4_ypfpa")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spring Platform Body"]
+position = Vector2(0, -2.75)
 shape = SubResource("RectangleShape2D_0fqi1")

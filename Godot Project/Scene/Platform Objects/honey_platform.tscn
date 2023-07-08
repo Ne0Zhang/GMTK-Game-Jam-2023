@@ -6,7 +6,7 @@
 [ext_resource type="Script" path="res://Script/Main Game/Sprite_Control.gd" id="4_yxp2o"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_n0xvs"]
-radius = 40.0
+radius = 64.4981
 
 [node name="Honey Platform" type="Node2D"]
 script = ExtResource("1_47ulq")
@@ -15,10 +15,10 @@ script = ExtResource("1_47ulq")
 script = ExtResource("2_quh7k")
 
 [node name="Honey Platform Sprite" type="Sprite2D" parent="Honey Platform Body"]
-scale = Vector2(0.065, 0.065)
+scale = Vector2(0.11425, 0.11425)
 texture = ExtResource("3_gorfq")
 script = ExtResource("4_yxp2o")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Honey Platform Body"]
-position = Vector2(0, 8)
+position = Vector2(0, 16)
 shape = SubResource("CircleShape2D_n0xvs")
