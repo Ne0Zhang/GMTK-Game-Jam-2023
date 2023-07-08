@@ -1,10 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://cgd27enmiaa3g"]
+[gd_scene load_steps=13 format=3 uid="uid://cgd27enmiaa3g"]
 
 [ext_resource type="Script" path="res://Script/Main Game/game_manager.gd" id="1_mi7fx"]
 [ext_resource type="Script" path="res://Script/Cloud Platform/Cloud Button.gd" id="2_igkno"]
 [ext_resource type="Texture2D" uid="uid://ccqmwudhu5qx" path="res://Art Assets/Platform All Asset/Cloud Platform/cloud platform button.png" id="2_uci0p"]
+[ext_resource type="Texture2D" uid="uid://bc5xk6q4hl44a" path="res://Art Assets/Demo/Black Box.png" id="2_ym6vp"]
 [ext_resource type="Texture2D" uid="uid://cibnro5ppup2h" path="res://Art Assets/Platform All Asset/Honey Platform/honey platform button.png" id="4_4jx5v"]
 [ext_resource type="Texture2D" uid="uid://b264fak4f67hd" path="res://Art Assets/Demo/TestPlatform.png" id="4_dk6yq"]
+[ext_resource type="Texture2D" uid="uid://basokoe4tj3sm" path="res://Art Assets/Platform All Asset/normal button.png" id="4_orql0"]
 [ext_resource type="Script" path="res://Script/Honey Platform/Honey Button.gd" id="5_u1ycc"]
 [ext_resource type="Texture2D" uid="uid://b6u78yeveieg2" path="res://Art Assets/Platform All Asset/Ice Platform/ice platform button.png" id="6_6f15l"]
 [ext_resource type="Script" path="res://Script/Ice Platform/Ice Button.gd" id="7_8liqf"]
@@ -16,39 +18,73 @@ script = ExtResource("1_mi7fx")
 
 [node name="Platform Collection" type="Node" parent="."]
 
-[node name="Cloud Spawn Button" type="Node2D" parent="."]
+[node name="Button Collection" type="Node" parent="."]
 
-[node name="Cloud Button" type="Sprite2D" parent="Cloud Spawn Button"]
-position = Vector2(472, 584)
+[node name="Container" type="Sprite2D" parent="Button Collection"]
+position = Vector2(-24, 856)
+scale = Vector2(1.2, 0.373494)
+texture = ExtResource("2_ym6vp")
+centered = false
+
+[node name="Cloud Spawn Button" type="Node2D" parent="Button Collection"]
+position = Vector2(728, 952)
+scale = Vector2(1.7, 1.7)
+
+[node name="Cloud Button" type="Sprite2D" parent="Button Collection/Cloud Spawn Button"]
 scale = Vector2(0.05, 0.05)
 texture = ExtResource("2_uci0p")
 script = ExtResource("2_igkno")
 
-[node name="Ice Spawn Button" type="Node2D" parent="."]
+[node name="Cloud Count" type="Sprite2D" parent="Button Collection/Cloud Spawn Button"]
+position = Vector2(0, 48)
+scale = Vector2(0.0195239, 0.0195239)
+texture = ExtResource("4_orql0")
 
-[node name="Ice Button" type="Sprite2D" parent="Ice Spawn Button"]
-position = Vector2(576, 584)
+[node name="Ice Spawn Button" type="Node2D" parent="Button Collection"]
+position = Vector2(984, 952)
+scale = Vector2(1.7, 1.7)
+
+[node name="Ice Button" type="Sprite2D" parent="Button Collection/Ice Spawn Button"]
 scale = Vector2(0.05, 0.05)
 texture = ExtResource("6_6f15l")
 script = ExtResource("7_8liqf")
 
-[node name="Honey Spawn Button" type="Node2D" parent="."]
+[node name="Ice Count" type="Sprite2D" parent="Button Collection/Ice Spawn Button"]
+position = Vector2(0, 48)
+scale = Vector2(0.0195239, 0.0195239)
+texture = ExtResource("4_orql0")
 
-[node name="Honey Button" type="Sprite2D" parent="Honey Spawn Button"]
-position = Vector2(680, 584)
+[node name="Honey Spawn Button" type="Node2D" parent="Button Collection"]
+position = Vector2(1240, 952)
+scale = Vector2(1.7, 1.7)
+
+[node name="Honey Button" type="Sprite2D" parent="Button Collection/Honey Spawn Button"]
 scale = Vector2(0.05, 0.05)
 texture = ExtResource("4_4jx5v")
 script = ExtResource("5_u1ycc")
 
-[node name="Spring Spawn Button" type="Node2D" parent="."]
+[node name="Honey Count" type="Sprite2D" parent="Button Collection/Honey Spawn Button"]
+position = Vector2(0, 48)
+scale = Vector2(0.0195239, 0.0195239)
+texture = ExtResource("4_orql0")
 
-[node name="Spring Button" type="Sprite2D" parent="Spring Spawn Button"]
-position = Vector2(784, 584)
+[node name="Spring Spawn Button" type="Node2D" parent="Button Collection"]
+position = Vector2(1496, 952)
+scale = Vector2(1.7, 1.7)
+
+[node name="Spring Button" type="Sprite2D" parent="Button Collection/Spring Spawn Button"]
 scale = Vector2(0.05, 0.05)
 texture = ExtResource("7_bygdd")
 script = ExtResource("9_b6y8p")
 
+[node name="Spring Count" type="Sprite2D" parent="Button Collection/Spring Spawn Button"]
+position = Vector2(0, 48)
+scale = Vector2(0.0195239, 0.0195239)
+texture = ExtResource("4_orql0")
+
 [node name="Border" type="Sprite2D" parent="."]
-position = Vector2(300, 340)
-scale = Vector2(0.2, 82.5)
+position = Vector2(300, 556)
+scale = Vector2(0.2, 139)
 texture = ExtResource("4_dk6yq")
+
+[node name="HUD" type="CanvasLayer" parent="."]

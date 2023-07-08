@@ -58,5 +58,5 @@ func _ready():
 	platform_sprite = get_node("Ice Platform Sprite")
 	platform_sprite._change_alpha(.45)
 	main_scene = get_node("/root/Main")
-	assoc_button = get_node("/root/Main/Ice Spawn Button/Ice Button")
+	assoc_button = get_node("/root/Main/Button Collection/Ice Spawn Button/Ice Button")
 	parent = get_owner()

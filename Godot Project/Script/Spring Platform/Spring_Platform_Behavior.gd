@@ -58,5 +58,5 @@ func _ready():
 	platform_sprite = get_node("Spring Platform Sprite")
 	platform_sprite._change_alpha(.45)
 	main_scene = get_node("/root/Main")
-	assoc_button = get_node("/root/Main/Spring Spawn Button/Spring Button")
+	assoc_button = get_node("/root/Main/Button Collection/Spring Spawn Button/Spring Button")
 	parent = get_owner()

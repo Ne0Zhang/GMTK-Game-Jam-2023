@@ -40,5 +40,5 @@ func _ready():
 	platform_sprite = get_node("Honey Platform Sprite")
 	platform_sprite._change_alpha(.45)
 	main_scene = get_node("/root/Main")
-	assoc_button = get_node("/root/Main/Honey Spawn Button/Honey Button")
+	assoc_button = get_node("/root/Main/Button Collection/Honey Spawn Button/Honey Button")
 	parent = get_owner()

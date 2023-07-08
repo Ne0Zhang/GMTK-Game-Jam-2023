@@ -6,7 +6,7 @@
 [ext_resource type="Script" path="res://Script/Main Game/Sprite_Control.gd" id="4_7f1d7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0fqi1"]
-size = Vector2(112, 21)
+size = Vector2(224, 32)
 
 [node name="Ice Platform" type="Node2D"]
 script = ExtResource("1_3fspn")
@@ -15,7 +15,7 @@ script = ExtResource("1_3fspn")
 script = ExtResource("2_ke2uc")
 
 [node name="Ice Platform Sprite" type="Sprite2D" parent="Ice Platform Body"]
-scale = Vector2(0.082, 0.082)
+scale = Vector2(0.161, 0.161)
 texture = ExtResource("3_auodr")
 script = ExtResource("4_7f1d7")
 
