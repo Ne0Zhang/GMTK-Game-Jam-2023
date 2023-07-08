@@ -157,7 +157,7 @@ position = Vector2(1072, 318)
 scale = Vector2(0.21725, 0.21725)
 sprite_frames = SubResource("SpriteFrames_b0l6t")
 animation = &"run"
-frame_progress = 0.127993
+frame_progress = 0.374868
 
 [node name="back" type="Button" parent="."]
 offset_left = 50.0

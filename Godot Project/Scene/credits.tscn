@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://p1cjougw120a"]
 
 [ext_resource type="Texture2D" uid="uid://crv3538xavf3k" path="res://Art Assets/title/bg.png" id="1_epkcm"]
+[ext_resource type="Script" path="res://Script/credits.gd" id="1_mvao5"]
 [ext_resource type="Theme" uid="uid://dbhkb8xxcoj7t" path="res://theme.tres" id="1_utfub"]
 [ext_resource type="Texture2D" uid="uid://b602ux8n3yrj3" path="res://Art Assets/title/illust.PNG" id="2_kqbn8"]
-[ext_resource type="Script" path="res://Script/tutorial.gd" id="4_fqsf3"]
 [ext_resource type="FontFile" uid="uid://capvxe8dvs2ae" path="res://Font/Nice Sugar.ttf" id="4_prmlm"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_5133e"]
@@ -30,7 +30,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("4_fqsf3")
+script = ExtResource("1_mvao5")
 
 [node name="bg" type="TextureRect" parent="."]
 layout_mode = 0
