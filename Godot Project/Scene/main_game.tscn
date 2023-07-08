@@ -21,9 +21,9 @@ script = ExtResource("1_mi7fx")
 [node name="Button Collection" type="Node" parent="."]
 
 [node name="Container" type="Sprite2D" parent="Button Collection"]
-position = Vector2(-24, 856)
-scale = Vector2(1.5625, 0.373494)
-texture = ExtResource("2_lqkmu")
+position = Vector2(0, 864)
+scale = Vector2(1.17073, 0.325301)
+texture = ExtResource("2_ym6vp")
 centered = false
 
 [node name="Cloud Spawn Button" type="Node2D" parent="Button Collection"]
@@ -83,8 +83,8 @@ scale = Vector2(0.0195239, 0.0195239)
 texture = ExtResource("4_orql0")
 
 [node name="Border" type="Sprite2D" parent="."]
-position = Vector2(300, 556)
-scale = Vector2(0.2, 139)
+position = Vector2(300, 540)
+scale = Vector2(0.2, 135)
 texture = ExtResource("4_dk6yq")
 
 [node name="HUD" type="CanvasLayer" parent="."]
