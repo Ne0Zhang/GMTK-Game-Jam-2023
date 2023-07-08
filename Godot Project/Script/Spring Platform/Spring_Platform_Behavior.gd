@@ -55,8 +55,8 @@ func _set_rotation(direction: float) -> void:
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	curr_rotate = 0.0
-	platform_sprite = get_node("Cloud Platform Sprite")
+	platform_sprite = get_node("Spring Platform Sprite")
 	platform_sprite._change_alpha(.45)
 	main_scene = get_node("/root/Main")
-	assoc_button = get_node("/root/Main/Cloud Spawn Button/Cloud Button")
+	assoc_button = get_node("/root/Main/Spring Spawn Button/Spring Button")
 	parent = get_owner()

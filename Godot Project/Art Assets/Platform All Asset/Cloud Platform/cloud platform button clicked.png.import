@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccqmwudhu5qx"
-path="res://.godot/imported/cloud platform button.png-5da594d87df275d939ac9c8c629be01c.ctex"
+uid="uid://bt66k3ne0mrvk"
+path="res://.godot/imported/cloud platform button clicked.png-2e83b5d5b6b13c0c0954438ed8a821d0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art Assets/Cloud Platform/cloud platform button.png"
-dest_files=["res://.godot/imported/cloud platform button.png-5da594d87df275d939ac9c8c629be01c.ctex"]
+source_file="res://Art Assets/Platform All Asset/Cloud Platform/cloud platform button clicked.png"
+dest_files=["res://.godot/imported/cloud platform button clicked.png-2e83b5d5b6b13c0c0954438ed8a821d0.ctex"]
 
 [params]
 

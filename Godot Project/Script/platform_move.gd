@@ -10,7 +10,6 @@ func _process(delta):
 		global_position.y = clampf(global_position.y, 80, screensize.y-160)
 	if can_move:
 		global_position.x -= delta *  speed
-		print(global_position.x)
 	if (global_position.x < -230.0):
 		queue_free()
 
