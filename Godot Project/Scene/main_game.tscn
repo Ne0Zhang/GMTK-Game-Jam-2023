@@ -1,11 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://cgd27enmiaa3g"]
+[gd_scene load_steps=13 format=3 uid="uid://cgd27enmiaa3g"]
 
 [ext_resource type="Script" path="res://Script/Main Game/game_manager.gd" id="1_mi7fx"]
 [ext_resource type="Script" path="res://Script/Cloud Platform/Cloud Button.gd" id="2_igkno"]
-[ext_resource type="Texture2D" uid="uid://bptmdo6bx37ex" path="res://Art Assets/Demo/Blue Container.png" id="2_lqkmu"]
+[ext_resource type="Texture2D" uid="uid://bptmdo6bx37ex" path="res://Art Assets/title/Blue Container.png" id="2_lqkmu"]
 [ext_resource type="Texture2D" uid="uid://ccqmwudhu5qx" path="res://Art Assets/Platform All Asset/Cloud Platform/cloud platform button.png" id="2_uci0p"]
 [ext_resource type="Texture2D" uid="uid://cibnro5ppup2h" path="res://Art Assets/Platform All Asset/Honey Platform/honey platform button.png" id="4_4jx5v"]
-[ext_resource type="Texture2D" uid="uid://b264fak4f67hd" path="res://Art Assets/Demo/TestPlatform.png" id="4_dk6yq"]
 [ext_resource type="Texture2D" uid="uid://basokoe4tj3sm" path="res://Art Assets/Platform All Asset/normal button.png" id="4_orql0"]
 [ext_resource type="Script" path="res://Script/Honey Platform/Honey Button.gd" id="5_u1ycc"]
 [ext_resource type="Texture2D" uid="uid://b6u78yeveieg2" path="res://Art Assets/Platform All Asset/Ice Platform/ice platform button.png" id="6_6f15l"]
@@ -86,7 +85,6 @@ texture = ExtResource("4_orql0")
 [node name="Border" type="Sprite2D" parent="."]
 position = Vector2(300, 540)
 scale = Vector2(0.2, 135)
-texture = ExtResource("4_dk6yq")
 
 [node name="HUD" type="CanvasLayer" parent="."]
 

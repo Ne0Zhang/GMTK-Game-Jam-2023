@@ -26,7 +26,6 @@ window/size/viewport_height=1080
 window/stretch/mode="canvas_items"
 mouse_cursor/custom_image="res://Art Assets/title/cursor.png"
 
-
 [dotnet]
 
 project/assembly_name="GMTK Game Jam 2023 Project"
