@@ -18,7 +18,7 @@ func _spawn_cloud_platform():
 	
 	# add it to the scene
 	get_node("/root/Main/Platform Collection").add_child(cloud)
-	cloud.get_node("Honey Platform Body")._is_selected(true)
+	cloud.get_node("Honey Platform Body")._is_selected()
 	pass
 
 func _reset_sprite():

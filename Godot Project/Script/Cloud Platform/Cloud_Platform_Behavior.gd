@@ -18,7 +18,7 @@ var parent
 # Platform will follow mouse unless clicked and dropped
 var selected = false
 
-func _is_selected(state : bool):
+func _is_selected():
 	await get_tree().create_timer(0.25).timeout
 	selected = true
 
