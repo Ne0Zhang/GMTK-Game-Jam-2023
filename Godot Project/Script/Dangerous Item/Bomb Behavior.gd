@@ -4,6 +4,7 @@ extends Node2D
 var direction = Vector2(-1,0)
 var bound
 
+var audio_node
 var anim_node
 
 # Called when the node enters the scene tree for the first time.
@@ -11,6 +12,7 @@ func _ready():
 	bound = Vector2(0, get_viewport_rect().size.y)
 	anim_node = get_node("Bomb_2D/Bomb_Anim")
 	anim_node.play("Idle")
+	audio_node = get_node("Explode_Audio")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -30,5 +32,6 @@ func _free_object():
 # If player touches bomb, bomb explode and dies
 func _explode():
 	anim_node.play("Explode")
+	audio_node.play()
 	await anim_node.animation_finished
 	queue_free()

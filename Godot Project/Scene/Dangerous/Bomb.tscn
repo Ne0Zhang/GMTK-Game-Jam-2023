@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://begbibl507llm"]
+[gd_scene load_steps=20 format=3 uid="uid://begbibl507llm"]
 
 [ext_resource type="Texture2D" uid="uid://gbg54yn7qb6v" path="res://Art Assets/Bomb Anim/1.png" id="1_604a2"]
 [ext_resource type="Script" path="res://Script/Dangerous Item/Bomb Behavior.gd" id="1_gpfsm"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://126ywv52e8b3" path="res://Art Assets/Bomb Anim/13.png" id="13_bliq0"]
 [ext_resource type="Texture2D" uid="uid://cx1i7pgyuubi3" path="res://Art Assets/Bomb Anim/14.png" id="14_cyrt2"]
 [ext_resource type="Texture2D" uid="uid://cel441a5ppo5j" path="res://Art Assets/Bomb Anim/15.png" id="15_fyo1w"]
+[ext_resource type="AudioStream" uid="uid://cbvvilcy3srhb" path="res://SFX Assets/Bomb SFX/Bomb.wav" id="17_b0158"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_m8g2l"]
 animations = [{
@@ -109,3 +110,6 @@ animation = &"Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bomb_2D"]
 shape = SubResource("CircleShape2D_3oiy3")
+
+[node name="Explode_Audio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("17_b0158")
