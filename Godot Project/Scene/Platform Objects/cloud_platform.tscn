@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://b7f56enibx3sv"]
+
+[ext_resource type="Script" path="res://Script/platform_move.gd" id="1_5aid7"]
+[ext_resource type="Script" path="res://Script/Cloud Platform/Cloud_Platform_Behavior.gd" id="2_w7hen"]
+[ext_resource type="Texture2D" uid="uid://pqmhs0v04dx7" path="res://Art Assets/Platform All Asset/Cloud Platform/cloud platform.png" id="3_rvdjt"]
+[ext_resource type="Script" path="res://Script/Main Game/Sprite_Control.gd" id="4_pobxg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0fqi1"]
+size = Vector2(200, 34.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_skh7q"]
+size = Vector2(40, 34)
+
+[node name="Cloud Platform" type="Node2D" groups=["platforms"]]
+script = ExtResource("1_5aid7")
+
+[node name="Cloud Platform Body" type="StaticBody2D" parent="."]
+collision_mask = 0
+script = ExtResource("2_w7hen")
+
+[node name="Cloud Platform Sprite" type="Sprite2D" parent="Cloud Platform Body"]
+position = Vector2(-7.62939e-06, -7.62939e-06)
+scale = Vector2(0.145, 0.145)
+texture = ExtResource("3_rvdjt")
+script = ExtResource("4_pobxg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cloud Platform Body"]
+position = Vector2(-28, 6.75)
+shape = SubResource("RectangleShape2D_0fqi1")
+
+[node name="CollisionShape2D(jump)" type="CollisionShape2D" parent="Cloud Platform Body"]
+position = Vector2(92, 7)
+shape = SubResource("RectangleShape2D_skh7q")

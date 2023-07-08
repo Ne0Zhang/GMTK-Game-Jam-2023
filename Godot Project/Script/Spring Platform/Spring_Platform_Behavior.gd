@@ -1,9 +1,9 @@
 extends StaticBody2D
 
 # Lower cap for the rotation
-@export var min_rotate = -60.0
+@export var min_rotate = -80.0
 # Upper cap for the rotation
-@export var max_rotate = 60.0
+@export var max_rotate = 80.0
 # Rotation Speed
 @export var rot_speed = 10
 # Current platform rotation
@@ -55,8 +55,8 @@ func _set_rotation(direction: float) -> void:
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	curr_rotate = 0.0
-	platform_sprite = get_node("Cloud Platform Sprite")
+	platform_sprite = get_node("Spring Platform Sprite")
 	platform_sprite._change_alpha(.45)
 	main_scene = get_node("/root/Main")
-	assoc_button = get_node("/root/Main/Button Collection/Cloud Spawn Button/Cloud Button")
+	assoc_button = get_node("/root/Main/Button Collection/Spring Spawn Button/Spring Button")
 	parent = get_owner()

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bt66k3ne0mrvk"
-path="res://.godot/imported/cloud platform button clicked.png-2706fa3aab066474630cc30ed3301688.ctex"
+uid="uid://d34o8evuag46e"
+path="res://.godot/imported/honey platform.png-5d6811ca70b05c47ac02c7dc9cd32a83.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art Assets/Cloud Platform/cloud platform button clicked.png"
-dest_files=["res://.godot/imported/cloud platform button clicked.png-2706fa3aab066474630cc30ed3301688.ctex"]
+source_file="res://Art Assets/Platform All Asset/Honey Platform/honey platform.png"
+dest_files=["res://.godot/imported/honey platform.png-5d6811ca70b05c47ac02c7dc9cd32a83.ctex"]
 
 [params]
 

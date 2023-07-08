@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://bnmsnbjsc7y1u"]
+
+[ext_resource type="Script" path="res://Script/platform_move.gd" id="1_3fspn"]
+[ext_resource type="Script" path="res://Script/Ice Platform/Ice_Platform_Behavior.gd" id="2_ke2uc"]
+[ext_resource type="Texture2D" uid="uid://ixettn6arwno" path="res://Art Assets/Platform All Asset/Ice Platform/ice platform.png" id="3_auodr"]
+[ext_resource type="Script" path="res://Script/Main Game/Sprite_Control.gd" id="4_7f1d7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0fqi1"]
+size = Vector2(224, 32)
+
+[node name="Ice Platform" type="Node2D" groups=["platforms"]]
+script = ExtResource("1_3fspn")
+
+[node name="Ice Platform Body" type="StaticBody2D" parent="."]
+collision_mask = 0
+script = ExtResource("2_ke2uc")
+
+[node name="Ice Platform Sprite" type="Sprite2D" parent="Ice Platform Body"]
+scale = Vector2(0.161, 0.161)
+texture = ExtResource("3_auodr")
+script = ExtResource("4_7f1d7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ice Platform Body"]
+shape = SubResource("RectangleShape2D_0fqi1")
