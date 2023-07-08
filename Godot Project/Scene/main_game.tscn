@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cgd27enmiaa3g"]
+[gd_scene load_steps=16 format=3 uid="uid://cgd27enmiaa3g"]
 
 [ext_resource type="Script" path="res://Script/Main Game/game_manager.gd" id="1_mi7fx"]
 [ext_resource type="Script" path="res://Script/Cloud Platform/Cloud Button.gd" id="2_igkno"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://crlkea8yl3plf" path="res://Art Assets/Platform All Asset/Spring Platform/spring platform button.png" id="7_bygdd"]
 [ext_resource type="Script" path="res://Script/Spring Platform/Spring Button.gd" id="9_b6y8p"]
 [ext_resource type="PackedScene" uid="uid://depbsan31sf51" path="res://Scene/player.tscn" id="13_rjp4p"]
+[ext_resource type="Script" path="res://Script/Main Game/Bomb Spawn Behavior.gd" id="15_48nm8"]
 [ext_resource type="Script" path="res://Script/Main Game/Fireball Spawn Behavior.gd" id="15_pukrx"]
 
 [node name="Main" type="Node"]
@@ -189,5 +190,43 @@ texture = ExtResource("4_orql0")
 position = Vector2(1800, -104)
 
 [node name="Sprite2D" type="Sprite2D" parent="Fireball Spawn/point4"]
+scale = Vector2(0.0542857, 0.0542857)
+texture = ExtResource("4_orql0")
+
+[node name="Bomb Spawn" type="Node" parent="."]
+script = ExtResource("15_48nm8")
+
+[node name="point1" type="Node2D" parent="Bomb Spawn"]
+position = Vector2(1992, 120)
+
+[node name="Sprite2D" type="Sprite2D" parent="Bomb Spawn/point1"]
+scale = Vector2(0.0542857, 0.0542857)
+texture = ExtResource("4_orql0")
+
+[node name="point2" type="Node2D" parent="Bomb Spawn"]
+position = Vector2(1992, 280)
+
+[node name="Sprite2D" type="Sprite2D" parent="Bomb Spawn/point2"]
+scale = Vector2(0.0542857, 0.0542857)
+texture = ExtResource("4_orql0")
+
+[node name="point3" type="Node2D" parent="Bomb Spawn"]
+position = Vector2(1992, 432)
+
+[node name="Sprite2D" type="Sprite2D" parent="Bomb Spawn/point3"]
+scale = Vector2(0.0542857, 0.0542857)
+texture = ExtResource("4_orql0")
+
+[node name="point4" type="Node2D" parent="Bomb Spawn"]
+position = Vector2(1992, 592)
+
+[node name="Sprite2D" type="Sprite2D" parent="Bomb Spawn/point4"]
+scale = Vector2(0.0542857, 0.0542857)
+texture = ExtResource("4_orql0")
+
+[node name="point5" type="Node2D" parent="Bomb Spawn"]
+position = Vector2(1992, 744)
+
+[node name="Sprite2D" type="Sprite2D" parent="Bomb Spawn/point5"]
 scale = Vector2(0.0542857, 0.0542857)
 texture = ExtResource("4_orql0")

@@ -5,6 +5,10 @@ var can_spawn = true
 var fireball_speed = 200.0
 var fireball_spawn_rate = 6.0 # seconds
 
+# Bomb Related Variables
+var bomb_speed = 200.0
+var bomb_spawn_rate = 4.0 # seconds
+
 # Platform Related Variables
 var platform_speed = 250
 
