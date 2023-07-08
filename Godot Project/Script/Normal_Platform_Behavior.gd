@@ -9,17 +9,13 @@ extends StaticBody2D
 # Current platform rotation
 @export var curr_rotate : float = 0.0
 
-
-# Read the mouse wheel input
 func _input(event):
 	if event is InputEventMouseButton:
-		print("IN")
-		if event.button_index == MOUSE_BUTTON_WHEEL_UP:
+		if Input.is_action_just_pressed("Rotate_Left"):
 			_set_rotation(1)
-		if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
+		if Input.is_action_just_pressed("Rotate_Right"):
 			_set_rotation(-1)
 
-# Store the variable and rotate the node
 func _set_rotation(direction: float) -> void:
 	curr_rotate += (direction * rot_speed)
 	if curr_rotate <= min_rotate: curr_rotate = min_rotate
@@ -30,10 +26,9 @@ func _set_rotation(direction: float) -> void:
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	rotation_degrees = 0.0
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass # Replace with function body.
+	pass
