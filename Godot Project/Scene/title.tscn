@@ -1,9 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://b2ekd215qfkml"]
+[gd_scene load_steps=5 format=3 uid="uid://bxw3ddgpa1qeu"]
 
 [ext_resource type="Script" path="res://Script/title.gd" id="1_5wpq2"]
 [ext_resource type="Texture2D" uid="uid://crv3538xavf3k" path="res://Art Assets/title/bg.png" id="2_lgood"]
 [ext_resource type="Texture2D" uid="uid://b602ux8n3yrj3" path="res://Art Assets/title/illust.PNG" id="3_sxw1y"]
-[ext_resource type="Theme" uid="uid://bt14k4hhojrju" path="res://theme.tres" id="4_dmw18"]
+[ext_resource type="Theme" uid="uid://ksvcksfif44k" path="res://theme.tres" id="4_dmw18"]
 
 [node name="Title" type="Control"]
 layout_mode = 3
@@ -26,14 +26,15 @@ layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.0
 texture = ExtResource("3_sxw1y")
-expand_mode = 1
+expand_mode = 3
+stretch_mode = 4
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
 offset_left = 509.0
-offset_top = 478.0
+offset_top = 518.0
 offset_right = 1065.0
-offset_bottom = 559.0
+offset_bottom = 599.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
 layout_mode = 2

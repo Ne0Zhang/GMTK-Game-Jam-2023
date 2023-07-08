@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://7lxob5m63we4"]
+
+[ext_resource type="Script" path="res://Script/Normal_Platform_Behavior.gd" id="1_451gr"]
+[ext_resource type="Texture2D" path="res://Art Assets/Demo/TestPlatform.png" id="1_tonla"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dptft"]
+size = Vector2(384, 80)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+script = ExtResource("1_451gr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(9.5, 9.5)
+texture = ExtResource("1_tonla")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_dptft")

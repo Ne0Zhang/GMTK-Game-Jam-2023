@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://8rcwypn8v1tf"]
+[gd_scene load_steps=5 format=3 uid="uid://b7sresh6udp8r"]
 
 [ext_resource type="Script" path="res://Script/tutorial.gd" id="1_e65rn"]
 [ext_resource type="Texture2D" uid="uid://crv3538xavf3k" path="res://Art Assets/title/bg.png" id="2_0t4np"]
-[ext_resource type="Theme" uid="uid://bt14k4hhojrju" path="res://theme.tres" id="2_80ypa"]
+[ext_resource type="Theme" uid="uid://ksvcksfif44k" path="res://theme.tres" id="2_80ypa"]
+[ext_resource type="Texture2D" uid="uid://b602ux8n3yrj3" path="res://Art Assets/title/illust.PNG" id="3_l7t2a"]
 
 [node name="tutorial" type="Control"]
 layout_mode = 3
@@ -20,11 +21,20 @@ offset_bottom = 648.0
 texture = ExtResource("2_0t4np")
 expand_mode = 1
 
+[node name="illust" type="TextureRect" parent="."]
+layout_mode = 2
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("3_l7t2a")
+expand_mode = 1
+stretch_mode = 4
+
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_left = 5.11
-offset_right = 89.11
-offset_bottom = 47.0
+offset_left = 35.0
+offset_top = 559.0
+offset_right = 145.0
+offset_bottom = 618.0
 
 [node name="back" type="Button" parent="MarginContainer"]
 layout_mode = 2
