@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bxw3ddgpa1qeu"]
+[gd_scene load_steps=6 format=3 uid="uid://bxw3ddgpa1qeu"]
 
 [ext_resource type="Script" path="res://Script/title.gd" id="1_5wpq2"]
 [ext_resource type="Texture2D" uid="uid://crv3538xavf3k" path="res://Art Assets/title/bg.png" id="2_lgood"]
 [ext_resource type="Texture2D" uid="uid://b602ux8n3yrj3" path="res://Art Assets/title/illust.PNG" id="3_sxw1y"]
 [ext_resource type="Theme" uid="uid://ksvcksfif44k" path="res://theme.tres" id="4_dmw18"]
+[ext_resource type="AudioStream" uid="uid://cmthfudfy0stu" path="res://Sound Assets/The_Amazing_Goob_Theme.wav" id="5_r5i8j"]
 
 [node name="Title" type="Control"]
 layout_mode = 3
@@ -63,6 +64,11 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("4_dmw18")
 text = "Credits"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_r5i8j")
+volume_db = -6.66
+autoplay = true
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/Tutorial" to="." method="_on_tutorial_pressed"]

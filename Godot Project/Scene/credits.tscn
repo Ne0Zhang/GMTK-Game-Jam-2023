@@ -1,8 +1,27 @@
-[gd_scene load_steps=4 format=3 uid="uid://pvr7ned0itew"]
+[gd_scene load_steps=8 format=3 uid="uid://pvr7ned0itew"]
 
 [ext_resource type="Texture2D" uid="uid://crv3538xavf3k" path="res://Art Assets/title/bg.png" id="1_epkcm"]
 [ext_resource type="Theme" uid="uid://ksvcksfif44k" path="res://theme.tres" id="1_utfub"]
 [ext_resource type="Texture2D" uid="uid://b602ux8n3yrj3" path="res://Art Assets/title/illust.PNG" id="2_kqbn8"]
+[ext_resource type="Script" path="res://Script/tutorial.gd" id="4_fqsf3"]
+[ext_resource type="FontFile" uid="uid://capvxe8dvs2ae" path="res://Font/Nice Sugar.ttf" id="4_prmlm"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5133e"]
+font = ExtResource("4_prmlm")
+font_size = 50
+font_color = Color(0.360784, 0.32549, 0.470588, 1)
+outline_size = 17
+outline_color = Color(0.992157, 0.976471, 0.933333, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_4vgfd"]
+line_spacing = 19.0
+font = ExtResource("4_prmlm")
+font_size = 30
+font_color = Color(0.360784, 0.32549, 0.470588, 1)
+outline_size = 10
+outline_color = Color(0.992157, 0.976471, 0.933333, 1)
+shadow_size = 0
+shadow_color = Color(0.992188, 0.976563, 0.933594, 1)
 
 [node name="credits" type="Control"]
 layout_mode = 3
@@ -11,6 +30,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("4_fqsf3")
 
 [node name="bg" type="TextureRect" parent="."]
 layout_mode = 0
@@ -25,14 +45,39 @@ offset_bottom = 648.0
 texture = ExtResource("2_kqbn8")
 expand_mode = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 0
+[node name="back" type="Button" parent="."]
+layout_mode = 2
 offset_left = 35.0
 offset_top = 559.0
 offset_right = 145.0
 offset_bottom = 618.0
-
-[node name="back" type="Button" parent="MarginContainer"]
-layout_mode = 2
 theme = ExtResource("1_utfub")
 text = "Back"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 528.0
+offset_top = 118.0
+offset_right = 1103.0
+offset_bottom = 523.0
+
+[node name="credits" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Credits"
+label_settings = SubResource("LabelSettings_5133e")
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 29
+
+[node name="names" type="Label" parent="VBoxContainer/MarginContainer"]
+layout_mode = 2
+text = "Ryan
+Brendan Kitchen
+Ashley Lu
+Crystal Wong
+Issy Wong
+Neo Zhang"
+label_settings = SubResource("LabelSettings_4vgfd")
+
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
