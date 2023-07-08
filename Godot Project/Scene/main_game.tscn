@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dsvunjendf0oh"]
+[gd_scene load_steps=5 format=3 uid="uid://dsvunjendf0oh"]
 
 [ext_resource type="Script" path="res://Script/Main Game/game_manager.gd" id="1_mi7fx"]
 [ext_resource type="Texture2D" uid="uid://ccqmwudhu5qx" path="res://Art Assets/Cloud Platform/cloud platform button.png" id="1_r1uai"]
 [ext_resource type="Script" path="res://Script/Cloud Platform/Cloud Button.gd" id="2_igkno"]
+[ext_resource type="Texture2D" uid="uid://b264fak4f67hd" path="res://Art Assets/Demo/TestPlatform.png" id="4_dk6yq"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_mi7fx")
@@ -12,7 +13,12 @@ script = ExtResource("1_mi7fx")
 [node name="Cloud Spawn Button" type="Node2D" parent="."]
 
 [node name="Cloud Button" type="Sprite2D" parent="Cloud Spawn Button"]
-position = Vector2(1048, 552)
+position = Vector2(568, 592)
 scale = Vector2(0.05, 0.05)
 texture = ExtResource("1_r1uai")
 script = ExtResource("2_igkno")
+
+[node name="Border" type="Sprite2D" parent="."]
+position = Vector2(300, 340)
+scale = Vector2(0.2, 82.5)
+texture = ExtResource("4_dk6yq")
