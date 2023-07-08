@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cgd27enmiaa3g"]
+[gd_scene load_steps=14 format=3 uid="uid://cgd27enmiaa3g"]
 
 [ext_resource type="Script" path="res://Script/Main Game/game_manager.gd" id="1_mi7fx"]
 [ext_resource type="Script" path="res://Script/Cloud Platform/Cloud Button.gd" id="2_igkno"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" path="res://Script/Ice Platform/Ice Button.gd" id="7_8liqf"]
 [ext_resource type="Texture2D" uid="uid://crlkea8yl3plf" path="res://Art Assets/Platform All Asset/Spring Platform/spring platform button.png" id="7_bygdd"]
 [ext_resource type="Script" path="res://Script/Spring Platform/Spring Button.gd" id="9_b6y8p"]
+[ext_resource type="PackedScene" uid="uid://depbsan31sf51" path="res://Scene/player.tscn" id="13_rjp4p"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_mi7fx")
@@ -21,9 +22,9 @@ script = ExtResource("1_mi7fx")
 [node name="Button Collection" type="Node" parent="."]
 
 [node name="Container" type="Sprite2D" parent="Button Collection"]
-position = Vector2(0, 864)
-scale = Vector2(1.17073, 0.325301)
-texture = ExtResource("2_ym6vp")
+position = Vector2(0, 856)
+scale = Vector2(1.5, 0.311111)
+texture = ExtResource("2_lqkmu")
 centered = false
 
 [node name="Cloud Spawn Button" type="Node2D" parent="Button Collection"]
@@ -152,3 +153,7 @@ theme_type_variation = &"HeaderLarge"
 text = "1"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Player" parent="." instance=ExtResource("13_rjp4p")]
+position = Vector2(452, 404)
+gravity_scale = 0.0

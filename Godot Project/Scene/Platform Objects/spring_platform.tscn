@@ -8,10 +8,11 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0fqi1"]
 size = Vector2(192, 26.5)
 
-[node name="Spring Platform" type="Node2D"]
+[node name="Spring Platform" type="Node2D" groups=["platforms"]]
 script = ExtResource("1_pk0qi")
 
 [node name="Spring Platform Body" type="StaticBody2D" parent="."]
+collision_mask = 0
 script = ExtResource("2_vkxfm")
 
 [node name="Spring Platform Sprite" type="Sprite2D" parent="Spring Platform Body"]
