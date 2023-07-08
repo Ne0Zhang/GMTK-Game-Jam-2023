@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://capvxe8dvs2ae"
-path="res://.godot/imported/Nice Sugar.ttf-dfcd00f6ae1919950eb4122cd3e0bcbf.fontdata"
+path="res://.godot/imported/Nice Sugar.ttf-094164bfe9a2c67a0886d9abda7d7c7a.fontdata"
 
 [deps]
 
-source_file="res://Art Assets/Nice Sugar.ttf"
-dest_files=["res://.godot/imported/Nice Sugar.ttf-dfcd00f6ae1919950eb4122cd3e0bcbf.fontdata"]
+source_file="res://Font/Nice Sugar.ttf"
+dest_files=["res://.godot/imported/Nice Sugar.ttf-094164bfe9a2c67a0886d9abda7d7c7a.fontdata"]
 
 [params]
 
