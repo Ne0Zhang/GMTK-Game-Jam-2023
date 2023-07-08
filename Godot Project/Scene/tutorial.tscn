@@ -1,10 +1,61 @@
-[gd_scene load_steps=6 format=3 uid="uid://b7sresh6udp8r"]
+[gd_scene load_steps=19 format=3 uid="uid://b7sresh6udp8r"]
 
 [ext_resource type="Script" path="res://Script/tutorial.gd" id="1_e65rn"]
 [ext_resource type="Texture2D" uid="uid://crv3538xavf3k" path="res://Art Assets/title/bg.png" id="2_0t4np"]
 [ext_resource type="Theme" uid="uid://dbhkb8xxcoj7t" path="res://theme.tres" id="2_80ypa"]
 [ext_resource type="Texture2D" uid="uid://b602ux8n3yrj3" path="res://Art Assets/title/illust.PNG" id="3_l7t2a"]
 [ext_resource type="Texture2D" uid="uid://cly0uvupq18bm" path="res://Art Assets/title/mouse.PNG" id="5_pjtgq"]
+[ext_resource type="Texture2D" uid="uid://d03jjih4pqkxo" path="res://Art Assets/title/rotate.PNG" id="6_rpn0o"]
+[ext_resource type="Texture2D" uid="uid://dv03w3voowbwp" path="res://Art Assets/title/move.PNG" id="7_crf5l"]
+[ext_resource type="FontFile" uid="uid://capvxe8dvs2ae" path="res://Font/Nice Sugar.ttf" id="8_vawgu"]
+[ext_resource type="Texture2D" uid="uid://ce65fs6vjooje" path="res://Art Assets/title/run/1.png" id="9_73qli"]
+[ext_resource type="Texture2D" uid="uid://bcflumqc5qshy" path="res://Art Assets/title/run/2.png" id="10_83jq4"]
+[ext_resource type="Texture2D" uid="uid://crevevmhsf2p" path="res://Art Assets/title/run/3.png" id="11_hsv60"]
+[ext_resource type="Texture2D" uid="uid://cy1ycs26iybfm" path="res://Art Assets/title/run/4.png" id="12_0317a"]
+[ext_resource type="Texture2D" uid="uid://btk67cnyuke8g" path="res://Art Assets/title/run/5.png" id="13_o78h4"]
+[ext_resource type="Texture2D" uid="uid://cfoiejuyiggjv" path="res://Art Assets/title/run/6.png" id="14_p2lj5"]
+[ext_resource type="Texture2D" uid="uid://ck0du1reehjtq" path="res://Art Assets/title/run/7.png" id="15_61kmo"]
+[ext_resource type="Texture2D" uid="uid://8mw5ag0rdh0n" path="res://Art Assets/title/run/8.png" id="16_katc1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8wubl"]
+font = ExtResource("8_vawgu")
+font_size = 50
+font_color = Color(0.360784, 0.32549, 0.470588, 1)
+outline_size = 25
+outline_color = Color(0.992157, 0.976471, 0.933333, 1)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b0l6t"]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_73qli")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_83jq4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_hsv60")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_0317a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_o78h4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_p2lj5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_61kmo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_katc1")
+}],
+"loop": true,
+"name": &"run",
+"speed": 12.0
+}]
 
 [node name="tutorial" type="Control"]
 layout_mode = 3
@@ -30,40 +81,90 @@ texture = ExtResource("3_l7t2a")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 0
-offset_left = 50.0
-offset_top = 970.0
-offset_right = 185.0
-offset_bottom = 1042.0
-
-[node name="back" type="Button" parent="MarginContainer"]
-layout_mode = 2
-theme = ExtResource("2_80ypa")
-text = "Back"
-
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="mouse" type="TextureRect" parent="."]
 layout_mode = 1
-anchors_preset = 11
-anchor_left = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -691.0
-offset_top = 93.0
-offset_right = -77.0
-offset_bottom = -462.0
-grow_horizontal = 0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -961.0
+offset_top = -482.0
+offset_right = 959.0
+offset_bottom = 598.0
+grow_horizontal = 2
 grow_vertical = 2
-
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
 texture = ExtResource("5_pjtgq")
+stretch_mode = 4
+
+[node name="rotate" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -224.0
+offset_top = -213.0
+offset_right = 1122.0
+offset_bottom = 867.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.380482
+pivot_offset = Vector2(-10, 0)
+texture = ExtResource("6_rpn0o")
+expand_mode = 1
+stretch_mode = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="move" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -534.0
+offset_top = -559.0
+offset_right = 812.0
+offset_bottom = 342.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_crf5l")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="TextEdit" type="TextEdit" parent="HBoxContainer"]
+[node name="rotatePlatform" type="Label" parent="."]
 layout_mode = 2
-text = "Rotate platform"
+offset_left = 1370.0
+offset_top = 265.0
+offset_right = 1977.0
+offset_bottom = 366.0
+text = "2. Rotate platform"
+label_settings = SubResource("LabelSettings_8wubl")
 
-[connection signal="pressed" from="MarginContainer/back" to="." method="_on_back_pressed"]
+[node name="movePlatform" type="Label" parent="."]
+layout_mode = 2
+offset_left = 843.0
+offset_top = 524.0
+offset_right = 1450.0
+offset_bottom = 625.0
+text = "1. Place platform"
+label_settings = SubResource("LabelSettings_8wubl")
+
+[node name="bean" type="AnimatedSprite2D" parent="."]
+position = Vector2(1072, 318)
+scale = Vector2(0.21725, 0.21725)
+sprite_frames = SubResource("SpriteFrames_b0l6t")
+animation = &"run"
+frame_progress = 0.127993
+
+[node name="back" type="Button" parent="."]
+offset_left = 50.0
+offset_top = 970.0
+offset_right = 191.0
+offset_bottom = 1048.0
+theme = ExtResource("2_80ypa")
+text = "Back"
+
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
