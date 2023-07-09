@@ -26,7 +26,10 @@ func _ready():
 
 func slow_platforms():
 	get_node("/root/Main").platform_speed = speed/5
+	get_node("/root/Main/Player").velocity /= 3
+	get_node("/root/Main/Player").gravity = 0
 
 
 func reset_platform_speeds():
 	get_node("/root/Main").platform_speed = speed
+	get_node("/root/Main/Player").gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
