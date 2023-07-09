@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bqc6jqpdn2l0p"
-path="res://.godot/imported/The_Amazing_Goob_Theme.wav-a4052a1b61a3326df6ecb6ee5cb0e8d8.sample"
+path="res://.godot/imported/The_Amazing_Goob_Theme.wav-10134c18930bf06dad48729e220cf8b5.sample"
 
 [deps]
 
-source_file="res://SFX Assets/The_Amazing_Goob_Theme.wav"
-dest_files=["res://.godot/imported/The_Amazing_Goob_Theme.wav-a4052a1b61a3326df6ecb6ee5cb0e8d8.sample"]
+source_file="res://SFX Assets/Music/The_Amazing_Goob_Theme.wav"
+dest_files=["res://.godot/imported/The_Amazing_Goob_Theme.wav-10134c18930bf06dad48729e220cf8b5.sample"]
 
 [params]
 
