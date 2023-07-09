@@ -1,5 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://cgd27enmiaa3g"]
-
+[gd_scene load_steps=24 format=3 uid="uid://cgd27enmiaa3g"]
 
 [ext_resource type="Script" path="res://Script/Main Game/game_manager.gd" id="1_mi7fx"]
 [ext_resource type="Script" path="res://Script/Main Game/Score Keeper.gd" id="2_4ksrg"]
@@ -23,6 +22,7 @@
 [ext_resource type="Script" path="res://Script/Main Game/Bomb Spawn Behavior.gd" id="15_48nm8"]
 [ext_resource type="Script" path="res://Script/Main Game/Fireball Spawn Behavior.gd" id="15_pukrx"]
 [ext_resource type="PackedScene" uid="uid://cqblef1c5wm0q" path="res://Scene/Dangerous/trap_cloud.tscn" id="22_7cl75"]
+[ext_resource type="PackedScene" uid="uid://dcc4hu813eyvv" path="res://Scene/Platform Objects/test_start_platform.tscn" id="23_m86g0"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_mi7fx")
@@ -245,8 +245,7 @@ region_enabled = true
 region_rect = Rect2(5.54103, 1.76989, 1.7567, 1.7567)
 
 [node name="Player" parent="." instance=ExtResource("13_rjp4p")]
-position = Vector2(752, 520)
-gravity_scale = 0.0
+position = Vector2(728, 680)
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
@@ -300,3 +299,6 @@ text = "1"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
+
+[node name="Test_Start_Platform" parent="." instance=ExtResource("23_m86g0")]
+position = Vector2(672, 768)
