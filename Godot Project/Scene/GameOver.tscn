@@ -1,12 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://0mvc88qey3ld"]
+[gd_scene load_steps=6 format=3 uid="uid://rj2ebqbx5a6j"]
 
 [ext_resource type="Texture2D" uid="uid://bodq1j05l77ao" path="res://Art Assets/Background/Untitled_Artwork (2).png" id="1_1btyi"]
+[ext_resource type="LabelSettings" uid="uid://be0cgrceor0gt" path="res://Font/header_label.tres" id="2_21ybt"]
 [ext_resource type="Script" path="res://Script/Cont Button.gd" id="2_i3id2"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_jp8xu"]
-font_size = 101
-font_color = Color(0.239216, 0.239216, 0.239216, 1)
-outline_size = 30
+[ext_resource type="Theme" uid="uid://bq7d64u184nub" path="res://theme.tres" id="3_rcmp1"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_iyiig"]
 font_size = 51
@@ -18,17 +15,17 @@ texture = ExtResource("1_1btyi")
 centered = false
 
 [node name="Label" type="Label" parent="."]
-anchors_preset = -1
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -472.0
-offset_top = -364.0
+offset_top = -222.685
 offset_right = 472.0
-offset_bottom = -172.0
+offset_bottom = -30.685
 text = "GAME OVER"
-label_settings = SubResource("LabelSettings_jp8xu")
+label_settings = ExtResource("2_21ybt")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -37,11 +34,14 @@ offset_left = 688.0
 offset_top = 560.0
 offset_right = 1232.0
 offset_bottom = 672.0
+theme = ExtResource("3_rcmp1")
 action_mode = 0
+text = "Again!"
 icon_alignment = 1
 script = ExtResource("2_i3id2")
 
 [node name="Label" type="Label" parent="Button"]
+visible = false
 layout_mode = 0
 offset_right = 544.0
 offset_bottom = 112.0
