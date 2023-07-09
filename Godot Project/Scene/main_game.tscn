@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cgd27enmiaa3g"]
+[gd_scene load_steps=17 format=3 uid="uid://cgd27enmiaa3g"]
 
 [ext_resource type="Script" path="res://Script/Main Game/game_manager.gd" id="1_mi7fx"]
 [ext_resource type="Script" path="res://Script/Cloud Platform/Cloud Button.gd" id="2_igkno"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://depbsan31sf51" path="res://Scene/player.tscn" id="13_rjp4p"]
 [ext_resource type="Script" path="res://Script/Main Game/Bomb Spawn Behavior.gd" id="15_48nm8"]
 [ext_resource type="Script" path="res://Script/Main Game/Fireball Spawn Behavior.gd" id="15_pukrx"]
+[ext_resource type="PackedScene" uid="uid://b8kwwbb5w86v3" path="res://Scene/Collectable/Honey Orb.tscn" id="16_eqjyc"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_mi7fx")
@@ -230,3 +231,6 @@ theme_type_variation = &"HeaderLarge"
 text = "1"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Honey Orb" parent="." instance=ExtResource("16_eqjyc")]
+position = Vector2(1176, 424)
