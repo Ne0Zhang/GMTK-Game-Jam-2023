@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bodq1j05l77ao" path="res://Art Assets/Background/Untitled_Artwork (2).png" id="1_1btyi"]
 [ext_resource type="LabelSettings" uid="uid://be0cgrceor0gt" path="res://Font/header_label.tres" id="2_21ybt"]
 [ext_resource type="Script" path="res://Script/Cont Button.gd" id="2_i3id2"]
-[ext_resource type="Theme" uid="uid://bq7d64u184nub" path="res://theme.tres" id="3_rcmp1"]
+[ext_resource type="Theme" uid="uid://yduw1j5oobvc" path="res://theme.tres" id="3_rcmp1"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_iyiig"]
 font_size = 51

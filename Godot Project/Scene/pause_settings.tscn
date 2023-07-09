@@ -1,8 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cmskaqu4vxfvy"]
+[gd_scene load_steps=5 format=3 uid="uid://ci2pgwvyy4agr"]
 
 [ext_resource type="Script" path="res://Script/pause_settings.gd" id="1_d1k86"]
 [ext_resource type="LabelSettings" uid="uid://be0cgrceor0gt" path="res://Font/header_label.tres" id="2_unt3t"]
-[ext_resource type="Theme" uid="uid://bq7d64u184nub" path="res://theme.tres" id="3_c7aft"]
+[ext_resource type="Theme" uid="uid://yduw1j5oobvc" path="res://theme.tres" id="3_c7aft"]
 [ext_resource type="Script" path="res://Script/UI/volume_slider.gd" id="5_tgjta"]
 
 [node name="Pause Settings" type="Control"]

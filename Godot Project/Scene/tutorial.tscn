@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Script/tutorial.gd" id="1_e65rn"]
 [ext_resource type="Texture2D" path="res://Art Assets/title/bg.png" id="2_0t4np"]
-[ext_resource type="Theme" uid="uid://bq7d64u184nub" path="res://theme.tres" id="2_80ypa"]
+[ext_resource type="Theme" uid="uid://yduw1j5oobvc" path="res://theme.tres" id="2_80ypa"]
 [ext_resource type="Texture2D" path="res://Art Assets/title/illust.PNG" id="3_l7t2a"]
 [ext_resource type="Texture2D" path="res://Art Assets/title/mouse.PNG" id="5_pjtgq"]
 [ext_resource type="Texture2D" path="res://Art Assets/title/rotate.PNG" id="6_rpn0o"]
@@ -16,8 +16,8 @@
 [ext_resource type="Texture2D" path="res://Art Assets/title/run/6.png" id="14_p2lj5"]
 [ext_resource type="Texture2D" path="res://Art Assets/title/run/7.png" id="15_61kmo"]
 [ext_resource type="Texture2D" path="res://Art Assets/title/run/8.png" id="16_katc1"]
-[ext_resource type="PackedScene" uid="uid://jpajjrdgfc2d" path="res://Scene/options.tscn" id="17_q670j"]
-[ext_resource type="PackedScene" uid="uid://cmskaqu4vxfvy" path="res://Scene/pause_settings.tscn" id="18_0bicv"]
+[ext_resource type="PackedScene" uid="uid://dsirr5j21gqwm" path="res://Scene/options.tscn" id="17_q670j"]
+[ext_resource type="PackedScene" uid="uid://ci2pgwvyy4agr" path="res://Scene/pause_settings.tscn" id="18_0bicv"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_8wubl"]
 font = ExtResource("8_vawgu")

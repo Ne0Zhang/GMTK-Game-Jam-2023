@@ -1,13 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://df3c186bixc3a"]
+[gd_scene load_steps=10 format=3 uid="uid://buvxig5qvo13g"]
 
 [ext_resource type="Texture2D" path="res://Art Assets/title/bg.png" id="1_epkcm"]
 [ext_resource type="Script" path="res://Script/credits.gd" id="1_mvao5"]
-[ext_resource type="Theme" uid="uid://bq7d64u184nub" path="res://theme.tres" id="1_utfub"]
+[ext_resource type="Theme" uid="uid://yduw1j5oobvc" path="res://theme.tres" id="1_utfub"]
 [ext_resource type="Texture2D" path="res://Art Assets/title/illust.PNG" id="2_kqbn8"]
 [ext_resource type="FontFile" uid="uid://capvxe8dvs2ae" path="res://Font/Nice Sugar.ttf" id="4_prmlm"]
 [ext_resource type="LabelSettings" uid="uid://be0cgrceor0gt" path="res://Font/header_label.tres" id="5_jpdrp"]
-[ext_resource type="PackedScene" uid="uid://jpajjrdgfc2d" path="res://Scene/options.tscn" id="7_cy6ji"]
-[ext_resource type="PackedScene" uid="uid://cmskaqu4vxfvy" path="res://Scene/pause_settings.tscn" id="8_6adl8"]
+[ext_resource type="PackedScene" uid="uid://dsirr5j21gqwm" path="res://Scene/options.tscn" id="7_cy6ji"]
+[ext_resource type="PackedScene" uid="uid://ci2pgwvyy4agr" path="res://Scene/pause_settings.tscn" id="8_6adl8"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4vgfd"]
 line_spacing = 46.0
