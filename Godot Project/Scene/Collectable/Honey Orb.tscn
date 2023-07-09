@@ -1,20 +1,95 @@
-[gd_scene load_steps=4 format=3 uid="uid://b8kwwbb5w86v3"]
+[gd_scene load_steps=19 format=3 uid="uid://b8kwwbb5w86v3"]
 
-[ext_resource type="Script" path="res://Script/Honey Platform/Honey Orb Behavior.gd" id="1_ehgjl"]
-[ext_resource type="Texture2D" uid="uid://cbtwmthooexoq" path="res://Art Assets/Platform All Asset/Honey Platform/honey pot icon.png" id="1_ok87y"]
+[ext_resource type="Script" path="res://Script/Main Game/Orb Behavior.gd" id="1_tbe0j"]
+[ext_resource type="Texture2D" uid="uid://qqcrec0gw8ha" path="res://Art Assets/Platform All Asset/Honey Platform/honey icon.png" id="2_ox1y1"]
+[ext_resource type="Texture2D" uid="uid://c6vkcqo6xxmel" path="res://Art Assets/Honey Bubble Anim/1.png" id="3_dqvmw"]
+[ext_resource type="AudioStream" uid="uid://wweeo20hnavn" path="res://SFX Assets/BubblePop.wav" id="3_dsah1"]
+[ext_resource type="Texture2D" uid="uid://besihb7fhu80h" path="res://Art Assets/Honey Bubble Anim/2.png" id="4_eqr47"]
+[ext_resource type="Texture2D" uid="uid://dwy85saynl53c" path="res://Art Assets/Honey Bubble Anim/3.png" id="5_uhoys"]
+[ext_resource type="Texture2D" uid="uid://cpafo1liibokb" path="res://Art Assets/Honey Bubble Anim/4.png" id="6_6uyvf"]
+[ext_resource type="Texture2D" uid="uid://d01qeektmn8pg" path="res://Art Assets/Honey Bubble Anim/5.png" id="7_3akmm"]
+[ext_resource type="Texture2D" uid="uid://cc3xjyfl476oq" path="res://Art Assets/Honey Bubble Anim/6.png" id="8_ih06q"]
+[ext_resource type="Texture2D" uid="uid://dls5hkytde5kc" path="res://Art Assets/Honey Bubble Anim/7.png" id="9_ckx4l"]
+[ext_resource type="Texture2D" uid="uid://dypwf7vdtb7uv" path="res://Art Assets/Honey Bubble Anim/8.png" id="10_ovg5c"]
+[ext_resource type="Texture2D" uid="uid://cpuwev0v1sh3n" path="res://Art Assets/Honey Bubble Anim/9.png" id="11_cg61y"]
+[ext_resource type="Texture2D" uid="uid://dy4o36j2qnube" path="res://Art Assets/Honey Bubble Anim/10.png" id="12_qxp14"]
+[ext_resource type="Texture2D" uid="uid://urknk8ymgqxc" path="res://Art Assets/Honey Bubble Anim/11.png" id="13_pmv3l"]
+[ext_resource type="Texture2D" uid="uid://cyb6u7wrfjlhj" path="res://Art Assets/Honey Bubble Anim/12.png" id="14_4xqx1"]
+[ext_resource type="Texture2D" uid="uid://17kjscitwn5s" path="res://Art Assets/Honey Bubble Anim/13.png" id="15_0nysy"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_on50p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ox1y1")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_dqvmw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_eqr47")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_uhoys")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6uyvf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_3akmm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ih06q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ckx4l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ovg5c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_cg61y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_qxp14")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_pmv3l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_4xqx1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_0nysy")
+}],
+"loop": false,
+"name": &"Pop",
+"speed": 18.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_k31l3"]
 radius = 40.0
 
-[node name="Honey Orb" type="Node2D"]
-script = ExtResource("1_ehgjl")
+[node name="Honey_Orb_2D" type="Area2D" node_paths=PackedStringArray("anim_node")]
+script = ExtResource("1_tbe0j")
+type = "honey"
+anim_node = NodePath("Honey_Orb_Sprite_Anim")
 
-[node name="Honey_Orb_2D" type="Area2D" parent="."]
+[node name="Honey_Orb_Sprite_Anim" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_on50p")
+animation = &"Pop"
 
-[node name="Honey_Orb_Icon" type="Sprite2D" parent="Honey_Orb_2D"]
-position = Vector2(4.76837e-07, 4.76837e-07)
-scale = Vector2(0.076, 0.076)
-texture = ExtResource("1_ok87y")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Honey_Orb_2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_k31l3")
+one_way_collision_margin = 3.0
+
+[node name="Pop_Audio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_dsah1")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
