@@ -111,6 +111,7 @@ expand_mode = 3
 stretch_mode = 4
 
 [node name="Title Screen" type="Control" parent="."]
+visible = false
 anchors_preset = 0
 
 [node name="logo" type="TextureRect" parent="Title Screen"]
@@ -165,10 +166,20 @@ theme = ExtResource("4_dmw18")
 text = "Quit"
 
 [node name="tutorial" type="Control" parent="."]
+visible = false
 anchors_preset = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 script = ExtResource("7_clrsc")
+
+[node name="bg2" type="ColorRect" parent="tutorial"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.945098, 0.929412, 0.976471, 0.470588)
 
 [node name="mouse" type="TextureRect" parent="tutorial"]
 layout_mode = 1
@@ -327,10 +338,18 @@ theme = ExtResource("4_dmw18")
 text = "Back"
 
 [node name="credits" type="Control" parent="."]
-visible = false
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="bg2" type="ColorRect" parent="credits"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.945098, 0.929412, 0.976471, 0.470588)
 
 [node name="backFromCredits" type="Button" parent="credits"]
 layout_mode = 0
@@ -348,10 +367,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 134.0
-offset_top = 115.5
-offset_right = 1746.0
-offset_bottom = 924.5
+offset_left = -832.5
+offset_top = -404.5
+offset_right = 832.5
+offset_bottom = 404.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 72
