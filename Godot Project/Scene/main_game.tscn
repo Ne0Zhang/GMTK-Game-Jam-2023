@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cgd27enmiaa3g"]
+[gd_scene load_steps=15 format=3 uid="uid://cgd27enmiaa3g"]
 
 [ext_resource type="Script" path="res://Script/Main Game/game_manager.gd" id="1_mi7fx"]
 [ext_resource type="Script" path="res://Script/Cloud Platform/Cloud Button.gd" id="2_igkno"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://crlkea8yl3plf" path="res://Art Assets/Platform All Asset/Spring Platform/spring platform button.png" id="7_bygdd"]
 [ext_resource type="Script" path="res://Script/Spring Platform/Spring Button.gd" id="9_b6y8p"]
 [ext_resource type="PackedScene" uid="uid://depbsan31sf51" path="res://Scene/player.tscn" id="13_rjp4p"]
+[ext_resource type="PackedScene" uid="uid://dcc4hu813eyvv" path="res://Scene/Platform Objects/test_start_platform.tscn" id="14_3qy4i"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_mi7fx")
@@ -155,5 +156,8 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Player" parent="." instance=ExtResource("13_rjp4p")]
-position = Vector2(452, 404)
-gravity_scale = 0.0
+position = Vector2(360, 680)
+max_contacts_reported = 1
+
+[node name="Test_Start_Platform" parent="." instance=ExtResource("14_3qy4i")]
+position = Vector2(384, 816)
