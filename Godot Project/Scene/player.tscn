@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://depbsan31sf51"]
+[gd_scene load_steps=61 format=3 uid="uid://depbsan31sf51"]
 
 [ext_resource type="Script" path="res://Script/player.gd" id="1_fet1r"]
 [ext_resource type="Texture2D" uid="uid://ckasics2cwwih" path="res://Art Assets/Goob/jump/1.png" id="2_bv4j7"]
@@ -53,11 +53,10 @@
 [ext_resource type="Texture2D" uid="uid://41pg4xwbmi2l" path="res://Art Assets/Goob/Poof/10.png" id="33_qvvgm"]
 [ext_resource type="Texture2D" uid="uid://clkyg8nghkdv1" path="res://Art Assets/Goob/Poof/11.png" id="34_7f6lo"]
 [ext_resource type="Texture2D" uid="uid://ba6oom51gmyqo" path="res://Art Assets/Goob/Poof/12.png" id="35_2ohg3"]
-[ext_resource type="AudioStream" uid="uid://q2jnwyreopug" path="res://SFX Assets/Player/WalkingOnClouds.wav" id="54_d367b"]
 [ext_resource type="AudioStream" uid="uid://b4bb3gpbay2ru" path="res://SFX Assets/Player/Jump.wav" id="55_itua5"]
 [ext_resource type="AudioStream" uid="uid://lk6b171vjm7m" path="res://SFX Assets/Platform/IceSlideFINAL.wav" id="56_y3hlk"]
+[ext_resource type="AudioStream" uid="uid://bxkkkyrc3qlmw" path="res://SFX Assets/Platform/HoneyBlockCollisionFINAL.wav" id="57_j8gai"]
 [ext_resource type="AudioStream" uid="uid://bckeit4chb8eb" path="res://SFX Assets/Platform/SpringFINAL.wav" id="57_ky1rt"]
-[ext_resource type="AudioStream" uid="uid://b2oelr36d0vb7" path="res://SFX Assets/Platform/HoneyBlockCollision.wav" id="58_e3lgw"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g7vde"]
 animations = [{
@@ -295,7 +294,7 @@ frame = 13
 frame_progress = 1.0
 
 [node name="PlayerWalk" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("54_d367b")
+volume_db = 15.0
 
 [node name="PlayerJump" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("55_itua5")
@@ -307,4 +306,4 @@ stream = ExtResource("56_y3hlk")
 stream = ExtResource("57_ky1rt")
 
 [node name="PlayerHoney" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("58_e3lgw")
+stream = ExtResource("57_j8gai")

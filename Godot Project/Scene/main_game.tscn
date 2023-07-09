@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://cgd27enmiaa3g"]
+[gd_scene load_steps=26 format=3 uid="uid://cgd27enmiaa3g"]
 
 [ext_resource type="Script" path="res://Script/Main Game/main_game.gd" id="1_ejfhb"]
 [ext_resource type="Texture2D" uid="uid://y36b42nueg63" path="res://Art Assets/Background/Untitled_Artwork.png" id="2_fagth"]
@@ -23,6 +23,13 @@
 [ext_resource type="Script" path="res://Script/Main Game/Bomb Spawn Behavior.gd" id="15_48nm8"]
 [ext_resource type="Script" path="res://Script/Main Game/Fireball Spawn Behavior.gd" id="15_pukrx"]
 [ext_resource type="PackedScene" uid="uid://dbmka8yrjejbq" path="res://Scene/Platform Objects/test_start_platform.tscn" id="23_m86g0"]
+[ext_resource type="Script" path="res://Scene/Score UI.gd" id="24_88x1l"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_gntpr"]
+line_spacing = 0.0
+font_size = 36
+font_color = Color(0, 0, 0, 1)
+outline_size = 15
 
 [node name="Main" type="Node"]
 script = ExtResource("1_ejfhb")
@@ -305,3 +312,12 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Test_Start_Platform" parent="." instance=ExtResource("23_m86g0")]
 position = Vector2(656, 784)
+
+[node name="Current Score" type="Label" parent="."]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 480.0
+offset_bottom = 96.0
+text = "Score: xxx meter"
+label_settings = SubResource("LabelSettings_gntpr")
+script = ExtResource("24_88x1l")
