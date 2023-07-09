@@ -21,6 +21,7 @@ func unpaused():
 	get_tree().paused = false
 
 func _on_play_pressed():
+	get_node("/root/Music").queue_free()
 	get_tree().change_scene_to_file("res://Scene/main_game.tscn")
 
 func _on_tutorial_pressed():

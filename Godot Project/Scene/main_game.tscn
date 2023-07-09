@@ -1,12 +1,11 @@
 [gd_scene load_steps=23 format=3 uid="uid://cgd27enmiaa3g"]
 
-
 [ext_resource type="Script" path="res://Script/Main Game/game_manager.gd" id="1_mi7fx"]
 [ext_resource type="Script" path="res://Script/Main Game/Score Keeper.gd" id="2_4ksrg"]
 [ext_resource type="Texture2D" uid="uid://y36b42nueg63" path="res://Art Assets/Background/Untitled_Artwork.png" id="2_fagth"]
 [ext_resource type="PackedScene" uid="uid://crk6pqy1lkvpr" path="res://Scene/Background/Cloud.tscn" id="2_fwhy4"]
 [ext_resource type="Script" path="res://Script/Cloud Platform/Cloud Button.gd" id="2_igkno"]
-[ext_resource type="Texture2D" uid="uid://bptmdo6bx37ex" path="res://Art Assets/Demo/Blue Container.png" id="2_lqkmu"]
+[ext_resource type="Texture2D" uid="uid://bptmdo6bx37ex" path="res://Art Assets/title/Blue Container.png" id="2_lqkmu"]
 [ext_resource type="AudioStream" uid="uid://biqlyn00klxd8" path="res://SFX Assets/the-amazing-goob-theme_fixed.wav" id="2_nxcdn"]
 [ext_resource type="Texture2D" uid="uid://ccqmwudhu5qx" path="res://Art Assets/Platform All Asset/Cloud Platform/cloud platform button.png" id="2_uci0p"]
 [ext_resource type="Texture2D" uid="uid://cibnro5ppup2h" path="res://Art Assets/Platform All Asset/Honey Platform/honey platform button.png" id="4_4jx5v"]
@@ -17,8 +16,8 @@
 [ext_resource type="Script" path="res://Script/Ice Platform/Ice Button.gd" id="7_8liqf"]
 [ext_resource type="Texture2D" uid="uid://crlkea8yl3plf" path="res://Art Assets/Platform All Asset/Spring Platform/spring platform button.png" id="7_bygdd"]
 [ext_resource type="Script" path="res://Script/Spring Platform/Spring Button.gd" id="9_b6y8p"]
-[ext_resource type="LabelSettings" uid="uid://bhxcxbdju4ali" path="res://Font/count_label.tres" id="12_mnj3q"]
 [ext_resource type="AudioStream" uid="uid://b2j6hnaf8q5rn" path="res://SFX Assets/ButtonPress.wav" id="11_5ivan"]
+[ext_resource type="LabelSettings" uid="uid://bhxcxbdju4ali" path="res://Font/count_label.tres" id="12_mnj3q"]
 [ext_resource type="PackedScene" uid="uid://depbsan31sf51" path="res://Scene/player.tscn" id="13_rjp4p"]
 [ext_resource type="Script" path="res://Script/Main Game/Orb Spawn Behavior.gd" id="14_jfkm8"]
 [ext_resource type="Script" path="res://Script/Main Game/Bomb Spawn Behavior.gd" id="15_48nm8"]
@@ -29,6 +28,7 @@ script = ExtResource("1_mi7fx")
 
 [node name="Game Theme Music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_nxcdn")
+bus = &"Music"
 
 [node name="Background" type="Node" parent="."]
 
@@ -82,6 +82,7 @@ script = ExtResource("2_igkno")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Button Collection/Cloud Spawn Button/Cloud Button"]
 stream = ExtResource("11_5ivan")
+bus = &"SFX"
 
 [node name="Ice Spawn Button" type="Node2D" parent="Button Collection"]
 position = Vector2(880, 952)
@@ -94,6 +95,7 @@ script = ExtResource("7_8liqf")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Button Collection/Ice Spawn Button/Ice Button"]
 stream = ExtResource("11_5ivan")
+bus = &"SFX"
 
 [node name="Ice Count" type="Sprite2D" parent="Button Collection/Ice Spawn Button"]
 position = Vector2(0, 48)
@@ -111,6 +113,7 @@ script = ExtResource("5_u1ycc")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Button Collection/Honey Spawn Button/Honey Button"]
 stream = ExtResource("11_5ivan")
+bus = &"SFX"
 
 [node name="Honey Count" type="Sprite2D" parent="Button Collection/Honey Spawn Button"]
 position = Vector2(0, 48)
@@ -128,6 +131,7 @@ script = ExtResource("9_b6y8p")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Button Collection/Spring Spawn Button/Spring Button"]
 stream = ExtResource("11_5ivan")
+bus = &"SFX"
 
 [node name="Spring Count" type="Sprite2D" parent="Button Collection/Spring Spawn Button"]
 position = Vector2(0, 48)
@@ -240,7 +244,6 @@ texture = ExtResource("4_orql0")
 modulate = Color(1, 1, 1, 0.517647)
 position = Vector2(944, 840)
 scale = Vector2(1584, 16)
-texture = ExtResource("4_dk6yq")
 region_enabled = true
 region_rect = Rect2(5.54103, 1.76989, 1.7567, 1.7567)
 
