@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://cgd27enmiaa3g"]
+[gd_scene load_steps=24 format=3 uid="uid://cgd27enmiaa3g"]
 
 [ext_resource type="Script" path="res://Script/Main Game/main_game.gd" id="1_ejfhb"]
 [ext_resource type="Texture2D" uid="uid://y36b42nueg63" path="res://Art Assets/Background/Untitled_Artwork.png" id="2_fagth"]
@@ -7,13 +7,12 @@
 [ext_resource type="Texture2D" uid="uid://bptmdo6bx37ex" path="res://Art Assets/title/Blue Container.png" id="2_lqkmu"]
 [ext_resource type="AudioStream" uid="uid://biqlyn00klxd8" path="res://SFX Assets/the-amazing-goob-theme_fixed.wav" id="2_nxcdn"]
 [ext_resource type="Texture2D" uid="uid://ccqmwudhu5qx" path="res://Art Assets/Platform All Asset/Cloud Platform/cloud platform button.png" id="2_uci0p"]
-[ext_resource type="AudioStream" uid="uid://d1u7yddyksj1w" path="res://SFX Assets/Game_Over_Sound.wav" id="3_pxl6l"]
+[ext_resource type="AudioStream" uid="uid://bhqrvfs81n47e" path="res://SFX Assets/Game_Over_Sound_Fast.wav" id="3_bpksg"]
 [ext_resource type="Texture2D" uid="uid://cibnro5ppup2h" path="res://Art Assets/Platform All Asset/Honey Platform/honey platform button.png" id="4_4jx5v"]
 [ext_resource type="Texture2D" uid="uid://basokoe4tj3sm" path="res://Art Assets/Platform All Asset/normal button.png" id="4_orql0"]
 [ext_resource type="Script" path="res://Script/Honey Platform/Honey Button.gd" id="5_u1ycc"]
 [ext_resource type="Texture2D" uid="uid://b6u78yeveieg2" path="res://Art Assets/Platform All Asset/Ice Platform/ice platform button.png" id="6_6f15l"]
 [ext_resource type="Script" path="res://Script/Main Game/Bear Trap Spawn Behavior.gd" id="6_nuc6r"]
-[ext_resource type="PackedScene" uid="uid://c6sosua8k7rhy" path="res://Scene/Platform Objects/test_start_platform.tscn" id="6_rlt77"]
 [ext_resource type="Script" path="res://Script/Ice Platform/Ice Button.gd" id="7_8liqf"]
 [ext_resource type="Texture2D" uid="uid://crlkea8yl3plf" path="res://Art Assets/Platform All Asset/Spring Platform/spring platform button.png" id="7_bygdd"]
 [ext_resource type="Script" path="res://Script/Spring Platform/Spring Button.gd" id="9_b6y8p"]
@@ -28,6 +27,7 @@
 [ext_resource type="LabelSettings" uid="uid://be0cgrceor0gt" path="res://Font/header_label.tres" id="25_32m3c"]
 [ext_resource type="Theme" uid="uid://dcvpn3kn2ta0u" path="res://theme.tres" id="26_a7rnw"]
 [ext_resource type="Script" path="res://Script/UI/volume_slider.gd" id="27_03kkm"]
+[ext_resource type="PackedScene" uid="uid://dbmka8yrjejbq" path="res://Scene/Platform Objects/test_start_platform.tscn" id="23_m86g0"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_ejfhb")
@@ -37,7 +37,7 @@ stream = ExtResource("2_nxcdn")
 bus = &"Music"
 
 [node name="Game Over Music" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_pxl6l")
+stream = ExtResource("3_bpksg")
 
 [node name="Background" type="Node" parent="."]
 
@@ -63,10 +63,10 @@ type = "cloud"
 
 [node name="Collectable Collection" type="Node" parent="."]
 
-[node name="Platform Collection" type="Node" parent="."]
-
-[node name="Test_Start_Platform" parent="Platform Collection" instance=ExtResource("6_rlt77")]
+[node name="Test_Start_Platform" parent="Collectable Collection" instance=ExtResource("23_m86g0")]
 position = Vector2(80, 784)
+
+[node name="Platform Collection" type="Node" parent="."]
 
 [node name="Bear Trap Spawn" type="Node" parent="."]
 script = ExtResource("6_nuc6r")
@@ -257,7 +257,7 @@ region_enabled = true
 region_rect = Rect2(5.54103, 1.76989, 1.7567, 1.7567)
 
 [node name="Player" parent="." instance=ExtResource("13_rjp4p")]
-position = Vector2(104, 640)
+position = Vector2(728, 680)
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
@@ -443,3 +443,5 @@ text = "Back
 [connection signal="toggled" from="Pause/Pause Settings/OptionsButtons2/HBoxContainer/ChecksSliders/Fullscreen" to="Pause/Pause Settings" method="_on_fullscreen_toggled"]
 [connection signal="pressed" from="Pause/Pause Settings/OptionsButtons2/Menu" to="Pause/Pause Settings" method="_on_menu_pressed"]
 [connection signal="pressed" from="Pause/Pause Settings/backFromPause" to="." method="unpaused"]
+[node name="Test_Start_Platform" parent="." instance=ExtResource("23_m86g0")]
+position = Vector2(656, 784)
