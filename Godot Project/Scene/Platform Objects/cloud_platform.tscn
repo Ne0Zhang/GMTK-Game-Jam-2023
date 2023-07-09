@@ -6,7 +6,7 @@
 [ext_resource type="Script" path="res://Script/Main Game/Sprite_Control.gd" id="4_pobxg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0fqi1"]
-size = Vector2(216, 32)
+size = Vector2(200, 32)
 
 [node name="Cloud Platform" type="Node2D" groups=["jump", "platforms"]]
 script = ExtResource("1_5aid7")
@@ -22,5 +22,5 @@ texture = ExtResource("3_rvdjt")
 script = ExtResource("4_pobxg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cloud Platform Body"]
-position = Vector2(-20, 8)
+position = Vector2(-28, 8)
 shape = SubResource("RectangleShape2D_0fqi1")

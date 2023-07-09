@@ -14,8 +14,9 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	
 	# Fire Ball move downward from their Initiated Pos
-	if(global_position.x <= bound.x or global_position.y >= bound.y+100):
+	if(global_position.x <= bound.x or global_position.y >= bound.y-100):
 		print("destroy")
 		_free_Object()
 	global_position.x += direction.x * get_node("/root/Main").platform_speed * delta

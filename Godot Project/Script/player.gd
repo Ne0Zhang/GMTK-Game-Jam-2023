@@ -8,11 +8,9 @@ var oingo_speed = -600.0
 var is_boinging = false
 var touched_ice = false
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-var main
 
 func _ready():
 	screen_size = get_viewport_rect().size
-	main = get_node("/root/Main")
 
 func _physics_process(delta):
 	velocity.y += gravity * delta
@@ -22,9 +20,6 @@ func _physics_process(delta):
 
 	if position.x > 500: 
 		speed = 50
-	
-	if position.y > get_viewport_rect().size.y or position.x < 0:
-		main._game_over()
 
 	if $Floor_Check.is_colliding():
 		var groups = $Floor_Check.get_collider().get_groups()
