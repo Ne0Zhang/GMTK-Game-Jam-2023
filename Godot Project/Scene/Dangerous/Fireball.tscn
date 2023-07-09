@@ -43,20 +43,20 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_o71yu"]
-radius = 175.0
+radius = 24.2148
 
-[node name="Fireball_2D" type="Area2D"]
+[node name="Fireball" type="Node2D"]
+scale = Vector2(6.28, 6.28)
 script = ExtResource("1_bm76g")
 
-[node name="Fireball Anim" type="AnimatedSprite2D" parent="."]
-position = Vector2(16, -16)
-scale = Vector2(0.2, 0.2)
+[node name="Firebal_2D" type="Area2D" parent="."]
+
+[node name="Fireball Anim" type="AnimatedSprite2D" parent="Firebal_2D"]
+position = Vector2(2.54777, -1.27388)
+scale = Vector2(0.0247611, 0.0247611)
 sprite_frames = SubResource("SpriteFrames_oqfdh")
 animation = &"Spin"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-8, 0)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Firebal_2D"]
 scale = Vector2(0.32, 0.32)
 shape = SubResource("CircleShape2D_o71yu")
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -32,7 +32,7 @@ func _input(event):
 		if event.button_index == MOUSE_BUTTON_LEFT and not event.pressed:
 			selected = false
 			platform_sprite._change_alpha(1)
-			main_scene.platform_spawn = true
+			main_scene.can_spawn = true
 			assoc_button._reset_sprite()
 			parent.can_move = true
 			$CollisionShape2D.set_deferred("disabled", false)
