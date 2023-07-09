@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dsirr5j21gqwm"]
+
+[ext_resource type="Texture2D" uid="uid://dg6femmeq47xd" path="res://Art Assets/title/ui/settings.PNG" id="1_d4cwd"]
+[ext_resource type="Texture2D" uid="uid://bcm8ybv7vu22j" path="res://Art Assets/title/ui/settings_pressed.PNG" id="2_8p3ri"]
+[ext_resource type="Texture2D" uid="uid://d4hhj87w3i02j" path="res://Art Assets/title/ui/settings_hover.PNG" id="3_13s73"]
+
+[node name="options" type="TextureButton"]
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 125.0
+offset_bottom = 166.0
+texture_normal = ExtResource("1_d4cwd")
+texture_pressed = ExtResource("2_8p3ri")
+texture_hover = ExtResource("3_13s73")
+texture_disabled = ExtResource("2_8p3ri")
+texture_focused = ExtResource("2_8p3ri")
+ignore_texture_size = true
+stretch_mode = 4
