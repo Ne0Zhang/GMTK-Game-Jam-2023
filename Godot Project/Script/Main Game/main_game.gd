@@ -7,7 +7,7 @@ var honey_count = 3
 var spring_count = 4
 
 var can_spawn = true
-
+var game_over = false
 # Player Related Variables
 var player_speed = 250
 
@@ -37,6 +37,7 @@ var audio
 @onready var pause_settings = $"Pause/Pause Settings"
 
 func _ready():
+	game_over = false
 	audio = get_node("Game Theme Music")
 	audio.play()
 	pause_settings.destination = "main_game"
@@ -51,7 +52,15 @@ func unpaused():
 	get_tree().paused = false
 
 func _game_over():
-	platform_speed = 0
-	fireball_speed = 0
-	platform_spawn = false
-	obj_spawn = false
+	if !game_over:
+		game_over = true
+		audio.stop()
+		audio = get_node("Game Over Music")
+		audio.play()
+		platform_speed = 0
+		fireball_speed = 0
+		platform_spawn = false
+		obj_spawn = false
+		await audio.finished
+		print("Game Over") 
+		get_tree().change_scene_to_file("res://Scene/GameOver.tscn")
