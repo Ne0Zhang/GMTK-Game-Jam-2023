@@ -4,12 +4,11 @@ var spawn = false
 var cloud_platform = preload("res://Scene/Platform Objects/honey_platform.tscn")
 var main
 
-var honey_label;
-var honey_count = 3
+var honey_label
 
 func _input(event):
 	if event is InputEventMouseButton and event.pressed and Input.is_action_just_pressed("Clicked"):
-		if get_rect().has_point(to_local(event.position)) and main.can_spawn and honey_count > 0:
+		if get_rect().has_point(to_local(event.position)) and main.can_spawn and main.honey_count > 0:
 			_spawn_cloud_platform()
 			texture = load("res://Art Assets/Platform All Asset/Honey Platform/honey platform button clicked.png")
 
@@ -33,10 +32,10 @@ func _ready():
 	_print_count()
 
 func _drop_count():
-	honey_count -= 1
+	main.honey_count -= 1
 
 func _add_count():
-	honey_count += 1
+	main.honey_count += 1
 
 func _print_count():
-	honey_label.text = str(honey_count)
+	honey_label.text = str(main.honey_count)
