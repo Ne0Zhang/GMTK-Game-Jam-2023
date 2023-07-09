@@ -24,8 +24,9 @@ func _process(delta):
 	global_position.x += direction.x * get_node("/root/Main").platform_speed * delta
 
 func _on_body_entered(body):
-	if body.is_in_group("player"):
+	if body.is_in_group("player") and played:
 		print("Player Die by Explosion")
+		played = false
 		_explode()
 
 func _free_object():
