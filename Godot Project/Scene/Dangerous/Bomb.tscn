@@ -115,3 +115,4 @@ shape = SubResource("CircleShape2D_3oiy3")
 
 [node name="Explode_Audio" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("17_ecwn4")
+bus = &"SFX"

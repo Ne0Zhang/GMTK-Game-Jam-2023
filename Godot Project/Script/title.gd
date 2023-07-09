@@ -8,12 +8,10 @@ func _ready():
 func paused():
 	get_tree().paused = true
 	pause_settings.show()
-	print("paused")
 	
 func unpaused():
 	pause_settings.hide()
 	get_tree().paused = false
-	print("unpaused")
 
 func _on_play_pressed():
 	get_tree().change_scene_to_file("res://Scene/main_game.tscn")

@@ -1,8 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://bo7dyfwacjs0j"]
 
-[ext_resource type="AudioStream" uid="uid://cmthfudfy0stu" path="res://Sound Assets/The_Amazing_Goob_Theme.wav" id="1_a2d74"]
+[ext_resource type="AudioStream" uid="uid://w5qe46xv6ero" path="res://Sound Assets/Amazing_Goob_Main_Menu_Theme_2.wav" id="1_a8qum"]
 
 [node name="music" type="AudioStreamPlayer"]
-stream = ExtResource("1_a2d74")
+stream = ExtResource("1_a8qum")
 autoplay = true
 bus = &"Music"

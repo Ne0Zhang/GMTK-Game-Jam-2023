@@ -3,9 +3,6 @@ var master_bus = AudioServer.get_bus_index("Master")
 
 @onready var options = $"."
 
-func _ready():
-	print(get_signal_connection_list)
-
 func show_and_hide(first, second):
 	first.show()
 	second.hide()
