@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bn4jpbm73sov2"]
+[gd_scene load_steps=10 format=3 uid="uid://bn4jpbm73sov2"]
 
 [ext_resource type="Texture2D" uid="uid://crv3538xavf3k" path="res://Art Assets/title/bg.png" id="1_epkcm"]
 [ext_resource type="Script" path="res://Script/credits.gd" id="1_mvao5"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://b602ux8n3yrj3" path="res://Art Assets/title/illust.PNG" id="2_kqbn8"]
 [ext_resource type="FontFile" uid="uid://capvxe8dvs2ae" path="res://Font/Nice Sugar.ttf" id="4_prmlm"]
 [ext_resource type="LabelSettings" uid="uid://be0cgrceor0gt" path="res://Font/header_label.tres" id="5_jpdrp"]
+[ext_resource type="PackedScene" uid="uid://cwktou6n3nw5n" path="res://Scene/options.tscn" id="7_cy6ji"]
+[ext_resource type="PackedScene" uid="uid://dju6ejgl10ou7" path="res://Scene/pause_settings.tscn" id="8_6adl8"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4vgfd"]
 line_spacing = 46.0
@@ -57,9 +59,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -806.0
-offset_top = -370.5
+offset_top = -404.5
 offset_right = 806.0
-offset_bottom = 370.5
+offset_bottom = 404.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 72
@@ -85,12 +87,24 @@ label_settings = SubResource("LabelSettings_4vgfd")
 
 [node name="roles" type="Label" parent="VBoxContainer/nameCredits"]
 layout_mode = 2
-text = "Ryan
+text = "Programmer
 Music & SFX
 UI Artist
 Character Animator
 Prop & Effect Animator, Concept Artist
-Neo Zhang"
+Programmer, Designer"
 label_settings = SubResource("LabelSettings_4vgfd")
 
+[node name="options" parent="." instance=ExtResource("7_cy6ji")]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 130.0
+offset_bottom = 171.0
+
+[node name="Pause Settings" parent="." instance=ExtResource("8_6adl8")]
+visible = false
+layout_mode = 1
+
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="options" to="." method="paused"]

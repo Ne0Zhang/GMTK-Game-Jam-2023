@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://b7sresh6udp8r"]
+[gd_scene load_steps=21 format=3 uid="uid://b7sresh6udp8r"]
 
 [ext_resource type="Script" path="res://Script/tutorial.gd" id="1_e65rn"]
 [ext_resource type="Texture2D" uid="uid://crv3538xavf3k" path="res://Art Assets/title/bg.png" id="2_0t4np"]
@@ -16,6 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://cfoiejuyiggjv" path="res://Art Assets/title/run/6.png" id="14_p2lj5"]
 [ext_resource type="Texture2D" uid="uid://ck0du1reehjtq" path="res://Art Assets/title/run/7.png" id="15_61kmo"]
 [ext_resource type="Texture2D" uid="uid://8mw5ag0rdh0n" path="res://Art Assets/title/run/8.png" id="16_katc1"]
+[ext_resource type="PackedScene" uid="uid://cwktou6n3nw5n" path="res://Scene/options.tscn" id="17_q670j"]
+[ext_resource type="PackedScene" uid="uid://dju6ejgl10ou7" path="res://Scene/pause_settings.tscn" id="18_0bicv"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_8wubl"]
 font = ExtResource("8_vawgu")
@@ -58,6 +60,7 @@ animations = [{
 }]
 
 [node name="tutorial" type="Control"]
+process_mode = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -168,4 +171,16 @@ offset_bottom = 1048.0
 theme = ExtResource("2_80ypa")
 text = "Back"
 
+[node name="options" parent="." instance=ExtResource("17_q670j")]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 130.0
+offset_bottom = 171.0
+
+[node name="Pause Settings" parent="." instance=ExtResource("18_0bicv")]
+visible = false
+layout_mode = 1
+
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="options" to="." method="paused"]
