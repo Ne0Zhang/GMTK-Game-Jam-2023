@@ -36,9 +36,9 @@ func _input(event):
 			$CollisionShape2D.set_deferred("disabled", false)
 
 	if event is InputEventMouseButton and selected:
-		if Input.is_action_just_pressed("Rotate_Right"):
-			_set_rotation(1)
 		if Input.is_action_just_pressed("Rotate_Left"):
+			_set_rotation(1)
+		if Input.is_action_just_pressed("Rotate_Right"):
 			_set_rotation(-1)
 
 # ============ DRAG AND DROP CONTROL ============ 

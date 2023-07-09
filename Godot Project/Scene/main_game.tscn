@@ -2,17 +2,21 @@
 
 [ext_resource type="Script" path="res://Script/Main Game/game_manager.gd" id="1_mi7fx"]
 [ext_resource type="Script" path="res://Script/Main Game/Score Keeper.gd" id="2_4ksrg"]
+[ext_resource type="Script" path="res://Script/Main Game/main_game.gd" id="1_ejfhb"]
 [ext_resource type="Texture2D" uid="uid://y36b42nueg63" path="res://Art Assets/Background/Untitled_Artwork.png" id="2_fagth"]
 [ext_resource type="PackedScene" uid="uid://crk6pqy1lkvpr" path="res://Scene/Background/Cloud.tscn" id="2_fwhy4"]
 [ext_resource type="Script" path="res://Script/Cloud Platform/Cloud Button.gd" id="2_igkno"]
 [ext_resource type="Texture2D" uid="uid://bptmdo6bx37ex" path="res://Art Assets/Demo/Blue Container.png" id="2_lqkmu"]
 [ext_resource type="AudioStream" uid="uid://biqlyn00klxd8" path="res://SFX Assets/the-amazing-goob-theme_fixed.wav" id="2_nxcdn"]
 [ext_resource type="Texture2D" uid="uid://ccqmwudhu5qx" path="res://Art Assets/Platform All Asset/Cloud Platform/cloud platform button.png" id="2_uci0p"]
+[ext_resource type="AudioStream" uid="uid://bhqrvfs81n47e" path="res://SFX Assets/Game_Over_Sound_Fast.wav" id="3_bpksg"]
 [ext_resource type="Texture2D" uid="uid://cibnro5ppup2h" path="res://Art Assets/Platform All Asset/Honey Platform/honey platform button.png" id="4_4jx5v"]
 [ext_resource type="Texture2D" uid="uid://b264fak4f67hd" path="res://Art Assets/Demo/TestPlatform.png" id="4_dk6yq"]
 [ext_resource type="Texture2D" uid="uid://basokoe4tj3sm" path="res://Art Assets/Platform All Asset/normal button.png" id="4_orql0"]
 [ext_resource type="Script" path="res://Script/Honey Platform/Honey Button.gd" id="5_u1ycc"]
 [ext_resource type="Texture2D" uid="uid://b6u78yeveieg2" path="res://Art Assets/Platform All Asset/Ice Platform/ice platform button.png" id="6_6f15l"]
+[ext_resource type="Script" path="res://Script/Main Game/Bear Trap Spawn Behavior.gd" id="6_nuc6r"]
+[ext_resource type="PackedScene" uid="uid://dbmka8yrjejbq" path="res://Scene/Platform Objects/test_start_platform.tscn" id="6_vjrhs"]
 [ext_resource type="Script" path="res://Script/Ice Platform/Ice Button.gd" id="7_8liqf"]
 [ext_resource type="Texture2D" uid="uid://crlkea8yl3plf" path="res://Art Assets/Platform All Asset/Spring Platform/spring platform button.png" id="7_bygdd"]
 [ext_resource type="Script" path="res://Script/Spring Platform/Spring Button.gd" id="9_b6y8p"]
@@ -25,10 +29,13 @@
 [ext_resource type="PackedScene" uid="uid://dcc4hu813eyvv" path="res://Scene/Platform Objects/test_start_platform.tscn" id="23_m86g0"]
 
 [node name="Main" type="Node"]
-script = ExtResource("1_mi7fx")
+script = ExtResource("1_ejfhb")
 
 [node name="Game Theme Music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_nxcdn")
+
+[node name="Game Over Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_bpksg")
 
 [node name="Background" type="Node" parent="."]
 
@@ -50,17 +57,17 @@ type = "cloud"
 position = Vector2(3264, -56)
 type = "cloud"
 
-[node name="Score Keeper" type="Node" parent="."]
-script = ExtResource("2_4ksrg")
-
 [node name="Danger Collection" type="Node" parent="."]
-
-[node name="Trap Cloud" parent="Danger Collection" instance=ExtResource("22_7cl75")]
-position = Vector2(1352, 552)
 
 [node name="Collectable Collection" type="Node" parent="."]
 
+[node name="Test_Start_Platform" parent="Collectable Collection" instance=ExtResource("6_vjrhs")]
+position = Vector2(80, 784)
+
 [node name="Platform Collection" type="Node" parent="."]
+
+[node name="Bear Trap Spawn" type="Node" parent="."]
+script = ExtResource("6_nuc6r")
 
 [node name="Button Collection" type="Node" parent="."]
 

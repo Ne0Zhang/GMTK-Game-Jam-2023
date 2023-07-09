@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dtlrmtbdwp5m2"]
+[gd_scene load_steps=7 format=3 uid="uid://dtlrmtbdwp5m2"]
 
 [ext_resource type="Script" path="res://Script/platform_move.gd" id="1_47ulq"]
 [ext_resource type="Script" path="res://Script/Honey Platform/Honey_Platform_Behavior.gd" id="2_quh7k"]
 [ext_resource type="Texture2D" uid="uid://d34o8evuag46e" path="res://Art Assets/Platform All Asset/Honey Platform/honey platform.png" id="3_gorfq"]
 [ext_resource type="Script" path="res://Script/Main Game/Sprite_Control.gd" id="4_yxp2o"]
+[ext_resource type="AudioStream" uid="uid://b2oelr36d0vb7" path="res://SFX Assets/HoneyBlockCollision.wav" id="5_1yet4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_n0xvs"]
 radius = 64.4981
@@ -22,6 +23,9 @@ script = ExtResource("4_yxp2o")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Honey Platform Body"]
 position = Vector2(0, 16)
 shape = SubResource("CircleShape2D_n0xvs")
+
+[node name="honey audio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_1yet4")
 
 [connection signal="body_entered" from="Honey Platform Body" to="Honey Platform Body" method="_on_body_entered"]
 [connection signal="body_exited" from="Honey Platform Body" to="Honey Platform Body" method="_on_body_exited"]

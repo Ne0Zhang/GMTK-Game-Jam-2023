@@ -13,9 +13,10 @@ var prev = 0
 var rng = RandomNumberGenerator.new()
 
 func _ready():
-	spawnpoints.append(get_node("spawn1"))
-	spawnpoints.append(get_node("spawn2"))
-	spawnpoints.append(get_node("spawn3"))
+	spawnpoints.append(get_node("/root/Main/Orb Spawn/spawn1"))
+	spawnpoints.append(get_node("/root/Main/Orb Spawn/spawn2"))
+	spawnpoints.append(get_node("/root/Main/Orb Spawn/spawn3"))
+	print(spawnpoints)
 	collection_dest = get_node("/root/Main/Collectable Collection")
 
 func _process(delta):
@@ -33,10 +34,10 @@ func _rand_int_pick():
 
 func _spawn_orb(pick : int):
 	var orb
-	if pick == 1: orb = ice_orb.instantiate()
-	elif pick == 2: orb = honey_orb.instantiate()
-	elif pick == 3: orb = spring_orb.instantiate()
+	if pick == 0: orb = ice_orb.instantiate()
+	elif pick == 1: orb = honey_orb.instantiate()
+	elif pick == 2: orb = spring_orb.instantiate()
 	
-	orb.global_position = spawnpoints[rng.randi_range(0,2)].global_position
+	orb.global_position = spawnpoints[rng.randi_range(0,2)].position
 	
 	collection_dest.add_child(orb)
