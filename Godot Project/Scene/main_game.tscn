@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cgd27enmiaa3g"]
+[gd_scene load_steps=14 format=3 uid="uid://dsvunjendf0oh"]
 
 [ext_resource type="Script" path="res://Script/Main Game/game_manager.gd" id="1_mi7fx"]
 [ext_resource type="Script" path="res://Script/Cloud Platform/Cloud Button.gd" id="2_igkno"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" path="res://Script/Ice Platform/Ice Button.gd" id="7_8liqf"]
 [ext_resource type="Texture2D" uid="uid://crlkea8yl3plf" path="res://Art Assets/Platform All Asset/Spring Platform/spring platform button.png" id="7_bygdd"]
 [ext_resource type="Script" path="res://Script/Spring Platform/Spring Button.gd" id="9_b6y8p"]
+[ext_resource type="LabelSettings" uid="uid://bhxcxbdju4ali" path="res://Font/count_label.tres" id="12_mnj3q"]
 [ext_resource type="PackedScene" uid="uid://depbsan31sf51" path="res://Scene/player.tscn" id="13_rjp4p"]
 
 [node name="Main" type="Node"]
@@ -101,6 +102,7 @@ offset_right = 32.32
 offset_bottom = -24.0
 theme_type_variation = &"HeaderLarge"
 text = "1"
+label_settings = ExtResource("12_mnj3q")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -117,6 +119,7 @@ offset_right = 32.96
 offset_bottom = -24.0
 theme_type_variation = &"HeaderLarge"
 text = "1"
+label_settings = ExtResource("12_mnj3q")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -133,6 +136,7 @@ offset_right = 31.6799
 offset_bottom = -24.0
 theme_type_variation = &"HeaderLarge"
 text = "1"
+label_settings = ExtResource("12_mnj3q")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -149,6 +153,7 @@ offset_right = 32.3199
 offset_bottom = -24.0
 theme_type_variation = &"HeaderLarge"
 text = "1"
+label_settings = ExtResource("12_mnj3q")
 horizontal_alignment = 1
 vertical_alignment = 1
 

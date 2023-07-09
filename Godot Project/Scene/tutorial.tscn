@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Script/tutorial.gd" id="1_e65rn"]
 [ext_resource type="Texture2D" uid="uid://crv3538xavf3k" path="res://Art Assets/title/bg.png" id="2_0t4np"]
-[ext_resource type="Theme" uid="uid://dbhkb8xxcoj7t" path="res://theme.tres" id="2_80ypa"]
+[ext_resource type="Theme" uid="uid://dcvpn3kn2ta0u" path="res://theme.tres" id="2_80ypa"]
 [ext_resource type="Texture2D" uid="uid://b602ux8n3yrj3" path="res://Art Assets/title/illust.PNG" id="3_l7t2a"]
 [ext_resource type="Texture2D" uid="uid://cly0uvupq18bm" path="res://Art Assets/title/mouse.PNG" id="5_pjtgq"]
 [ext_resource type="Texture2D" uid="uid://d03jjih4pqkxo" path="res://Art Assets/title/rotate.PNG" id="6_rpn0o"]
@@ -157,9 +157,10 @@ position = Vector2(1072, 318)
 scale = Vector2(0.21725, 0.21725)
 sprite_frames = SubResource("SpriteFrames_b0l6t")
 animation = &"run"
-frame_progress = 0.374868
+frame_progress = 0.942036
 
 [node name="back" type="Button" parent="."]
+layout_mode = 0
 offset_left = 50.0
 offset_top = 970.0
 offset_right = 191.0

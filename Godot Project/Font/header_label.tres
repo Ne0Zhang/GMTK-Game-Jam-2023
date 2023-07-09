@@ -6,3 +6,5 @@
 font = ExtResource("1_mxwcd")
 font_size = 70
 font_color = Color(0.992157, 0.976471, 0.933333, 1)
+outline_size = 34
+outline_color = Color(0.360784, 0.32549, 0.470588, 1)

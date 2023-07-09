@@ -1,17 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://p1cjougw120a"]
+[gd_scene load_steps=8 format=3 uid="uid://bn4jpbm73sov2"]
 
 [ext_resource type="Texture2D" uid="uid://crv3538xavf3k" path="res://Art Assets/title/bg.png" id="1_epkcm"]
 [ext_resource type="Script" path="res://Script/credits.gd" id="1_mvao5"]
-[ext_resource type="Theme" uid="uid://dbhkb8xxcoj7t" path="res://theme.tres" id="1_utfub"]
+[ext_resource type="Theme" uid="uid://dcvpn3kn2ta0u" path="res://theme.tres" id="1_utfub"]
 [ext_resource type="Texture2D" uid="uid://b602ux8n3yrj3" path="res://Art Assets/title/illust.PNG" id="2_kqbn8"]
 [ext_resource type="FontFile" uid="uid://capvxe8dvs2ae" path="res://Font/Nice Sugar.ttf" id="4_prmlm"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_5133e"]
-font = ExtResource("4_prmlm")
-font_size = 70
-font_color = Color(0.360784, 0.32549, 0.470588, 1)
-outline_size = 30
-outline_color = Color(0.992157, 0.976471, 0.933333, 1)
+[ext_resource type="LabelSettings" uid="uid://be0cgrceor0gt" path="res://Font/header_label.tres" id="5_jpdrp"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4vgfd"]
 line_spacing = 46.0
@@ -56,28 +50,46 @@ theme = ExtResource("1_utfub")
 text = "Back"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 0
-offset_left = 1103.0
-offset_top = 150.0
-offset_right = 1678.0
-offset_bottom = 758.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -806.0
+offset_top = -370.5
+offset_right = 806.0
+offset_bottom = 370.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 72
 
 [node name="credits" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 text = "Credits"
-label_settings = SubResource("LabelSettings_5133e")
+label_settings = ExtResource("5_jpdrp")
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+[node name="nameCredits" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_constants/margin_top = 66
+theme_override_constants/separation = 141
 
-[node name="names" type="Label" parent="VBoxContainer/MarginContainer"]
+[node name="names" type="Label" parent="VBoxContainer/nameCredits"]
 layout_mode = 2
-text = "Ryan
+text = "Ryan Kim
 Brendan Kitchen
 Ashley Lu
-Crystal Wong
+Nami Wong
 Issy Wong
+Neo Zhang"
+label_settings = SubResource("LabelSettings_4vgfd")
+
+[node name="roles" type="Label" parent="VBoxContainer/nameCredits"]
+layout_mode = 2
+text = "Ryan
+Music & SFX
+UI Artist
+Character Animator
+Prop & Effect Animator, Concept Artist
 Neo Zhang"
 label_settings = SubResource("LabelSettings_4vgfd")
 
