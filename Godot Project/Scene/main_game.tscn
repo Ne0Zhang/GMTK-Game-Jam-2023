@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://basokoe4tj3sm" path="res://Art Assets/Platform All Asset/normal button.png" id="4_orql0"]
 [ext_resource type="Script" path="res://Script/Honey Platform/Honey Button.gd" id="5_u1ycc"]
 [ext_resource type="Texture2D" uid="uid://b6u78yeveieg2" path="res://Art Assets/Platform All Asset/Ice Platform/ice platform button.png" id="6_6f15l"]
+[ext_resource type="Script" path="res://Script/Main Game/Bear Trap Spawn Behavior.gd" id="6_nuc6r"]
 [ext_resource type="Script" path="res://Script/Ice Platform/Ice Button.gd" id="7_8liqf"]
 [ext_resource type="Texture2D" uid="uid://crlkea8yl3plf" path="res://Art Assets/Platform All Asset/Spring Platform/spring platform button.png" id="7_bygdd"]
 [ext_resource type="Script" path="res://Script/Spring Platform/Spring Button.gd" id="9_b6y8p"]
@@ -22,7 +23,6 @@
 [ext_resource type="Script" path="res://Script/Main Game/Orb Spawn Behavior.gd" id="14_jfkm8"]
 [ext_resource type="Script" path="res://Script/Main Game/Bomb Spawn Behavior.gd" id="15_48nm8"]
 [ext_resource type="Script" path="res://Script/Main Game/Fireball Spawn Behavior.gd" id="15_pukrx"]
-[ext_resource type="PackedScene" uid="uid://cqblef1c5wm0q" path="res://Scene/Dangerous/trap_cloud.tscn" id="22_7cl75"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_mi7fx")
@@ -55,12 +55,12 @@ script = ExtResource("2_4ksrg")
 
 [node name="Danger Collection" type="Node" parent="."]
 
-[node name="Trap Cloud" parent="Danger Collection" instance=ExtResource("22_7cl75")]
-position = Vector2(1352, 552)
-
 [node name="Collectable Collection" type="Node" parent="."]
 
 [node name="Platform Collection" type="Node" parent="."]
+
+[node name="Bear Trap Spawn" type="Node" parent="."]
+script = ExtResource("6_nuc6r")
 
 [node name="Button Collection" type="Node" parent="."]
 

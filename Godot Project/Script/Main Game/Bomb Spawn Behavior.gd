@@ -4,15 +4,19 @@ var spawnpoints = []
 
 var bomb_obj = preload("res://Scene/Dangerous/Bomb.tscn")
 var collection_dest
+var main
 
 var spawn_rate
-var timer = 0.0
+var timer
 
 var prev = 0
 
 var rng = RandomNumberGenerator.new()
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	main = get_node("/root/Main")
+	timer = main.bomb_start
+	
 	spawnpoints.append(get_node("point1"))
 	spawnpoints.append(get_node("point2"))
 	spawnpoints.append(get_node("point3"))
@@ -22,8 +26,8 @@ func _ready():
 	collection_dest = get_node("/root/Main/Danger Collection")
 
 func _process(delta):
-	spawn_rate = get_node("/root/Main").bomb_spawn_rate
-	if (timer >= spawn_rate and get_node("/root/Main").obj_spawn):
+	spawn_rate = main.bomb_spawn_rate
+	if (timer >= spawn_rate and main.obj_spawn):
 		timer = 0.0
 		_spawn_fireball(_rand_int_pick())
 	timer += delta

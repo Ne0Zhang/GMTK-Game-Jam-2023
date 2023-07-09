@@ -33,9 +33,9 @@ func _rand_int_pick():
 
 func _spawn_orb(pick : int):
 	var orb
-	if pick == 1: orb = ice_orb.instantiate()
-	elif pick == 2: orb = honey_orb.instantiate()
-	elif pick == 3: orb = spring_orb.instantiate()
+	if pick == 0: orb = ice_orb.instantiate()
+	elif pick == 1: orb = honey_orb.instantiate()
+	elif pick == 2: orb = spring_orb.instantiate()
 	
 	orb.global_position = spawnpoints[rng.randi_range(0,2)].global_position
 	
