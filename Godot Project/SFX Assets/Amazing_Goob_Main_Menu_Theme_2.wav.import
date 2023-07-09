@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://df6anrcd372yy"
+path="res://.godot/imported/Amazing_Goob_Main_Menu_Theme_2.wav-f8d54497dc5b5f063d6a4f0a47c4b2e0.sample"
+
+[deps]
+
+source_file="res://SFX Assets/Amazing_Goob_Main_Menu_Theme_2.wav"
+dest_files=["res://.godot/imported/Amazing_Goob_Main_Menu_Theme_2.wav-f8d54497dc5b5f063d6a4f0a47c4b2e0.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
