@@ -1,7 +1,5 @@
 [gd_scene load_steps=24 format=3 uid="uid://cgd27enmiaa3g"]
 
-[ext_resource type="Script" path="res://Script/Main Game/game_manager.gd" id="1_mi7fx"]
-[ext_resource type="Script" path="res://Script/Main Game/Score Keeper.gd" id="2_4ksrg"]
 [ext_resource type="Script" path="res://Script/Main Game/main_game.gd" id="1_ejfhb"]
 [ext_resource type="Texture2D" uid="uid://y36b42nueg63" path="res://Art Assets/Background/Untitled_Artwork.png" id="2_fagth"]
 [ext_resource type="PackedScene" uid="uid://crk6pqy1lkvpr" path="res://Scene/Background/Cloud.tscn" id="2_fwhy4"]
@@ -16,7 +14,6 @@
 [ext_resource type="Script" path="res://Script/Honey Platform/Honey Button.gd" id="5_u1ycc"]
 [ext_resource type="Texture2D" uid="uid://b6u78yeveieg2" path="res://Art Assets/Platform All Asset/Ice Platform/ice platform button.png" id="6_6f15l"]
 [ext_resource type="Script" path="res://Script/Main Game/Bear Trap Spawn Behavior.gd" id="6_nuc6r"]
-[ext_resource type="PackedScene" uid="uid://dbmka8yrjejbq" path="res://Scene/Platform Objects/test_start_platform.tscn" id="6_vjrhs"]
 [ext_resource type="Script" path="res://Script/Ice Platform/Ice Button.gd" id="7_8liqf"]
 [ext_resource type="Texture2D" uid="uid://crlkea8yl3plf" path="res://Art Assets/Platform All Asset/Spring Platform/spring platform button.png" id="7_bygdd"]
 [ext_resource type="Script" path="res://Script/Spring Platform/Spring Button.gd" id="9_b6y8p"]
@@ -25,8 +22,7 @@
 [ext_resource type="Script" path="res://Script/Main Game/Orb Spawn Behavior.gd" id="14_jfkm8"]
 [ext_resource type="Script" path="res://Script/Main Game/Bomb Spawn Behavior.gd" id="15_48nm8"]
 [ext_resource type="Script" path="res://Script/Main Game/Fireball Spawn Behavior.gd" id="15_pukrx"]
-[ext_resource type="PackedScene" uid="uid://cqblef1c5wm0q" path="res://Scene/Dangerous/trap_cloud.tscn" id="22_7cl75"]
-[ext_resource type="PackedScene" uid="uid://dcc4hu813eyvv" path="res://Scene/Platform Objects/test_start_platform.tscn" id="23_m86g0"]
+[ext_resource type="PackedScene" uid="uid://dbmka8yrjejbq" path="res://Scene/Platform Objects/test_start_platform.tscn" id="23_m86g0"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_ejfhb")
@@ -61,7 +57,7 @@ type = "cloud"
 
 [node name="Collectable Collection" type="Node" parent="."]
 
-[node name="Test_Start_Platform" parent="Collectable Collection" instance=ExtResource("6_vjrhs")]
+[node name="Test_Start_Platform" parent="Collectable Collection" instance=ExtResource("23_m86g0")]
 position = Vector2(80, 784)
 
 [node name="Platform Collection" type="Node" parent="."]
@@ -308,4 +304,4 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Test_Start_Platform" parent="." instance=ExtResource("23_m86g0")]
-position = Vector2(672, 768)
+position = Vector2(656, 784)
