@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgjxo22c71gwa"
-path="res://.godot/imported/pause_hover.PNG-9a2811937cfad7f8260b572a1490e57d.ctex"
+uid="uid://cpfybtsfjkjci"
+path="res://.godot/imported/volume-tick.png-468f99d21a7efc906a07d81d09034624.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art Assets/title/ui/pause_hover.PNG"
-dest_files=["res://.godot/imported/pause_hover.PNG-9a2811937cfad7f8260b572a1490e57d.ctex"]
+source_file="res://Art Assets/title/ui/volume-tick.png"
+dest_files=["res://.godot/imported/volume-tick.png-468f99d21a7efc906a07d81d09034624.ctex"]
 
 [params]
 

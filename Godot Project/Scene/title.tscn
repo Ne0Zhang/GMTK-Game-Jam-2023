@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://bxw3ddgpa1qeu"]
+[gd_scene load_steps=27 format=3 uid="uid://bxw3ddgpa1qeu"]
 
 [ext_resource type="Script" path="res://Script/title.gd" id="1_5wpq2"]
 [ext_resource type="PackedScene" uid="uid://bo7dyfwacjs0j" path="res://Scene/music.tscn" id="2_24il8"]
@@ -7,6 +7,7 @@
 [ext_resource type="Theme" uid="uid://dcvpn3kn2ta0u" path="res://theme.tres" id="4_dmw18"]
 [ext_resource type="Texture2D" uid="uid://q4jywr60aahu" path="res://Art Assets/title/ui/title.png" id="4_m3oc3"]
 [ext_resource type="PackedScene" uid="uid://cwktou6n3nw5n" path="res://Scene/options.tscn" id="6_8jcrc"]
+[ext_resource type="Script" path="res://Script/tutorial.gd" id="7_clrsc"]
 [ext_resource type="Texture2D" uid="uid://cly0uvupq18bm" path="res://Art Assets/title/mouse.PNG" id="7_e6tp8"]
 [ext_resource type="PackedScene" uid="uid://dju6ejgl10ou7" path="res://Scene/pause_settings.tscn" id="8_36ogc"]
 [ext_resource type="Texture2D" uid="uid://d03jjih4pqkxo" path="res://Art Assets/title/rotate.PNG" id="8_etq10"]
@@ -159,6 +160,7 @@ visible = false
 anchors_preset = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
+script = ExtResource("7_clrsc")
 
 [node name="mouse" type="TextureRect" parent="tutorial"]
 layout_mode = 1
@@ -328,7 +330,6 @@ offset_right = 130.0
 offset_bottom = 171.0
 
 [node name="Pause Settings" parent="." instance=ExtResource("8_36ogc")]
-visible = false
 layout_mode = 1
 
 [node name="bg2" type="ColorRect" parent="Pause Settings"]

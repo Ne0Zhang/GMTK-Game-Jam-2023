@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dlumi0wcq477k"
-path="res://.godot/imported/pause.PNG-33897403a4b6938b4a0180deede3a0f3.ctex"
+uid="uid://dpgddsbpmo565"
+path="res://.godot/imported/volume-tick-drag.png-ac1005e8630f2e4ec36379760b2e1c3e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art Assets/title/ui/pause.PNG"
-dest_files=["res://.godot/imported/pause.PNG-33897403a4b6938b4a0180deede3a0f3.ctex"]
+source_file="res://Art Assets/title/ui/volume-tick-drag.png"
+dest_files=["res://.godot/imported/volume-tick-drag.png-ac1005e8630f2e4ec36379760b2e1c3e.ctex"]
 
 [params]
 
