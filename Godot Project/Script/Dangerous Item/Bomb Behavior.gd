@@ -26,7 +26,7 @@ func _process(delta):
 func _on_body_entered(body):
 	if body.is_in_group("player") and played:
 		print("Player Die by Explosion")
-		player = false
+		played = false
 		_explode()
 
 func _free_object():

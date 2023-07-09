@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bptmdo6bx37ex" path="res://Art Assets/Demo/Blue Container.png" id="2_lqkmu"]
 [ext_resource type="AudioStream" uid="uid://biqlyn00klxd8" path="res://SFX Assets/the-amazing-goob-theme_fixed.wav" id="2_nxcdn"]
 [ext_resource type="Texture2D" uid="uid://ccqmwudhu5qx" path="res://Art Assets/Platform All Asset/Cloud Platform/cloud platform button.png" id="2_uci0p"]
-[ext_resource type="AudioStream" uid="uid://d1u7yddyksj1w" path="res://SFX Assets/Game_Over_Sound.wav" id="3_pxl6l"]
+[ext_resource type="AudioStream" uid="uid://bhqrvfs81n47e" path="res://SFX Assets/Game_Over_Sound_Fast.wav" id="3_bpksg"]
 [ext_resource type="Texture2D" uid="uid://cibnro5ppup2h" path="res://Art Assets/Platform All Asset/Honey Platform/honey platform button.png" id="4_4jx5v"]
 [ext_resource type="Texture2D" uid="uid://b264fak4f67hd" path="res://Art Assets/Demo/TestPlatform.png" id="4_dk6yq"]
 [ext_resource type="Texture2D" uid="uid://basokoe4tj3sm" path="res://Art Assets/Platform All Asset/normal button.png" id="4_orql0"]
@@ -31,7 +31,7 @@ script = ExtResource("1_ejfhb")
 stream = ExtResource("2_nxcdn")
 
 [node name="Game Over Music" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_pxl6l")
+stream = ExtResource("3_bpksg")
 
 [node name="Background" type="Node" parent="."]
 
