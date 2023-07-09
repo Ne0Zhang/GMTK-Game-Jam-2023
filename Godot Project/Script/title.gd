@@ -5,6 +5,7 @@ extends Control
 @onready var tutorial_screen = $tutorial
 @onready var credits_screen = $credits
 @onready var music = $music
+@onready var mouseClick = $mouseClick
 
 
 @onready var logo = $"Title Screen/logo"
@@ -32,24 +33,30 @@ func show_and_hide(target1, target2):
 	target2.hide()
 
 func paused():
+	mouseClick.play()
 	get_tree().paused = true
 	pause_settings.show()
 	
 func unpaused():
+	mouseClick.play()
 	pause_settings.hide()
 	get_tree().paused = false
 
 func _on_play_pressed():
+	mouseClick.play()
 	get_tree().change_scene_to_file("res://Scene/main_game.tscn")
 
 func _on_tutorial_pressed():
+	mouseClick.play()
 	show_and_hide(tutorial_screen, title_screen)
 	# get_tree().change_scene_to_file("res://Scene/tutorial.tscn")
 
 func _on_credits_pressed():
+	mouseClick.play()
 	show_and_hide(credits_screen, title_screen)
 
 func _on_quit_pressed():
+	mouseClick.play()
 	get_tree().quit()
 
 func expand_tween(target):
@@ -66,8 +73,10 @@ func expand_tween(target):
 
 
 func _on_back_from_tutorial_pressed():
+	mouseClick.play()
 	show_and_hide(title_screen, tutorial_screen)
 
 
 func _on_back_from_credits_pressed():
+	mouseClick.play()
 	show_and_hide(title_screen, credits_screen)

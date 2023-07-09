@@ -1,10 +1,9 @@
-[gd_scene load_steps=24 format=3 uid="uid://cgd27enmiaa3g"]
+[gd_scene load_steps=28 format=3 uid="uid://cgd27enmiaa3g"]
 
 [ext_resource type="Script" path="res://Script/Main Game/main_game.gd" id="1_ejfhb"]
 [ext_resource type="Texture2D" uid="uid://y36b42nueg63" path="res://Art Assets/Background/Untitled_Artwork.png" id="2_fagth"]
 [ext_resource type="PackedScene" uid="uid://crk6pqy1lkvpr" path="res://Scene/Background/Cloud.tscn" id="2_fwhy4"]
 [ext_resource type="Script" path="res://Script/Cloud Platform/Cloud Button.gd" id="2_igkno"]
-[ext_resource type="Texture2D" uid="uid://bptmdo6bx37ex" path="res://Art Assets/title/Blue Container.png" id="2_lqkmu"]
 [ext_resource type="AudioStream" uid="uid://biqlyn00klxd8" path="res://SFX Assets/the-amazing-goob-theme_fixed.wav" id="2_nxcdn"]
 [ext_resource type="Texture2D" uid="uid://ccqmwudhu5qx" path="res://Art Assets/Platform All Asset/Cloud Platform/cloud platform button.png" id="2_uci0p"]
 [ext_resource type="AudioStream" uid="uid://bhqrvfs81n47e" path="res://SFX Assets/Game_Over_Sound_Fast.wav" id="3_bpksg"]
@@ -22,12 +21,12 @@
 [ext_resource type="Script" path="res://Script/Main Game/Orb Spawn Behavior.gd" id="14_jfkm8"]
 [ext_resource type="Script" path="res://Script/Main Game/Bomb Spawn Behavior.gd" id="15_48nm8"]
 [ext_resource type="Script" path="res://Script/Main Game/Fireball Spawn Behavior.gd" id="15_pukrx"]
-[ext_resource type="PackedScene" uid="uid://cwktou6n3nw5n" path="res://Scene/options.tscn" id="23_2xmga"]
-[ext_resource type="PackedScene" uid="uid://dju6ejgl10ou7" path="res://Scene/pause_settings.tscn" id="24_mgytb"]
+[ext_resource type="PackedScene" uid="uid://dsirr5j21gqwm" path="res://Scene/options.tscn" id="23_2xmga"]
+[ext_resource type="PackedScene" path="res://Scene/Platform Objects/test_start_platform.tscn" id="23_m86g0"]
+[ext_resource type="PackedScene" uid="uid://ci2pgwvyy4agr" path="res://Scene/pause_settings.tscn" id="24_mgytb"]
 [ext_resource type="LabelSettings" uid="uid://be0cgrceor0gt" path="res://Font/header_label.tres" id="25_32m3c"]
-[ext_resource type="Theme" uid="uid://dcvpn3kn2ta0u" path="res://theme.tres" id="26_a7rnw"]
+[ext_resource type="Theme" uid="uid://yduw1j5oobvc" path="res://theme.tres" id="26_a7rnw"]
 [ext_resource type="Script" path="res://Script/UI/volume_slider.gd" id="27_03kkm"]
-[ext_resource type="PackedScene" uid="uid://dbmka8yrjejbq" path="res://Scene/Platform Objects/test_start_platform.tscn" id="23_m86g0"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_ejfhb")
@@ -38,6 +37,7 @@ bus = &"Music"
 
 [node name="Game Over Music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_bpksg")
+bus = &"Music"
 
 [node name="Background" type="Node" parent="."]
 
@@ -77,7 +77,6 @@ script = ExtResource("6_nuc6r")
 visible = false
 position = Vector2(0, 856)
 scale = Vector2(1.5, 0.311111)
-texture = ExtResource("2_lqkmu")
 centered = false
 
 [node name="Cloud Spawn Button" type="Node2D" parent="Button Collection"]
@@ -319,6 +318,10 @@ metadata/_edit_use_anchors_ = true
 
 [node name="options" parent="Pause" instance=ExtResource("23_2xmga")]
 
+[node name="MouseClick" type="AudioStreamPlayer2D" parent="Pause"]
+stream = ExtResource("11_5ivan")
+bus = &"SFX"
+
 [node name="Pause Settings" parent="Pause" instance=ExtResource("24_mgytb")]
 visible = false
 
@@ -329,7 +332,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.4, 0.184314, 0.360784, 0.819608)
+color = Color(0.945098, 0.929412, 0.976471, 0.470588)
 
 [node name="OptionsButtons2" type="VBoxContainer" parent="Pause/Pause Settings"]
 layout_mode = 1
@@ -439,9 +442,10 @@ theme = ExtResource("26_a7rnw")
 text = "Back
 "
 
+[node name="Test_Start_Platform" parent="." instance=ExtResource("23_m86g0")]
+position = Vector2(656, 784)
+
 [connection signal="pressed" from="Pause/options" to="." method="paused"]
 [connection signal="toggled" from="Pause/Pause Settings/OptionsButtons2/HBoxContainer/ChecksSliders/Fullscreen" to="Pause/Pause Settings" method="_on_fullscreen_toggled"]
 [connection signal="pressed" from="Pause/Pause Settings/OptionsButtons2/Menu" to="Pause/Pause Settings" method="_on_menu_pressed"]
 [connection signal="pressed" from="Pause/Pause Settings/backFromPause" to="." method="unpaused"]
-[node name="Test_Start_Platform" parent="." instance=ExtResource("23_m86g0")]
-position = Vector2(656, 784)

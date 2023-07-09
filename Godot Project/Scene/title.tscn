@@ -1,8 +1,9 @@
-[gd_scene load_steps=30 format=3 uid="uid://bxw3ddgpa1qeu"]
+[gd_scene load_steps=31 format=3 uid="uid://bxw3ddgpa1qeu"]
 
 [ext_resource type="Script" path="res://Script/title.gd" id="1_5wpq2"]
 [ext_resource type="PackedScene" uid="uid://ct3wycd6xdldl" path="res://Scene/music.tscn" id="2_24il8"]
 [ext_resource type="Texture2D" path="res://Art Assets/title/bg.png" id="2_lgood"]
+[ext_resource type="AudioStream" uid="uid://b2j6hnaf8q5rn" path="res://SFX Assets/ButtonPress.wav" id="3_klpdd"]
 [ext_resource type="Texture2D" path="res://Art Assets/title/illust.PNG" id="3_sxw1y"]
 [ext_resource type="Theme" uid="uid://yduw1j5oobvc" path="res://theme.tres" id="4_dmw18"]
 [ext_resource type="Texture2D" uid="uid://q4jywr60aahu" path="res://Art Assets/title/ui/title.png" id="4_m3oc3"]
@@ -88,6 +89,11 @@ grow_vertical = 2
 script = ExtResource("1_5wpq2")
 
 [node name="music" parent="." instance=ExtResource("2_24il8")]
+
+[node name="mouseClick" parent="." instance=ExtResource("2_24il8")]
+stream = ExtResource("3_klpdd")
+autoplay = false
+bus = &"SFX"
 
 [node name="bg" type="TextureRect" parent="."]
 layout_mode = 0
@@ -388,7 +394,6 @@ offset_right = 130.0
 offset_bottom = 171.0
 
 [node name="Pause Settings" parent="." instance=ExtResource("8_36ogc")]
-visible = false
 layout_mode = 1
 
 [node name="bg2" type="ColorRect" parent="Pause Settings"]
@@ -398,7 +403,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.4, 0.184314, 0.360784, 0.819608)
+color = Color(0.945098, 0.929412, 0.976471, 0.470588)
 
 [node name="OptionsButtons2" type="VBoxContainer" parent="Pause Settings"]
 layout_mode = 1
