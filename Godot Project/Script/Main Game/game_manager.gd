@@ -34,10 +34,21 @@ var bomb_speed = platform_speed
 
 
 var audio
+@onready var pause_settings = $"Pause/Pause Settings"
 
 func _ready():
 	audio = get_node("Game Theme Music")
 	audio.play()
+	pause_settings.destination = "main_game"
+	unpaused()
+	
+func paused():
+	get_tree().paused = true
+	pause_settings.show()
+	
+func unpaused():
+	pause_settings.hide()
+	get_tree().paused = false
 
 func _game_over():
 	platform_speed = 0

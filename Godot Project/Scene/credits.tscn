@@ -96,6 +96,7 @@ Programmer, Designer"
 label_settings = SubResource("LabelSettings_4vgfd")
 
 [node name="options" parent="." instance=ExtResource("7_cy6ji")]
+visible = false
 layout_mode = 0
 offset_left = 20.0
 offset_top = 20.0

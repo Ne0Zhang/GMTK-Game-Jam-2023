@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://cgd27enmiaa3g"]
+[gd_scene load_steps=28 format=3 uid="uid://cgd27enmiaa3g"]
 
 [ext_resource type="Script" path="res://Script/Main Game/game_manager.gd" id="1_mi7fx"]
 [ext_resource type="Script" path="res://Script/Main Game/Score Keeper.gd" id="2_4ksrg"]
@@ -22,6 +22,11 @@
 [ext_resource type="Script" path="res://Script/Main Game/Orb Spawn Behavior.gd" id="14_jfkm8"]
 [ext_resource type="Script" path="res://Script/Main Game/Bomb Spawn Behavior.gd" id="15_48nm8"]
 [ext_resource type="Script" path="res://Script/Main Game/Fireball Spawn Behavior.gd" id="15_pukrx"]
+[ext_resource type="PackedScene" uid="uid://cwktou6n3nw5n" path="res://Scene/options.tscn" id="23_2xmga"]
+[ext_resource type="PackedScene" uid="uid://dju6ejgl10ou7" path="res://Scene/pause_settings.tscn" id="24_mgytb"]
+[ext_resource type="LabelSettings" uid="uid://be0cgrceor0gt" path="res://Font/header_label.tres" id="25_32m3c"]
+[ext_resource type="Theme" uid="uid://dcvpn3kn2ta0u" path="res://theme.tres" id="26_a7rnw"]
+[ext_resource type="Script" path="res://Script/UI/volume_slider.gd" id="27_03kkm"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_mi7fx")
@@ -306,3 +311,132 @@ label_settings = ExtResource("12_mnj3q")
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
+
+[node name="Pause" type="Node" parent="."]
+
+[node name="options" parent="Pause" instance=ExtResource("23_2xmga")]
+
+[node name="Pause Settings" parent="Pause" instance=ExtResource("24_mgytb")]
+visible = false
+
+[node name="bg2" type="ColorRect" parent="Pause/Pause Settings"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.4, 0.184314, 0.360784, 0.819608)
+
+[node name="OptionsButtons2" type="VBoxContainer" parent="Pause/Pause Settings"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -324.0
+offset_top = -392.5
+offset_right = 324.0
+offset_bottom = 140.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 70
+
+[node name="Label" type="Label" parent="Pause/Pause Settings/OptionsButtons2"]
+layout_mode = 2
+text = "Settings"
+label_settings = ExtResource("25_32m3c")
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Pause/Pause Settings/OptionsButtons2"]
+layout_mode = 2
+
+[node name="Labels" type="VBoxContainer" parent="Pause/Pause Settings/OptionsButtons2/HBoxContainer"]
+layout_mode = 2
+
+[node name="Fullscreen" type="Label" parent="Pause/Pause Settings/OptionsButtons2/HBoxContainer/Labels"]
+layout_mode = 2
+text = "Fullscreen"
+label_settings = ExtResource("25_32m3c")
+
+[node name="Master" type="Label" parent="Pause/Pause Settings/OptionsButtons2/HBoxContainer/Labels"]
+layout_mode = 2
+text = "Master"
+label_settings = ExtResource("25_32m3c")
+
+[node name="Music" type="Label" parent="Pause/Pause Settings/OptionsButtons2/HBoxContainer/Labels"]
+layout_mode = 2
+text = "Music"
+label_settings = ExtResource("25_32m3c")
+
+[node name="SFX" type="Label" parent="Pause/Pause Settings/OptionsButtons2/HBoxContainer/Labels"]
+layout_mode = 2
+text = "SFX"
+label_settings = ExtResource("25_32m3c")
+
+[node name="ChecksSliders" type="VBoxContainer" parent="Pause/Pause Settings/OptionsButtons2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 74
+
+[node name="Fullscreen" type="CheckBox" parent="Pause/Pause Settings/OptionsButtons2/HBoxContainer/ChecksSliders"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("26_a7rnw")
+theme_override_constants/check_v_offset = 10
+keep_pressed_outside = true
+alignment = 1
+
+[node name="Master" type="HSlider" parent="Pause/Pause Settings/OptionsButtons2/HBoxContainer/ChecksSliders"]
+layout_mode = 2
+theme = ExtResource("26_a7rnw")
+max_value = 1.0
+step = 0.001
+script = ExtResource("27_03kkm")
+bus_name = "Master"
+
+[node name="Music" type="HSlider" parent="Pause/Pause Settings/OptionsButtons2/HBoxContainer/ChecksSliders"]
+layout_mode = 2
+theme = ExtResource("26_a7rnw")
+max_value = 1.0
+step = 0.001
+script = ExtResource("27_03kkm")
+bus_name = "Music"
+
+[node name="SFX" type="HSlider" parent="Pause/Pause Settings/OptionsButtons2/HBoxContainer/ChecksSliders"]
+layout_mode = 2
+theme = ExtResource("26_a7rnw")
+max_value = 1.0
+step = 0.001
+script = ExtResource("27_03kkm")
+bus_name = "SFX"
+
+[node name="Menu" type="Button" parent="Pause/Pause Settings/OptionsButtons2"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("26_a7rnw")
+text = "Menu"
+
+[node name="backFromPause" type="Button" parent="Pause/Pause Settings"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -70.5
+offset_top = -124.0
+offset_right = 70.5
+offset_bottom = -46.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("26_a7rnw")
+text = "Back
+"
+
+[connection signal="pressed" from="Pause/options" to="." method="paused"]
+[connection signal="toggled" from="Pause/Pause Settings/OptionsButtons2/HBoxContainer/ChecksSliders/Fullscreen" to="Pause/Pause Settings" method="_on_fullscreen_toggled"]
+[connection signal="pressed" from="Pause/Pause Settings/OptionsButtons2/Menu" to="Pause/Pause Settings" method="_on_menu_pressed"]
+[connection signal="pressed" from="Pause/Pause Settings/backFromPause" to="." method="unpaused"]
