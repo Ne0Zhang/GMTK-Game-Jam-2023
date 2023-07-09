@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://cgd27enmiaa3g"]
+[gd_scene load_steps=31 format=3 uid="uid://cgd27enmiaa3g"]
 
 [ext_resource type="Script" path="res://Script/Main Game/main_game.gd" id="1_ejfhb"]
 [ext_resource type="Texture2D" uid="uid://y36b42nueg63" path="res://Art Assets/Background/Untitled_Artwork.png" id="2_fagth"]
@@ -21,6 +21,7 @@
 [ext_resource type="Script" path="res://Script/Main Game/Orb Spawn Behavior.gd" id="14_jfkm8"]
 [ext_resource type="Script" path="res://Script/Main Game/Bomb Spawn Behavior.gd" id="15_48nm8"]
 [ext_resource type="Script" path="res://Script/Main Game/Fireball Spawn Behavior.gd" id="15_pukrx"]
+[ext_resource type="Texture2D" uid="uid://m1dv3y2pjfhr" path="res://Art Assets/title/WhiteBox.png" id="22_rpuam"]
 [ext_resource type="PackedScene" uid="uid://dsirr5j21gqwm" path="res://Scene/options.tscn" id="23_2xmga"]
 [ext_resource type="PackedScene" uid="uid://dbmka8yrjejbq" path="res://Scene/Platform Objects/test_start_platform.tscn" id="23_m86g0"]
 [ext_resource type="Script" path="res://Scene/Score UI.gd" id="24_88x1l"]
@@ -74,6 +75,9 @@ type = "cloud"
 position = Vector2(80, 784)
 
 [node name="Platform Collection" type="Node" parent="."]
+
+[node name="Test_Start_Platform" parent="Platform Collection" instance=ExtResource("23_m86g0")]
+position = Vector2(656, 784)
 
 [node name="Bear Trap Spawn" type="Node" parent="."]
 script = ExtResource("6_nuc6r")
@@ -253,17 +257,16 @@ position = Vector2(3264, -56)
 scale = Vector2(0.0542857, 0.0542857)
 texture = ExtResource("4_orql0")
 
-[node name="Border Box" type="Node" parent="."]
-
-[node name="BottomBorder" type="Sprite2D" parent="Border Box"]
-modulate = Color(1, 1, 1, 0.517647)
-position = Vector2(944, 840)
-scale = Vector2(1584, 16)
-region_enabled = true
-region_rect = Rect2(5.54103, 1.76989, 1.7567, 1.7567)
-
 [node name="Player" parent="." instance=ExtResource("13_rjp4p")]
 position = Vector2(728, 680)
+
+[node name="BottomBorder" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.317647)
+position = Vector2(944, 840)
+scale = Vector2(1584, 16)
+texture = ExtResource("22_rpuam")
+region_enabled = true
+region_rect = Rect2(5.54103, 1.76989, 1.7567, 1.7567)
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
@@ -321,9 +324,22 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
+[node name="Current Score" type="Label" parent="HUD"]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 480.0
+offset_bottom = 96.0
+text = "Score: xxx meter"
+label_settings = SubResource("LabelSettings_gntpr")
+script = ExtResource("24_88x1l")
+
 [node name="Pause" type="Node" parent="."]
 
 [node name="options" parent="Pause" instance=ExtResource("23_2xmga")]
+offset_left = 16.0
+offset_top = 952.0
+offset_right = 126.0
+offset_bottom = 1103.0
 
 [node name="MouseClick" type="AudioStreamPlayer2D" parent="Pause"]
 stream = ExtResource("11_5ivan")
@@ -449,17 +465,7 @@ theme = ExtResource("26_a7rnw")
 text = "Back
 "
 
-[node name="Test_Start_Platform" parent="." instance=ExtResource("23_m86g0")]
-position = Vector2(656, 784)
-
-[node name="Current Score" type="Label" parent="."]
-offset_left = 16.0
-offset_top = 16.0
-offset_right = 480.0
-offset_bottom = 96.0
-text = "Score: xxx meter"
-label_settings = SubResource("LabelSettings_gntpr")
-script = ExtResource("24_88x1l")
+[node name="Sprite2D" type="Sprite2D" parent="."]
 
 [connection signal="pressed" from="Pause/options" to="." method="paused"]
 [connection signal="toggled" from="Pause/Pause Settings/OptionsButtons2/HBoxContainer/ChecksSliders/Fullscreen" to="Pause/Pause Settings" method="_on_fullscreen_toggled"]
