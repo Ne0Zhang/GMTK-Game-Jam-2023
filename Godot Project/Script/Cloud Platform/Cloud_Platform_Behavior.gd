@@ -1,5 +1,7 @@
 extends StaticBody2D
 
+signal slide
+
 # Lower cap for the rotation
 @export var min_rotate = -60.0
 # Upper cap for the rotation
@@ -34,7 +36,6 @@ func _input(event):
 			assoc_button._reset_sprite()
 			parent.can_move = true
 			$CollisionShape2D.set_deferred("disabled", false)
-			get_node("JumpBox/CollisionShape2D").set_deferred("disabled", false)
 
 	if event is InputEventMouseButton and selected:
 		if Input.is_action_just_pressed("Rotate_Right"):
@@ -63,4 +64,3 @@ func _ready():
 	assoc_button = get_node("/root/Main/Button Collection/Cloud Spawn Button/Cloud Button")
 	parent = get_owner()
 	$CollisionShape2D.set_deferred("disabled", true)
-	get_node("JumpBox/CollisionShape2D").set_deferred("disabled", true)
