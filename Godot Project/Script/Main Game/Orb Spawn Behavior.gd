@@ -19,7 +19,7 @@ func _ready():
 	collection_dest = get_node("/root/Main/Collectable Collection")
 
 func _process(delta):
-	if (timer >= spawn_rate):
+	if (timer >= spawn_rate and get_node("/root/Main").obj_spawn):
 		timer = 0.0
 		_spawn_orb(_rand_int_pick())
 	timer += delta

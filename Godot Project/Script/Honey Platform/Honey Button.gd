@@ -9,13 +9,13 @@ var audio
 
 func _input(event):
 	if event is InputEventMouseButton and event.pressed and Input.is_action_just_pressed("Clicked"):
-		if get_rect().has_point(to_local(event.position)) and main.can_spawn and main.honey_count > 0:
+		if get_rect().has_point(to_local(event.position)) and main.platform_spawn and main.honey_count > 0:
 			audio.play()
 			_spawn_cloud_platform()
 			texture = load("res://Art Assets/Platform All Asset/Honey Platform/honey platform button clicked.png")
 
 func _spawn_cloud_platform():
-	main.can_spawn = false
+	main.platform_spawn = false
 	_drop_count()
 	_print_count()
 	var cloud = cloud_platform.instantiate()

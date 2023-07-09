@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://cgd27enmiaa3g"]
+[gd_scene load_steps=23 format=3 uid="uid://cgd27enmiaa3g"]
 
 [ext_resource type="Script" path="res://Script/Main Game/game_manager.gd" id="1_mi7fx"]
 [ext_resource type="Script" path="res://Script/Main Game/Score Keeper.gd" id="2_4ksrg"]
@@ -21,9 +21,7 @@
 [ext_resource type="Script" path="res://Script/Main Game/Orb Spawn Behavior.gd" id="14_jfkm8"]
 [ext_resource type="Script" path="res://Script/Main Game/Bomb Spawn Behavior.gd" id="15_48nm8"]
 [ext_resource type="Script" path="res://Script/Main Game/Fireball Spawn Behavior.gd" id="15_pukrx"]
-[ext_resource type="PackedScene" uid="uid://b8kwwbb5w86v3" path="res://Scene/Collectable/Honey Orb.tscn" id="16_eqjyc"]
-[ext_resource type="PackedScene" uid="uid://cinaj4tb6gjcc" path="res://Scene/Collectable/Ice Orb.tscn" id="21_ajyof"]
-[ext_resource type="PackedScene" uid="uid://3m30rpspmd7" path="res://Scene/Collectable/Spring Orb.tscn" id="22_q3i3i"]
+[ext_resource type="PackedScene" uid="uid://cqblef1c5wm0q" path="res://Scene/Dangerous/trap_cloud.tscn" id="22_7cl75"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_mi7fx")
@@ -55,6 +53,9 @@ type = "cloud"
 script = ExtResource("2_4ksrg")
 
 [node name="Danger Collection" type="Node" parent="."]
+
+[node name="Trap Cloud" parent="Danger Collection" instance=ExtResource("22_7cl75")]
+position = Vector2(1352, 552)
 
 [node name="Collectable Collection" type="Node" parent="."]
 
@@ -298,12 +299,3 @@ text = "1"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
-
-[node name="Spring_Orb_2D" parent="." instance=ExtResource("22_q3i3i")]
-position = Vector2(992, 520)
-
-[node name="Ice_Orb_2D" parent="." instance=ExtResource("21_ajyof")]
-position = Vector2(1256, 520)
-
-[node name="Honey_Orb_2D" parent="." instance=ExtResource("16_eqjyc")]
-position = Vector2(1512, 544)

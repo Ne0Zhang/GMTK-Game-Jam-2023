@@ -31,5 +31,5 @@ func _free_Object():
 	queue_free()
 
 func _player_dies():
-	get_node("/root/Main").platform_speed = 0
+	get_node("/root/Main")._game_over()
 	print("Player died")

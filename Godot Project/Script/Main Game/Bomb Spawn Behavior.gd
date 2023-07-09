@@ -23,7 +23,7 @@ func _ready():
 
 func _process(delta):
 	spawn_rate = get_node("/root/Main").bomb_spawn_rate
-	if (timer >= spawn_rate):
+	if (timer >= spawn_rate and get_node("/root/Main").obj_spawn):
 		timer = 0.0
 		_spawn_fireball(_rand_int_pick())
 	timer += delta

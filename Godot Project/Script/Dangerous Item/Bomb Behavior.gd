@@ -35,7 +35,7 @@ func _free_object():
 
 # If player touches bomb, bomb explode and dies
 func _explode():
-	get_node("/root/Main").platform_speed = 0
+	get_node("/root/Main")._game_over()
 	anim_node.play("Explode")
 	audio_node.play()
 	await anim_node.animation_finished

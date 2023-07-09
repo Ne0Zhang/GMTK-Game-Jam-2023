@@ -6,8 +6,8 @@ var ice_count = 5
 var honey_count = 3
 var spring_count = 4
 
-var can_spawn = true
-
+var platform_spawn = true
+var obj_spawn = true
 # Platform Related Variables
 var platform_speed = 250
 
@@ -25,5 +25,8 @@ func _ready():
 	audio = get_node("Game Theme Music")
 	audio.play()
 
-func can_spawn_state(state : bool):
-	can_spawn = state
+func _game_over():
+	platform_speed = 0
+	fireball_speed = 0
+	platform_spawn = false
+	obj_spawn = false
