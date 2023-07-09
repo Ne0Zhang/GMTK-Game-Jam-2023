@@ -97,22 +97,19 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_3oiy3"]
 radius = 40.0
 
-[node name="Bomb" type="Node2D"]
+[node name="Bomb_2D" type="Area2D"]
 script = ExtResource("1_gpfsm")
 
-[node name="Bomb_2D" type="Area2D" parent="."]
-
-[node name="Bomb_Anim" type="AnimatedSprite2D" parent="Bomb_2D"]
+[node name="Bomb_Anim" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -8)
 scale = Vector2(0.18, 0.18)
 sprite_frames = SubResource("SpriteFrames_m8g2l")
 animation = &"Explode"
-frame = 10
-frame_progress = 0.979953
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bomb_2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_3oiy3")
 
 [node name="Explode_Audio" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("17_ecwn4")
-bus = &"SFX"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

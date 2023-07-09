@@ -20,13 +20,16 @@ func _ready():
 	var screensize = get_viewport_rect().size
 	var bottom = get_node("/root/Main/Button Collection/Container").position
 	
-	top_left = Vector2(300, 0)
-	bottom_right = Vector2(screensize.x, bottom.y - 20)
+	top_left = Vector2(50, 50)
+	bottom_right = Vector2(screensize.x-50, bottom.y - 50)
 
 
 func slow_platforms():
 	get_node("/root/Main").platform_speed = speed/5
+	get_node("/root/Main/Player").velocity /= 3
+	get_node("/root/Main/Player").gravity = 0
 
 
 func reset_platform_speeds():
 	get_node("/root/Main").platform_speed = speed
+	get_node("/root/Main/Player").gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
