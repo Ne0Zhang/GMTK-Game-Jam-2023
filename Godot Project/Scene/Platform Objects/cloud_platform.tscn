@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://b7f56enibx3sv"]
+[gd_scene load_steps=7 format=3 uid="uid://b7f56enibx3sv"]
 
 [ext_resource type="Script" path="res://Script/platform_move.gd" id="1_5aid7"]
 [ext_resource type="Script" path="res://Script/Cloud Platform/Cloud_Platform_Behavior.gd" id="2_w7hen"]
@@ -8,10 +8,13 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0fqi1"]
 size = Vector2(200, 32)
 
-[node name="Cloud Platform" type="Node2D" groups=["jump", "platforms"]]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mb0pd"]
+size = Vector2(30, 32)
+
+[node name="Cloud Platform" type="Node2D" groups=["platforms"]]
 script = ExtResource("1_5aid7")
 
-[node name="Cloud Platform Body" type="StaticBody2D" parent="." groups=["jump"]]
+[node name="Cloud Platform Body" type="StaticBody2D" parent="."]
 collision_mask = 0
 script = ExtResource("2_w7hen")
 
@@ -24,3 +27,10 @@ script = ExtResource("4_pobxg")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cloud Platform Body"]
 position = Vector2(-28, 8)
 shape = SubResource("RectangleShape2D_0fqi1")
+
+[node name="JumpBox" type="Area2D" parent="Cloud Platform Body"]
+position = Vector2(92, -8.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cloud Platform Body/JumpBox"]
+position = Vector2(-5, -15.5)
+shape = SubResource("RectangleShape2D_mb0pd")

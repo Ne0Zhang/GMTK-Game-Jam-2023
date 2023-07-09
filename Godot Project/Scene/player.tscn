@@ -1,6 +1,5 @@
-[gd_scene load_steps=6 format=3 uid="uid://depbsan31sf51"]
+[gd_scene load_steps=5 format=3 uid="uid://depbsan31sf51"]
 
-[ext_resource type="Script" path="res://Script/player.gd" id="1_fet1r"]
 [ext_resource type="Texture2D" uid="uid://xmmkjt52eara" path="res://Art Assets/Demo/playerGrey_walk1.png" id="1_fhs3y"]
 [ext_resource type="Texture2D" uid="uid://des1v56uly4lj" path="res://Art Assets/Demo/playerGrey_walk2.png" id="2_nnnkl"]
 
@@ -22,10 +21,8 @@ animations = [{
 radius = 27.0
 height = 70.0
 
-[node name="Player" type="CharacterBody2D" groups=["player"]]
-floor_max_angle = 3.14159
-floor_snap_length = 10.0
-script = ExtResource("1_fet1r")
+[node name="Player" type="RigidBody2D" groups=["player"]]
+lock_rotation = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
@@ -34,6 +31,3 @@ animation = &"walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_75uhd")
-
-[node name="Floor_Check" type="RayCast2D" parent="."]
-position = Vector2(10, 0)

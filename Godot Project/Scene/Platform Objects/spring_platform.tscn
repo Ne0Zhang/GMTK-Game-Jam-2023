@@ -11,10 +11,9 @@ size = Vector2(192, 26.5)
 [node name="Spring Platform" type="Node2D" groups=["platforms"]]
 script = ExtResource("1_pk0qi")
 
-[node name="Spring Platform Body" type="StaticBody2D" parent="." groups=["boingo"]]
+[node name="Spring Platform Body" type="StaticBody2D" parent="."]
 collision_mask = 0
 script = ExtResource("2_vkxfm")
-max_rotate = 20.0
 
 [node name="Spring Platform Sprite" type="Sprite2D" parent="Spring Platform Body"]
 position = Vector2(3.8147e-06, 3.8147e-06)

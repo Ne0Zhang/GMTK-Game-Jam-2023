@@ -6,12 +6,6 @@ var ice_count = 5
 var honey_count = 3
 var spring_count = 4
 
-var can_spawn = true
-
-# Player Related Variables
-var player_speed = 250
-
-
 var platform_spawn = true
 var obj_spawn = true
 # Platform Related Variables

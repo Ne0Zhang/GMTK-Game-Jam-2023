@@ -8,14 +8,12 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0fqi1"]
 size = Vector2(224, 32)
 
-[node name="Ice Platform" type="Node2D" groups=["ice", "platforms"]]
+[node name="Ice Platform" type="Node2D" groups=["platforms"]]
 script = ExtResource("1_3fspn")
 
-[node name="Ice Platform Body" type="StaticBody2D" parent="." groups=["ice"]]
+[node name="Ice Platform Body" type="StaticBody2D" parent="."]
 collision_mask = 0
 script = ExtResource("2_ke2uc")
-min_rotate = 0.0
-max_rotate = 20.0
 
 [node name="Ice Platform Sprite" type="Sprite2D" parent="Ice Platform Body"]
 scale = Vector2(0.161, 0.161)
