@@ -111,7 +111,6 @@ expand_mode = 3
 stretch_mode = 4
 
 [node name="Title Screen" type="Control" parent="."]
-visible = false
 anchors_preset = 0
 
 [node name="logo" type="TextureRect" parent="Title Screen"]
@@ -166,7 +165,6 @@ theme = ExtResource("4_dmw18")
 text = "Quit"
 
 [node name="tutorial" type="Control" parent="."]
-visible = false
 anchors_preset = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
@@ -189,6 +187,7 @@ texture = ExtResource("7_e6tp8")
 stretch_mode = 4
 
 [node name="rotate" type="TextureRect" parent="tutorial"]
+modulate = Color(1, 1, 1, 0.329412)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -300,7 +299,7 @@ offset_left = 1370.0
 offset_top = 265.0
 offset_right = 1977.0
 offset_bottom = 366.0
-text = "2. Rotate platform"
+text = "1. Rotate platform"
 label_settings = SubResource("LabelSettings_loepf")
 
 [node name="movePlatform" type="Label" parent="tutorial"]
@@ -309,7 +308,7 @@ offset_left = 843.0
 offset_top = 524.0
 offset_right = 1450.0
 offset_bottom = 625.0
-text = "1. Place platform"
+text = "2. Place platform"
 label_settings = SubResource("LabelSettings_loepf")
 
 [node name="bean" type="AnimatedSprite2D" parent="tutorial"]
@@ -328,6 +327,7 @@ theme = ExtResource("4_dmw18")
 text = "Back"
 
 [node name="credits" type="Control" parent="."]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -394,6 +394,7 @@ offset_right = 130.0
 offset_bottom = 171.0
 
 [node name="Pause Settings" parent="." instance=ExtResource("8_36ogc")]
+visible = false
 layout_mode = 1
 
 [node name="bg2" type="ColorRect" parent="Pause Settings"]
