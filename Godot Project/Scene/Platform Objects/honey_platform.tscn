@@ -26,7 +26,6 @@ shape = SubResource("CircleShape2D_n0xvs")
 
 [node name="honey audio" type="AudioStreamPlayer2D" parent="Honey Platform Body"]
 stream = ExtResource("5_7yhk0")
-volume_db = 5.0
 
 [connection signal="body_entered" from="Honey Platform Body" to="Honey Platform Body" method="_on_body_entered"]
 [connection signal="body_exited" from="Honey Platform Body" to="Honey Platform Body" method="_on_body_exited"]
