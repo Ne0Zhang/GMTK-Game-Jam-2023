@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bhqrvfs81n47e"
-path="res://.godot/imported/Game_Over_Sound_Fast.wav-31e0844db33247246606e331a9a40293.sample"
+path="res://.godot/imported/Game_Over_Sound_Fast.wav-07f00836c78ff8988b2b6beb3f82f28e.sample"
 
 [deps]
 
-source_file="res://SFX Assets/Game_Over_Sound_Fast.wav"
-dest_files=["res://.godot/imported/Game_Over_Sound_Fast.wav-31e0844db33247246606e331a9a40293.sample"]
+source_file="res://SFX Assets/Music/Game_Over_Sound_Fast.wav"
+dest_files=["res://.godot/imported/Game_Over_Sound_Fast.wav-07f00836c78ff8988b2b6beb3f82f28e.sample"]
 
 [params]
 

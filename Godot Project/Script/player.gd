@@ -10,11 +10,17 @@ var oingo_speed = -600.0
 var is_boinging = false
 var touched_ice = false
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+var audio_src: AudioStreamPlayer2D
+var playrun = false
 var main
 
 func _ready():
 	screen_size = get_viewport_rect().size
 	$AnimatedSprite2D.animation = "run"
+	if !playrun:
+		playrun = true
+		audio_src = get_node("PlayerWalk")
+		audio_src.play()
 	$The_Poofer.animation = "poof"
 	$AnimatedSprite2D.play()
 	main = get_node("/root/Main")
@@ -37,6 +43,8 @@ func _physics_process(delta):
 		if !floor_checked:
 			match groups:
 				["jump",..]:
+					if !playrun:
+						_play_run_audio()
 					$AnimatedSprite2D.animation = "run"
 					if form != 0:
 						$The_Poofer.play()
@@ -46,6 +54,7 @@ func _physics_process(delta):
 					is_boinging = false
 					form = 0
 				["ice",..]:
+					_play_audio("slide")
 					$AnimatedSprite2D.animation = "ice"
 					if form != 1:
 						$The_Poofer.play()
@@ -55,6 +64,7 @@ func _physics_process(delta):
 					is_boinging = false
 					form = 1
 				["boingo",..]:
+					_play_audio("spring")
 					is_boinging = true
 					touched_ice = false
 					var direction = $Floor_Check.get_collider().rotation
@@ -64,10 +74,12 @@ func _physics_process(delta):
 						$The_Poofer.play()
 					$AnimatedSprite2D.play()
 				["honey",..]:
+					_play_audio("honey")
 					print_debug("in honey")
 			floor_checked = true
 
 	if can_jump && !$Floor_Check.is_colliding():
+		_play_audio("jump")
 		$AnimatedSprite2D.animation = "jump"
 		$AnimatedSprite2D.play()
 		can_jump = false
@@ -85,4 +97,23 @@ func _physics_process(delta):
 
 	move_and_slide()
 	
+func _play_run_audio():
+	audio_src.stop()
+	playrun = true
+	audio_src = get_node("PlayerWalk")
+	audio_src.play()
 
+func _play_audio(state : String):
+	audio_src.stop()
+	playrun = false
+	match state:
+		"jump": 
+			audio_src = get_node("PlayerJump")
+		"slide": 
+			audio_src = get_node("PlayerSlide")
+		"spring": 
+			audio_src = get_node("PlayerSpring")
+		"honey":
+			audio_src = get_node("PlayerHoney")
+	audio_src.play()
+	

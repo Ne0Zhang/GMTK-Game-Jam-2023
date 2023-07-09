@@ -17,6 +17,7 @@ var platform_sprite
 var main_scene
 var assoc_button
 var parent
+var audio_src : AudioStreamPlayer2D
 
 # Platform will follow mouse unless clicked and dropped
 var selected = false
@@ -46,14 +47,17 @@ func _ready():
 	main_scene = get_node("/root/Main")
 	assoc_button = get_node("/root/Main/Button Collection/Honey Spawn Button/Honey Button")
 	parent = get_owner()
+	audio_src = get_node("honey audio")
 	$CollisionShape2D.set_deferred("disabled", true)
 
 
 func _on_body_entered(body):
 	if body.is_in_group("player"):
+		audio_src.play()
 		in_honey.emit()
 
 
 func _on_body_exited(body):
 	if body.is_in_group("player"):
+		audio_src.stop()
 		out_honey.emit()

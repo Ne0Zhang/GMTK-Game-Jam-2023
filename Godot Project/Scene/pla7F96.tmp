@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://depbsan31sf51"]
+[gd_scene load_steps=59 format=3 uid="uid://depbsan31sf51"]
 
 [ext_resource type="Script" path="res://Script/player.gd" id="1_fet1r"]
 [ext_resource type="Texture2D" uid="uid://ckasics2cwwih" path="res://Art Assets/Goob/jump/1.png" id="2_bv4j7"]
@@ -55,9 +55,6 @@
 [ext_resource type="Texture2D" uid="uid://ba6oom51gmyqo" path="res://Art Assets/Goob/Poof/12.png" id="35_2ohg3"]
 [ext_resource type="AudioStream" uid="uid://q2jnwyreopug" path="res://SFX Assets/Player/WalkingOnClouds.wav" id="54_d367b"]
 [ext_resource type="AudioStream" uid="uid://b4bb3gpbay2ru" path="res://SFX Assets/Player/Jump.wav" id="55_itua5"]
-[ext_resource type="AudioStream" uid="uid://c637vr8bik38t" path="res://SFX Assets/Platform/IceSlide.wav" id="56_n52qt"]
-[ext_resource type="AudioStream" uid="uid://c6ile3tihb6sx" path="res://SFX Assets/Platform/Spring.wav" id="57_htlsa"]
-[ext_resource type="AudioStream" uid="uid://b2oelr36d0vb7" path="res://SFX Assets/Platform/HoneyBlockCollision.wav" id="58_e3lgw"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g7vde"]
 animations = [{
@@ -299,12 +296,3 @@ stream = ExtResource("54_d367b")
 
 [node name="PlayerJump" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("55_itua5")
-
-[node name="PlayerSlide" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("56_n52qt")
-
-[node name="PlayerSpring" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("57_htlsa")
-
-[node name="PlayerHoney" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("58_e3lgw")

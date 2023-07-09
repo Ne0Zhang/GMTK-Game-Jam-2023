@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b2oelr36d0vb7"
+path="res://.godot/imported/HoneyBlockCollision.wav-c7f90d303e4da81efacf509ff020b5dd.sample"
+
+[deps]
+
+source_file="res://SFX Assets/Platform/HoneyBlockCollision.wav"
+dest_files=["res://.godot/imported/HoneyBlockCollision.wav-c7f90d303e4da81efacf509ff020b5dd.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=1
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
