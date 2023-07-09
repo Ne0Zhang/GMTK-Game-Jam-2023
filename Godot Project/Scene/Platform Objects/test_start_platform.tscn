@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=5 format=3 uid="uid://dcc4hu813eyvv"]
+=======
+[gd_scene load_steps=5 format=3 uid="uid://c6sosua8k7rhy"]
+>>>>>>> Stashed changes
 
 [ext_resource type="Texture2D" uid="uid://bc5xk6q4hl44a" path="res://Art Assets/Demo/Black Box.png" id="1_petsn"]
 
@@ -16,10 +20,17 @@ func _process(delta):
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_diqni"]
+<<<<<<< Updated upstream
 size = Vector2(320, 80)
 
 [node name="Test_Start_Platform" type="RigidBody2D" groups=["jump"]]
 position = Vector2(80, 1040)
+=======
+size = Vector2(576, 80)
+
+[node name="Test_Start_Platform" type="RigidBody2D" groups=["jump"]]
+position = Vector2(80, 1056)
+>>>>>>> Stashed changes
 physics_material_override = SubResource("PhysicsMaterial_dnisl")
 gravity_scale = 0.0
 max_contacts_reported = 1
@@ -27,6 +38,7 @@ contact_monitor = true
 freeze = true
 freeze_mode = 1
 script = SubResource("GDScript_gvtfv")
+<<<<<<< Updated upstream
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(80, 0)
@@ -35,4 +47,15 @@ shape = SubResource("RectangleShape2D_diqni")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(80, 1.35899e-05)
 scale = Vector2(0.195122, 0.120482)
+=======
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(208, 0)
+shape = SubResource("RectangleShape2D_diqni")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(208, 0)
+scale = Vector2(0.35122, 0.120482)
+>>>>>>> Stashed changes
 texture = ExtResource("1_petsn")
