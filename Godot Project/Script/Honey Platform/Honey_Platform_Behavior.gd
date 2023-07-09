@@ -36,7 +36,6 @@ func _input(event):
 			main_scene.can_spawn = true
 			assoc_button._reset_sprite()
 			parent.can_move = true
-			$CollisionShape2D.set_deferred("disabled", false)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -46,7 +45,6 @@ func _ready():
 	main_scene = get_node("/root/Main")
 	assoc_button = get_node("/root/Main/Button Collection/Honey Spawn Button/Honey Button")
 	parent = get_owner()
-	$CollisionShape2D.set_deferred("disabled", true)
 
 
 func _on_body_entered(body):

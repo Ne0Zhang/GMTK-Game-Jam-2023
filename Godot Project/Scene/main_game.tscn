@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cgd27enmiaa3g"]
+[gd_scene load_steps=14 format=3 uid="uid://dsvunjendf0oh"]
 
 [ext_resource type="Script" path="res://Script/Main Game/game_manager.gd" id="1_mi7fx"]
 [ext_resource type="Script" path="res://Script/Cloud Platform/Cloud Button.gd" id="2_igkno"]
@@ -13,14 +13,9 @@
 [ext_resource type="Script" path="res://Script/Spring Platform/Spring Button.gd" id="9_b6y8p"]
 [ext_resource type="LabelSettings" uid="uid://bhxcxbdju4ali" path="res://Font/count_label.tres" id="12_mnj3q"]
 [ext_resource type="PackedScene" uid="uid://depbsan31sf51" path="res://Scene/player.tscn" id="13_rjp4p"]
-[ext_resource type="Script" path="res://Script/Main Game/Bomb Spawn Behavior.gd" id="15_48nm8"]
-[ext_resource type="Script" path="res://Script/Main Game/Fireball Spawn Behavior.gd" id="15_pukrx"]
-[ext_resource type="PackedScene" uid="uid://b8kwwbb5w86v3" path="res://Scene/Collectable/Honey Orb.tscn" id="16_eqjyc"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_mi7fx")
-
-[node name="Danger Collection" type="Node" parent="."]
 
 [node name="Platform Collection" type="Node" parent="."]
 
@@ -88,83 +83,9 @@ position = Vector2(0, 48)
 scale = Vector2(0.0195239, 0.0195239)
 texture = ExtResource("4_orql0")
 
-[node name="Fireball Spawn" type="Node" parent="."]
-script = ExtResource("15_pukrx")
-
-[node name="point1" type="Node2D" parent="Fireball Spawn"]
-position = Vector2(944, -104)
-
-[node name="Sprite2D" type="Sprite2D" parent="Fireball Spawn/point1"]
-scale = Vector2(0.0542857, 0.0542857)
-texture = ExtResource("4_orql0")
-
-[node name="point2" type="Node2D" parent="Fireball Spawn"]
-position = Vector2(1232, -104)
-
-[node name="Sprite2D" type="Sprite2D" parent="Fireball Spawn/point2"]
-scale = Vector2(0.0542857, 0.0542857)
-texture = ExtResource("4_orql0")
-
-[node name="point3" type="Node2D" parent="Fireball Spawn"]
-position = Vector2(1520, -104)
-
-[node name="Sprite2D" type="Sprite2D" parent="Fireball Spawn/point3"]
-scale = Vector2(0.0542857, 0.0542857)
-texture = ExtResource("4_orql0")
-
-[node name="point4" type="Node2D" parent="Fireball Spawn"]
-position = Vector2(1800, -104)
-
-[node name="Sprite2D" type="Sprite2D" parent="Fireball Spawn/point4"]
-scale = Vector2(0.0542857, 0.0542857)
-texture = ExtResource("4_orql0")
-
-[node name="Bomb Spawn" type="Node" parent="."]
-script = ExtResource("15_48nm8")
-
-[node name="point1" type="Node2D" parent="Bomb Spawn"]
-position = Vector2(1992, 120)
-
-[node name="Sprite2D" type="Sprite2D" parent="Bomb Spawn/point1"]
-scale = Vector2(0.0542857, 0.0542857)
-texture = ExtResource("4_orql0")
-
-[node name="point2" type="Node2D" parent="Bomb Spawn"]
-position = Vector2(1992, 280)
-
-[node name="Sprite2D" type="Sprite2D" parent="Bomb Spawn/point2"]
-scale = Vector2(0.0542857, 0.0542857)
-texture = ExtResource("4_orql0")
-
-[node name="point3" type="Node2D" parent="Bomb Spawn"]
-position = Vector2(1992, 432)
-
-[node name="Sprite2D" type="Sprite2D" parent="Bomb Spawn/point3"]
-scale = Vector2(0.0542857, 0.0542857)
-texture = ExtResource("4_orql0")
-
-[node name="point4" type="Node2D" parent="Bomb Spawn"]
-position = Vector2(1992, 592)
-
-[node name="Sprite2D" type="Sprite2D" parent="Bomb Spawn/point4"]
-scale = Vector2(0.0542857, 0.0542857)
-texture = ExtResource("4_orql0")
-
-[node name="point5" type="Node2D" parent="Bomb Spawn"]
-position = Vector2(1992, 744)
-
-[node name="Sprite2D" type="Sprite2D" parent="Bomb Spawn/point5"]
-scale = Vector2(0.0542857, 0.0542857)
-texture = ExtResource("4_orql0")
-
-[node name="Player" parent="." instance=ExtResource("13_rjp4p")]
-position = Vector2(452, 404)
-gravity_scale = 0.0
-
 [node name="Border" type="Sprite2D" parent="."]
 position = Vector2(300, 540)
-scale = Vector2(0.200408, 135.467)
-texture = ExtResource("4_dk6yq")
+scale = Vector2(0.2, 135)
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
@@ -236,5 +157,6 @@ label_settings = ExtResource("12_mnj3q")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Honey Orb" parent="." instance=ExtResource("16_eqjyc")]
-position = Vector2(1176, 424)
+[node name="Player" parent="." instance=ExtResource("13_rjp4p")]
+position = Vector2(452, 404)
+gravity_scale = 0.0
