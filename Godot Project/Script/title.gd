@@ -13,7 +13,9 @@ extends Control
 @onready var credits = $"Title Screen/MarginContainer/HBoxContainer/Credits"
 @onready var quit = $"Title Screen/MarginContainer/HBoxContainer/Quit"
 
-
+@onready var iceIcon = $tutorial/iceIcon
+@onready var honeyIcon = $tutorial/honeyIcon
+@onready var bounceIcon = $tutorial/bounceIcon
 
 func _ready():
 	title_screen.show()
@@ -21,6 +23,9 @@ func _ready():
 	credits_screen.hide()
 	unpaused()
 	expand_tween(logo)
+	expand_tween(iceIcon)
+	expand_tween(honeyIcon)
+	expand_tween(bounceIcon)
 
 func show_and_hide(target1, target2):
 	target1.show()
@@ -48,9 +53,15 @@ func _on_quit_pressed():
 	get_tree().quit()
 
 func expand_tween(target):
+	var x = target.scale.x
+	var y = target.scale.y
+	
+	var up_x = target.scale.x * 1.1
+	var up_y = target.scale.y * 1.1
+	
 	var tween = get_tree().create_tween()
-	tween.tween_property(target, "scale", Vector2(1.1, 1.1), 0.8)
-	tween.tween_property(target, "scale", Vector2(1, 1), 0.8)
+	tween.tween_property(target, "scale", Vector2(up_x, up_y), 0.8)
+	tween.tween_property(target, "scale", Vector2(x, y), 0.8)
 	tween.set_loops()
 
 
