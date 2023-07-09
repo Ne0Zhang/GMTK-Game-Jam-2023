@@ -12,7 +12,7 @@ radius = 64.4981
 [node name="Honey Platform" type="Node2D" groups=["platforms"]]
 script = ExtResource("1_47ulq")
 
-[node name="Honey Platform Body" type="Area2D" parent="."]
+[node name="Honey Platform Body" type="Area2D" parent="." groups=["honey"]]
 script = ExtResource("2_quh7k")
 
 [node name="Honey Platform Sprite" type="Sprite2D" parent="Honey Platform Body"]

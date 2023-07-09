@@ -1,16 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://b65r711p1grsf"]
+[gd_scene load_steps=6 format=3 uid="uid://b65r711p1grsf"]
 
 [ext_resource type="PackedScene" uid="uid://dtlrmtbdwp5m2" path="res://Scene/Platform Objects/honey_platform.tscn" id="1_ycrce"]
 [ext_resource type="PackedScene" uid="uid://bnmsnbjsc7y1u" path="res://Scene/Platform Objects/ice_platform.tscn" id="2_lwv3d"]
 [ext_resource type="PackedScene" uid="uid://dhpjnb0o8s4do" path="res://Scene/Platform Objects/spring_platform.tscn" id="3_eovlr"]
 [ext_resource type="PackedScene" uid="uid://b7f56enibx3sv" path="res://Scene/Platform Objects/cloud_platform.tscn" id="4_uc4rt"]
 [ext_resource type="PackedScene" uid="uid://depbsan31sf51" path="res://Scene/player.tscn" id="5_wn5gv"]
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_8oxvc"]
-friction = 0.0
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_lwfg4"]
-friction = 0.0
 
 [node name="Player_Collision_Test" type="Node"]
 
@@ -36,13 +30,9 @@ position = Vector2(514, 485)
 
 [node name="Player2" parent="." instance=ExtResource("5_wn5gv")]
 position = Vector2(1364, 478)
-physics_material_override = SubResource("PhysicsMaterial_8oxvc")
-freeze_mode = 1
 
 [node name="Player3" parent="." instance=ExtResource("5_wn5gv")]
 position = Vector2(1020, 486)
-physics_material_override = SubResource("PhysicsMaterial_lwfg4")
-freeze_mode = 1
 
 [node name="Player4" parent="." instance=ExtResource("5_wn5gv")]
 position = Vector2(774, 489)

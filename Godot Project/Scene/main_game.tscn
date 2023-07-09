@@ -14,7 +14,6 @@
 [ext_resource type="Script" path="res://Script/Honey Platform/Honey Button.gd" id="5_u1ycc"]
 [ext_resource type="Texture2D" uid="uid://b6u78yeveieg2" path="res://Art Assets/Platform All Asset/Ice Platform/ice platform button.png" id="6_6f15l"]
 [ext_resource type="Script" path="res://Script/Main Game/Bear Trap Spawn Behavior.gd" id="6_nuc6r"]
-[ext_resource type="PackedScene" uid="uid://dbmka8yrjejbq" path="res://Scene/Platform Objects/test_start_platform.tscn" id="6_vjrhs"]
 [ext_resource type="Script" path="res://Script/Ice Platform/Ice Button.gd" id="7_8liqf"]
 [ext_resource type="Texture2D" uid="uid://crlkea8yl3plf" path="res://Art Assets/Platform All Asset/Spring Platform/spring platform button.png" id="7_bygdd"]
 [ext_resource type="Script" path="res://Script/Spring Platform/Spring Button.gd" id="9_b6y8p"]
@@ -23,6 +22,7 @@
 [ext_resource type="Script" path="res://Script/Main Game/Orb Spawn Behavior.gd" id="14_jfkm8"]
 [ext_resource type="Script" path="res://Script/Main Game/Bomb Spawn Behavior.gd" id="15_48nm8"]
 [ext_resource type="Script" path="res://Script/Main Game/Fireball Spawn Behavior.gd" id="15_pukrx"]
+[ext_resource type="PackedScene" uid="uid://dbmka8yrjejbq" path="res://Scene/Platform Objects/test_start_platform.tscn" id="23_m86g0"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_ejfhb")
@@ -57,7 +57,7 @@ type = "cloud"
 
 [node name="Collectable Collection" type="Node" parent="."]
 
-[node name="Test_Start_Platform" parent="Collectable Collection" instance=ExtResource("6_vjrhs")]
+[node name="Test_Start_Platform" parent="Collectable Collection" instance=ExtResource("23_m86g0")]
 position = Vector2(80, 784)
 
 [node name="Platform Collection" type="Node" parent="."]
@@ -248,7 +248,7 @@ region_enabled = true
 region_rect = Rect2(5.54103, 1.76989, 1.7567, 1.7567)
 
 [node name="Player" parent="." instance=ExtResource("13_rjp4p")]
-position = Vector2(104, 640)
+position = Vector2(728, 680)
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
@@ -302,3 +302,6 @@ text = "1"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
+
+[node name="Test_Start_Platform" parent="." instance=ExtResource("23_m86g0")]
+position = Vector2(656, 784)
