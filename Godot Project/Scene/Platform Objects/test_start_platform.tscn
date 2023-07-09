@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dbmka8yrjejbq"]
 
-[ext_resource type="Texture2D" uid="uid://bc5xk6q4hl44a" path="res://Art Assets/Demo/Black Box.png" id="1_petsn"]
+[ext_resource type="Texture2D" uid="uid://bc5xk6q4hl44a" path="res://Art Assets/title/Black Box.png" id="1_petsn"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_dnisl"]
 friction = 0.0
