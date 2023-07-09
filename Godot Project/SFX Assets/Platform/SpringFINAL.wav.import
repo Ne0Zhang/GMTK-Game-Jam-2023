@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bckeit4chb8eb"
+path="res://.godot/imported/SpringFINAL.wav-6a2c1cc150c660f8fe525588d4f5f22a.sample"
+
+[deps]
+
+source_file="res://SFX Assets/Platform/SpringFINAL.wav"
+dest_files=["res://.godot/imported/SpringFINAL.wav-6a2c1cc150c660f8fe525588d4f5f22a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

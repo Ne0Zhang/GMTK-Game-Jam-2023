@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Script/Honey Platform/Honey_Platform_Behavior.gd" id="2_quh7k"]
 [ext_resource type="Texture2D" uid="uid://d34o8evuag46e" path="res://Art Assets/Platform All Asset/Honey Platform/honey platform.png" id="3_gorfq"]
 [ext_resource type="Script" path="res://Script/Main Game/Sprite_Control.gd" id="4_yxp2o"]
-[ext_resource type="AudioStream" uid="uid://b2oelr36d0vb7" path="res://SFX Assets/Platform/HoneyBlockCollision.wav" id="5_h8lmh"]
+[ext_resource type="AudioStream" uid="uid://b2rgvyhww6oig" path="res://SFX Assets/Platform/HoneyBlockCollisionLEGIT.wav" id="5_7yhk0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_n0xvs"]
 radius = 64.4981
@@ -25,7 +25,7 @@ position = Vector2(0, 16)
 shape = SubResource("CircleShape2D_n0xvs")
 
 [node name="honey audio" type="AudioStreamPlayer2D" parent="Honey Platform Body"]
-stream = ExtResource("5_h8lmh")
+stream = ExtResource("5_7yhk0")
 
 [connection signal="body_entered" from="Honey Platform Body" to="Honey Platform Body" method="_on_body_entered"]
 [connection signal="body_exited" from="Honey Platform Body" to="Honey Platform Body" method="_on_body_exited"]

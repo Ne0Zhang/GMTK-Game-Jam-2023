@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://126ywv52e8b3" path="res://Art Assets/Bomb Anim/13.png" id="13_bliq0"]
 [ext_resource type="Texture2D" uid="uid://cx1i7pgyuubi3" path="res://Art Assets/Bomb Anim/14.png" id="14_cyrt2"]
 [ext_resource type="Texture2D" uid="uid://cel441a5ppo5j" path="res://Art Assets/Bomb Anim/15.png" id="15_fyo1w"]
-[ext_resource type="AudioStream" uid="uid://clrt1jg3mhifb" path="res://SFX Assets/Bomb SFX/BombFixed.wav" id="17_ecwn4"]
+[ext_resource type="AudioStream" uid="uid://b46om3m7fyxcr" path="res://SFX Assets/Bomb SFX/BombFINALOPTION.wav" id="17_8fb15"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_m8g2l"]
 animations = [{
@@ -110,6 +110,6 @@ animation = &"Explode"
 shape = SubResource("CircleShape2D_3oiy3")
 
 [node name="Explode_Audio" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("17_ecwn4")
+stream = ExtResource("17_8fb15")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
