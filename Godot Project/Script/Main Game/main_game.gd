@@ -34,24 +34,11 @@ var bomb_speed = platform_speed
 
 
 var audio
-@onready var pause_settings = $"Pause/Pause Settings"
-@onready var mouseClick = $Pause/MouseClick
 
 func _ready():
 	game_over = false
 	audio = get_node("Game Theme Music")
 	audio.play()
-	unpaused()
-	
-func paused():
-	mouseClick.play()
-	get_tree().paused = true
-	pause_settings.show()
-	
-func unpaused():
-	mouseClick.play()
-	pause_settings.hide()
-	get_tree().paused = false
 
 func _game_over():
 	if !game_over:

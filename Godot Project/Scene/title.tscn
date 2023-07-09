@@ -1,85 +1,11 @@
-[gd_scene load_steps=31 format=3 uid="uid://bxw3ddgpa1qeu"]
+[gd_scene load_steps=5 format=3 uid="uid://bbu1crmvwnl2r"]
 
 [ext_resource type="Script" path="res://Script/title.gd" id="1_5wpq2"]
-[ext_resource type="PackedScene" uid="uid://ct3wycd6xdldl" path="res://Scene/music.tscn" id="2_24il8"]
 [ext_resource type="Texture2D" path="res://Art Assets/title/bg.png" id="2_lgood"]
-[ext_resource type="AudioStream" uid="uid://b2j6hnaf8q5rn" path="res://SFX Assets/ButtonPress.wav" id="3_klpdd"]
 [ext_resource type="Texture2D" path="res://Art Assets/title/illust.PNG" id="3_sxw1y"]
-[ext_resource type="Theme" uid="uid://yduw1j5oobvc" path="res://theme.tres" id="4_dmw18"]
-[ext_resource type="Texture2D" uid="uid://q4jywr60aahu" path="res://Art Assets/title/ui/title.png" id="4_m3oc3"]
-[ext_resource type="PackedScene" uid="uid://dsirr5j21gqwm" path="res://Scene/options.tscn" id="6_8jcrc"]
-[ext_resource type="Script" path="res://Script/tutorial.gd" id="7_clrsc"]
-[ext_resource type="Texture2D" path="res://Art Assets/title/mouse.PNG" id="7_e6tp8"]
-[ext_resource type="PackedScene" uid="uid://ci2pgwvyy4agr" path="res://Scene/pause_settings.tscn" id="8_36ogc"]
-[ext_resource type="Texture2D" path="res://Art Assets/title/rotate.PNG" id="8_etq10"]
-[ext_resource type="LabelSettings" uid="uid://be0cgrceor0gt" path="res://Font/header_label.tres" id="9_h1ocf"]
-[ext_resource type="Texture2D" path="res://Art Assets/title/move.PNG" id="9_u5ole"]
-[ext_resource type="FontFile" uid="uid://capvxe8dvs2ae" path="res://Font/Nice Sugar.ttf" id="10_1csas"]
-[ext_resource type="Texture2D" uid="uid://vqodnd4bvc3e" path="res://Art Assets/title/ui/honey_icon.png" id="11_2qqe2"]
-[ext_resource type="Texture2D" path="res://Art Assets/title/run/1.png" id="11_dev28"]
-[ext_resource type="Texture2D" uid="uid://pp7ygdl6lasv" path="res://Art Assets/title/ui/ice_icon.png" id="12_42slc"]
-[ext_resource type="Script" path="res://Script/UI/volume_slider.gd" id="12_qx240"]
-[ext_resource type="Texture2D" path="res://Art Assets/title/run/2.png" id="12_vv5l1"]
-[ext_resource type="Texture2D" uid="uid://ckjil00outhyy" path="res://Art Assets/title/ui/bounce_icon.png" id="13_5e0t8"]
-[ext_resource type="Texture2D" path="res://Art Assets/title/run/3.png" id="13_kjrbq"]
-[ext_resource type="Texture2D" path="res://Art Assets/title/run/4.png" id="14_uehlt"]
-[ext_resource type="Texture2D" path="res://Art Assets/title/run/5.png" id="15_s3s7b"]
-[ext_resource type="Texture2D" path="res://Art Assets/title/run/6.png" id="16_smgio"]
-[ext_resource type="Texture2D" path="res://Art Assets/title/run/7.png" id="17_jn12f"]
-[ext_resource type="Texture2D" path="res://Art Assets/title/run/8.png" id="18_gv0am"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_loepf"]
-font = ExtResource("10_1csas")
-font_size = 50
-font_color = Color(0.360784, 0.32549, 0.470588, 1)
-outline_size = 25
-outline_color = Color(0.992157, 0.976471, 0.933333, 1)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_ol8nd"]
-resource_local_to_scene = true
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("11_dev28")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_vv5l1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_kjrbq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_uehlt")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_s3s7b")
-}, {
-"duration": 1.0,
-"texture": ExtResource("16_smgio")
-}, {
-"duration": 1.0,
-"texture": ExtResource("17_jn12f")
-}, {
-"duration": 1.0,
-"texture": ExtResource("18_gv0am")
-}],
-"loop": true,
-"name": &"run",
-"speed": 12.0
-}]
-
-[sub_resource type="LabelSettings" id="LabelSettings_r5cwt"]
-line_spacing = 46.0
-font = ExtResource("10_1csas")
-font_size = 50
-font_color = Color(0.360784, 0.32549, 0.470588, 1)
-outline_size = 20
-outline_color = Color(0.992157, 0.976471, 0.933333, 1)
-shadow_size = 0
-shadow_color = Color(0.992188, 0.976563, 0.933594, 1)
+[ext_resource type="Theme" path="res://theme.tres" id="4_dmw18"]
 
 [node name="Title" type="Control"]
-process_mode = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -88,458 +14,55 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5wpq2")
 
-[node name="music" parent="." instance=ExtResource("2_24il8")]
-
-[node name="mouseClick" parent="." instance=ExtResource("2_24il8")]
-stream = ExtResource("3_klpdd")
-autoplay = false
-bus = &"SFX"
-
 [node name="bg" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 1920.0
-offset_bottom = 1080.0
+offset_right = 1150.0
+offset_bottom = 648.0
 texture = ExtResource("2_lgood")
 expand_mode = 1
 
 [node name="illust" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 1920.0
-offset_bottom = 1080.0
+offset_right = 1152.0
+offset_bottom = 648.0
 texture = ExtResource("3_sxw1y")
-expand_mode = 3
-stretch_mode = 4
+expand_mode = 1
 
-[node name="Title Screen" type="Control" parent="."]
-visible = false
-anchors_preset = 0
-
-[node name="logo" type="TextureRect" parent="Title Screen"]
+[node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_left = 890.0
-offset_top = 141.0
-offset_right = 1859.0
-offset_bottom = 773.0
-pivot_offset = Vector2(484.5, 316)
-texture = ExtResource("4_m3oc3")
+offset_left = 509.0
+offset_top = 478.0
+offset_right = 1065.0
+offset_bottom = 559.0
 
-[node name="MarginContainer" type="MarginContainer" parent="Title Screen"]
-layout_mode = 0
-offset_left = 618.0
-offset_top = 894.0
-offset_right = 1865.0
-offset_bottom = 975.0
-pivot_offset = Vector2(623.5, 40.5)
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Title Screen/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 size_flags_vertical = 0
-theme_override_constants/separation = 50
+theme_override_constants/separation = 30
 alignment = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="Title Screen/MarginContainer/HBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
 
-[node name="Play" type="Button" parent="Title Screen/MarginContainer/HBoxContainer"]
+[node name="Play" type="Button" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("4_dmw18")
 theme_override_constants/h_separation = 53
 text = "Play"
 
-[node name="Tutorial" type="Button" parent="Title Screen/MarginContainer/HBoxContainer"]
+[node name="Tutorial" type="Button" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("4_dmw18")
 text = "Tutorial"
 
-[node name="Credits" type="Button" parent="Title Screen/MarginContainer/HBoxContainer"]
+[node name="Credits" type="Button" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("4_dmw18")
 text = "Credits"
 
-[node name="Quit" type="Button" parent="Title Screen/MarginContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme = ExtResource("4_dmw18")
-text = "Quit"
-
-[node name="tutorial" type="Control" parent="."]
-visible = false
-anchors_preset = 0
-offset_right = 1920.0
-offset_bottom = 1080.0
-script = ExtResource("7_clrsc")
-
-[node name="bg2" type="ColorRect" parent="tutorial"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.945098, 0.929412, 0.976471, 0.470588)
-
-[node name="mouse" type="TextureRect" parent="tutorial"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -961.0
-offset_top = -482.0
-offset_right = 959.0
-offset_bottom = 598.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("7_e6tp8")
-stretch_mode = 4
-
-[node name="rotate" type="TextureRect" parent="tutorial"]
-modulate = Color(1, 1, 1, 0.329412)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -224.0
-offset_top = -213.0
-offset_right = 1122.0
-offset_bottom = 867.0
-grow_horizontal = 2
-grow_vertical = 2
-rotation = -0.380482
-pivot_offset = Vector2(-10, 0)
-texture = ExtResource("8_etq10")
-expand_mode = 1
-stretch_mode = 4
-metadata/_edit_use_anchors_ = true
-
-[node name="move" type="TextureRect" parent="tutorial"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -534.0
-offset_top = -559.0
-offset_right = 812.0
-offset_bottom = 342.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("9_u5ole")
-expand_mode = 1
-stretch_mode = 4
-
-[node name="honeyIcon" type="TextureRect" parent="tutorial"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -239.25
-offset_top = 313.75
-offset_right = -1259.25
-offset_bottom = 133.75
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.255, 0.255)
-pivot_offset = Vector2(450, 450)
-texture = ExtResource("11_2qqe2")
-expand_mode = 1
-stretch_mode = 4
-metadata/_edit_use_anchors_ = true
-
-[node name="iceIcon" type="TextureRect" parent="tutorial"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -956.25
-offset_top = -227.25
-offset_right = -56.25
-offset_bottom = 672.75
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.255, 0.255)
-pivot_offset = Vector2(450, 450)
-texture = ExtResource("12_42slc")
-expand_mode = 1
-stretch_mode = 4
-
-[node name="bounceIcon" type="TextureRect" parent="tutorial"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -706.25
-offset_top = -228.25
-offset_right = 193.75
-offset_bottom = 671.75
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.255, 0.255)
-pivot_offset = Vector2(450, 450)
-texture = ExtResource("13_5e0t8")
-expand_mode = 1
-stretch_mode = 4
-
-[node name="tutorialDesc" type="Label" parent="tutorial"]
-layout_mode = 0
-offset_left = 139.0
-offset_top = 284.0
-offset_right = 784.0
-offset_bottom = 609.0
-text = "Don't let the goob fall!
-
-Collect special platforms
-to help them on their
-amazing adventure!"
-label_settings = SubResource("LabelSettings_loepf")
-
-[node name="rotatePlatform" type="Label" parent="tutorial"]
-layout_mode = 0
-offset_left = 1370.0
-offset_top = 265.0
-offset_right = 1977.0
-offset_bottom = 366.0
-text = "1. Rotate platform"
-label_settings = SubResource("LabelSettings_loepf")
-
-[node name="movePlatform" type="Label" parent="tutorial"]
-layout_mode = 0
-offset_left = 843.0
-offset_top = 524.0
-offset_right = 1450.0
-offset_bottom = 625.0
-text = "2. Place platform"
-label_settings = SubResource("LabelSettings_loepf")
-
-[node name="bean" type="AnimatedSprite2D" parent="tutorial"]
-position = Vector2(1072, 318)
-scale = Vector2(0.21725, 0.21725)
-sprite_frames = SubResource("SpriteFrames_ol8nd")
-animation = &"run"
-
-[node name="backFromTutorial" type="Button" parent="tutorial"]
-layout_mode = 0
-offset_left = 50.0
-offset_top = 970.0
-offset_right = 191.0
-offset_bottom = 1048.0
-theme = ExtResource("4_dmw18")
-text = "Back"
-
-[node name="credits" type="Control" parent="."]
-anchors_preset = 0
-offset_right = 1920.0
-offset_bottom = 1080.0
-
-[node name="bg2" type="ColorRect" parent="credits"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.945098, 0.929412, 0.976471, 0.470588)
-
-[node name="backFromCredits" type="Button" parent="credits"]
-layout_mode = 0
-offset_left = 50.0
-offset_top = 970.0
-offset_right = 191.0
-offset_bottom = 1048.0
-theme = ExtResource("4_dmw18")
-text = "Back"
-
-[node name="VBoxContainer2" type="VBoxContainer" parent="credits"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -832.5
-offset_top = -404.5
-offset_right = 832.5
-offset_bottom = 404.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 72
-
-[node name="credits" type="Label" parent="credits/VBoxContainer2"]
-layout_mode = 2
-text = "Credits"
-label_settings = ExtResource("9_h1ocf")
-
-[node name="nameCredits" type="HBoxContainer" parent="credits/VBoxContainer2"]
-layout_mode = 2
-theme_override_constants/separation = 141
-
-[node name="names" type="Label" parent="credits/VBoxContainer2/nameCredits"]
-layout_mode = 2
-text = "Ryan Kim
-Brendan Kitchen
-Ashley Lu
-Nami Wong
-Issy Wong
-Neo Zhang"
-label_settings = SubResource("LabelSettings_r5cwt")
-
-[node name="roles" type="Label" parent="credits/VBoxContainer2/nameCredits"]
-layout_mode = 2
-text = "Developer, Designer
-Music & SFX Composer, Designer
-UI Designer, Artist
-Character Animator
-Prop & Effect Animator, Character Design
-Developer, Designer"
-label_settings = SubResource("LabelSettings_r5cwt")
-
-[node name="options" parent="." instance=ExtResource("6_8jcrc")]
-process_mode = 1
-layout_mode = 0
-offset_left = 20.0
-offset_top = 20.0
-offset_right = 130.0
-offset_bottom = 171.0
-
-[node name="Pause Settings" parent="." instance=ExtResource("8_36ogc")]
-visible = false
-layout_mode = 1
-
-[node name="bg2" type="ColorRect" parent="Pause Settings"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.945098, 0.929412, 0.976471, 0.470588)
-
-[node name="OptionsButtons2" type="VBoxContainer" parent="Pause Settings"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -324.0
-offset_top = -392.5
-offset_right = 324.0
-offset_bottom = 140.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 70
-
-[node name="Label" type="Label" parent="Pause Settings/OptionsButtons2"]
-layout_mode = 2
-text = "Settings"
-label_settings = ExtResource("9_h1ocf")
-horizontal_alignment = 1
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Pause Settings/OptionsButtons2"]
-layout_mode = 2
-
-[node name="Labels" type="VBoxContainer" parent="Pause Settings/OptionsButtons2/HBoxContainer"]
-layout_mode = 2
-
-[node name="Fullscreen" type="Label" parent="Pause Settings/OptionsButtons2/HBoxContainer/Labels"]
-layout_mode = 2
-text = "Fullscreen"
-label_settings = ExtResource("9_h1ocf")
-
-[node name="Master" type="Label" parent="Pause Settings/OptionsButtons2/HBoxContainer/Labels"]
-layout_mode = 2
-text = "Master"
-label_settings = ExtResource("9_h1ocf")
-
-[node name="Music" type="Label" parent="Pause Settings/OptionsButtons2/HBoxContainer/Labels"]
-layout_mode = 2
-text = "Music"
-label_settings = ExtResource("9_h1ocf")
-
-[node name="SFX" type="Label" parent="Pause Settings/OptionsButtons2/HBoxContainer/Labels"]
-layout_mode = 2
-text = "SFX"
-label_settings = ExtResource("9_h1ocf")
-
-[node name="ChecksSliders" type="VBoxContainer" parent="Pause Settings/OptionsButtons2/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_constants/separation = 74
-
-[node name="Fullscreen" type="CheckBox" parent="Pause Settings/OptionsButtons2/HBoxContainer/ChecksSliders"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme = ExtResource("4_dmw18")
-theme_override_constants/check_v_offset = 10
-keep_pressed_outside = true
-alignment = 1
-
-[node name="Master" type="HSlider" parent="Pause Settings/OptionsButtons2/HBoxContainer/ChecksSliders"]
-layout_mode = 2
-theme = ExtResource("4_dmw18")
-max_value = 1.0
-step = 0.001
-script = ExtResource("12_qx240")
-bus_name = "Master"
-
-[node name="Music" type="HSlider" parent="Pause Settings/OptionsButtons2/HBoxContainer/ChecksSliders"]
-layout_mode = 2
-theme = ExtResource("4_dmw18")
-max_value = 1.0
-step = 0.001
-script = ExtResource("12_qx240")
-bus_name = "Music"
-
-[node name="SFX" type="HSlider" parent="Pause Settings/OptionsButtons2/HBoxContainer/ChecksSliders"]
-layout_mode = 2
-theme = ExtResource("4_dmw18")
-max_value = 1.0
-step = 0.001
-script = ExtResource("12_qx240")
-bus_name = "SFX"
-
-[node name="Menu" type="Button" parent="Pause Settings/OptionsButtons2"]
-layout_mode = 2
-size_flags_horizontal = 4
-theme = ExtResource("4_dmw18")
-text = "Menu"
-
-[node name="backFromPause" type="Button" parent="Pause Settings"]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -70.5
-offset_top = -124.0
-offset_right = 70.5
-offset_bottom = -46.0
-grow_horizontal = 2
-grow_vertical = 0
-theme = ExtResource("4_dmw18")
-text = "Back
-"
-
-[connection signal="pressed" from="Title Screen/MarginContainer/HBoxContainer/Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="Title Screen/MarginContainer/HBoxContainer/Tutorial" to="." method="_on_tutorial_pressed"]
-[connection signal="pressed" from="Title Screen/MarginContainer/HBoxContainer/Credits" to="." method="_on_credits_pressed"]
-[connection signal="pressed" from="Title Screen/MarginContainer/HBoxContainer/Quit" to="." method="_on_credits_pressed"]
-[connection signal="pressed" from="Title Screen/MarginContainer/HBoxContainer/Quit" to="." method="_on_quit_pressed"]
-[connection signal="pressed" from="tutorial/backFromTutorial" to="." method="_on_back_from_tutorial_pressed"]
-[connection signal="pressed" from="credits/backFromCredits" to="." method="_on_back_from_credits_pressed"]
-[connection signal="pressed" from="options" to="." method="paused"]
-[connection signal="toggled" from="Pause Settings/OptionsButtons2/HBoxContainer/ChecksSliders/Fullscreen" to="Pause Settings" method="_on_fullscreen_toggled"]
-[connection signal="pressed" from="Pause Settings/backFromPause" to="." method="unpaused"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Tutorial" to="." method="_on_tutorial_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Credits" to="." method="_on_credits_pressed"]

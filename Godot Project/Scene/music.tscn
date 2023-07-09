@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://ct3wycd6xdldl"]
-
-[ext_resource type="AudioStream" uid="uid://w5qe46xv6ero" path="res://Sound Assets/Amazing_Goob_Main_Menu_Theme_2.wav" id="1_a8qum"]
-
-[node name="music" type="AudioStreamPlayer"]
-stream = ExtResource("1_a8qum")
-autoplay = true
-bus = &"Music"
