@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=22 format=3 uid="uid://bq7d64u184nub"]
+[gd_resource type="Theme" load_steps=22 format=3 uid="uid://yduw1j5oobvc"]
 
 [ext_resource type="FontFile" uid="uid://capvxe8dvs2ae" path="res://Font/Nice Sugar.ttf" id="1_jhmp1"]
 [ext_resource type="Texture2D" uid="uid://do2ngavst6r22" path="res://Art Assets/title/ui/checked.png" id="2_2afan"]
@@ -259,7 +259,7 @@ CheckBox/styles/normal = SubResource("StyleBoxEmpty_v8s5d")
 CheckBox/styles/pressed = SubResource("StyleBoxEmpty_v8s5d")
 HSlider/constants/center_grabber = 0
 HSlider/constants/grabber_offset = 0
-HSlider/icons/grabber = null
+HSlider/icons/grabber = ExtResource("6_46wiy")
 HSlider/icons/grabber_disabled = ExtResource("5_suo43")
 HSlider/icons/grabber_highlight = ExtResource("6_46wiy")
 HSlider/icons/tick = SubResource("ImageTexture_2s6vx")
