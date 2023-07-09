@@ -1,28 +1,28 @@
 [gd_scene load_steps=27 format=3 uid="uid://bxw3ddgpa1qeu"]
 
 [ext_resource type="Script" path="res://Script/title.gd" id="1_5wpq2"]
-[ext_resource type="PackedScene" uid="uid://bo7dyfwacjs0j" path="res://Scene/music.tscn" id="2_24il8"]
-[ext_resource type="Texture2D" uid="uid://crv3538xavf3k" path="res://Art Assets/title/bg.png" id="2_lgood"]
-[ext_resource type="Texture2D" uid="uid://b602ux8n3yrj3" path="res://Art Assets/title/illust.PNG" id="3_sxw1y"]
-[ext_resource type="Theme" uid="uid://dcvpn3kn2ta0u" path="res://theme.tres" id="4_dmw18"]
+[ext_resource type="PackedScene" uid="uid://qj5m8nu4t4p5" path="res://Scene/music.tscn" id="2_24il8"]
+[ext_resource type="Texture2D" path="res://Art Assets/title/bg.png" id="2_lgood"]
+[ext_resource type="Texture2D" path="res://Art Assets/title/illust.PNG" id="3_sxw1y"]
+[ext_resource type="Theme" uid="uid://bq7d64u184nub" path="res://theme.tres" id="4_dmw18"]
 [ext_resource type="Texture2D" uid="uid://q4jywr60aahu" path="res://Art Assets/title/ui/title.png" id="4_m3oc3"]
-[ext_resource type="PackedScene" uid="uid://cwktou6n3nw5n" path="res://Scene/options.tscn" id="6_8jcrc"]
+[ext_resource type="PackedScene" uid="uid://jpajjrdgfc2d" path="res://Scene/options.tscn" id="6_8jcrc"]
 [ext_resource type="Script" path="res://Script/tutorial.gd" id="7_clrsc"]
-[ext_resource type="Texture2D" uid="uid://cly0uvupq18bm" path="res://Art Assets/title/mouse.PNG" id="7_e6tp8"]
-[ext_resource type="PackedScene" uid="uid://dju6ejgl10ou7" path="res://Scene/pause_settings.tscn" id="8_36ogc"]
-[ext_resource type="Texture2D" uid="uid://d03jjih4pqkxo" path="res://Art Assets/title/rotate.PNG" id="8_etq10"]
+[ext_resource type="Texture2D" path="res://Art Assets/title/mouse.PNG" id="7_e6tp8"]
+[ext_resource type="PackedScene" uid="uid://cmskaqu4vxfvy" path="res://Scene/pause_settings.tscn" id="8_36ogc"]
+[ext_resource type="Texture2D" path="res://Art Assets/title/rotate.PNG" id="8_etq10"]
 [ext_resource type="LabelSettings" uid="uid://be0cgrceor0gt" path="res://Font/header_label.tres" id="9_h1ocf"]
-[ext_resource type="Texture2D" uid="uid://dv03w3voowbwp" path="res://Art Assets/title/move.PNG" id="9_u5ole"]
+[ext_resource type="Texture2D" path="res://Art Assets/title/move.PNG" id="9_u5ole"]
 [ext_resource type="FontFile" uid="uid://capvxe8dvs2ae" path="res://Font/Nice Sugar.ttf" id="10_1csas"]
-[ext_resource type="Texture2D" uid="uid://ce65fs6vjooje" path="res://Art Assets/title/run/1.png" id="11_dev28"]
+[ext_resource type="Texture2D" path="res://Art Assets/title/run/1.png" id="11_dev28"]
 [ext_resource type="Script" path="res://Script/UI/volume_slider.gd" id="12_qx240"]
-[ext_resource type="Texture2D" uid="uid://bcflumqc5qshy" path="res://Art Assets/title/run/2.png" id="12_vv5l1"]
-[ext_resource type="Texture2D" uid="uid://crevevmhsf2p" path="res://Art Assets/title/run/3.png" id="13_kjrbq"]
-[ext_resource type="Texture2D" uid="uid://cy1ycs26iybfm" path="res://Art Assets/title/run/4.png" id="14_uehlt"]
-[ext_resource type="Texture2D" uid="uid://btk67cnyuke8g" path="res://Art Assets/title/run/5.png" id="15_s3s7b"]
-[ext_resource type="Texture2D" uid="uid://cfoiejuyiggjv" path="res://Art Assets/title/run/6.png" id="16_smgio"]
-[ext_resource type="Texture2D" uid="uid://ck0du1reehjtq" path="res://Art Assets/title/run/7.png" id="17_jn12f"]
-[ext_resource type="Texture2D" uid="uid://8mw5ag0rdh0n" path="res://Art Assets/title/run/8.png" id="18_gv0am"]
+[ext_resource type="Texture2D" path="res://Art Assets/title/run/2.png" id="12_vv5l1"]
+[ext_resource type="Texture2D" path="res://Art Assets/title/run/3.png" id="13_kjrbq"]
+[ext_resource type="Texture2D" path="res://Art Assets/title/run/4.png" id="14_uehlt"]
+[ext_resource type="Texture2D" path="res://Art Assets/title/run/5.png" id="15_s3s7b"]
+[ext_resource type="Texture2D" path="res://Art Assets/title/run/6.png" id="16_smgio"]
+[ext_resource type="Texture2D" path="res://Art Assets/title/run/7.png" id="17_jn12f"]
+[ext_resource type="Texture2D" path="res://Art Assets/title/run/8.png" id="18_gv0am"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_loepf"]
 font = ExtResource("10_1csas")
@@ -330,6 +330,7 @@ offset_right = 130.0
 offset_bottom = 171.0
 
 [node name="Pause Settings" parent="." instance=ExtResource("8_36ogc")]
+visible = false
 layout_mode = 1
 
 [node name="bg2" type="ColorRect" parent="Pause Settings"]
