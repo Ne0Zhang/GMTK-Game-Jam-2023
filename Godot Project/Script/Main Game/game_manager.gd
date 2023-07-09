@@ -6,6 +6,10 @@ var spring_count = 4
 
 var can_spawn = true
 
+# Player Related Variables
+var player_speed = 250
+
+
 # Platform Related Variables
 var platform_speed = 250
 

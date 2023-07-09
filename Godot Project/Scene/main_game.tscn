@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cgd27enmiaa3g"]
+[gd_scene load_steps=18 format=3 uid="uid://cgd27enmiaa3g"]
 
 [ext_resource type="Script" path="res://Script/Main Game/game_manager.gd" id="1_mi7fx"]
 [ext_resource type="Script" path="res://Script/Cloud Platform/Cloud Button.gd" id="2_igkno"]
@@ -16,6 +16,7 @@
 [ext_resource type="Script" path="res://Script/Main Game/Bomb Spawn Behavior.gd" id="15_48nm8"]
 [ext_resource type="Script" path="res://Script/Main Game/Fireball Spawn Behavior.gd" id="15_pukrx"]
 [ext_resource type="PackedScene" uid="uid://b8kwwbb5w86v3" path="res://Scene/Collectable/Honey Orb.tscn" id="16_eqjyc"]
+[ext_resource type="PackedScene" uid="uid://dcc4hu813eyvv" path="res://Scene/Platform Objects/test_start_platform.tscn" id="17_xsbmg"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_mi7fx")
@@ -158,8 +159,7 @@ scale = Vector2(0.0542857, 0.0542857)
 texture = ExtResource("4_orql0")
 
 [node name="Player" parent="." instance=ExtResource("13_rjp4p")]
-position = Vector2(452, 404)
-gravity_scale = 0.0
+position = Vector2(360, 736)
 
 [node name="Border" type="Sprite2D" parent="."]
 position = Vector2(300, 540)
@@ -234,3 +234,6 @@ vertical_alignment = 1
 
 [node name="Honey Orb" parent="." instance=ExtResource("16_eqjyc")]
 position = Vector2(1176, 424)
+
+[node name="Test_Start_Platform" parent="." instance=ExtResource("17_xsbmg")]
+position = Vector2(384, 816)

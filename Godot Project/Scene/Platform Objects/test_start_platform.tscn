@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bc5xk6q4hl44a" path="res://Art Assets/Demo/Black Box.png" id="1_petsn"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_dnisl"]
+friction = 0.0
 
 [sub_resource type="GDScript" id="GDScript_gvtfv"]
 script/source = "extends RigidBody2D

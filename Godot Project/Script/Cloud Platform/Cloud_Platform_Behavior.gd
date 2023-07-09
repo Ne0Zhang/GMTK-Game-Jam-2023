@@ -1,5 +1,7 @@
 extends StaticBody2D
 
+signal slide
+
 # Lower cap for the rotation
 @export var min_rotate = -60.0
 # Upper cap for the rotation
