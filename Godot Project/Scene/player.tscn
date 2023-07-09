@@ -55,7 +55,7 @@
 [ext_resource type="Texture2D" uid="uid://ba6oom51gmyqo" path="res://Art Assets/Goob/Poof/12.png" id="35_2ohg3"]
 [ext_resource type="AudioStream" uid="uid://q2jnwyreopug" path="res://SFX Assets/Player/WalkingOnClouds.wav" id="54_d367b"]
 [ext_resource type="AudioStream" uid="uid://b4bb3gpbay2ru" path="res://SFX Assets/Player/Jump.wav" id="55_itua5"]
-[ext_resource type="AudioStream" uid="uid://c637vr8bik38t" path="res://SFX Assets/Platform/IceSlide.wav" id="56_n52qt"]
+[ext_resource type="AudioStream" uid="uid://lk6b171vjm7m" path="res://SFX Assets/Platform/IceSlideFINAL.wav" id="56_y3hlk"]
 [ext_resource type="AudioStream" uid="uid://bckeit4chb8eb" path="res://SFX Assets/Platform/SpringFINAL.wav" id="57_ky1rt"]
 [ext_resource type="AudioStream" uid="uid://b2oelr36d0vb7" path="res://SFX Assets/Platform/HoneyBlockCollision.wav" id="58_e3lgw"]
 
@@ -301,7 +301,7 @@ stream = ExtResource("54_d367b")
 stream = ExtResource("55_itua5")
 
 [node name="PlayerSlide" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("56_n52qt")
+stream = ExtResource("56_y3hlk")
 
 [node name="PlayerSpring" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("57_ky1rt")
